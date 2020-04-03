@@ -299,7 +299,7 @@ const useStyles = (theme) => ({
     avatar: {
         marginLeft: 'auto',
         marginRight: 'auto',
-        backgroundColor: theme.palette.warning.main,
+        backgroundColor: '#ffdf00',
     },
     icon: {
         width: 65,
