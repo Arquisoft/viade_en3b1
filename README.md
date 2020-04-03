@@ -2,7 +2,7 @@
 [![codecov](https://codecov.io/gh/Arquisoft/viade_en3b/branch/master/graph/badge.svg)](https://codecov.io/gh/Arquisoft/viade_en3b)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d4bcdec9fd2c43b9806555a4d1b9e57e)](https://www.codacy.com/gh/Arquisoft/viade_en3b?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Arquisoft/viade_en3b&amp;utm_campaign=Badge_Grade)
 
-# VIADE EN3B
+# VIADE EN3B1
 
 This project is an assignment for the [Software Architecture course](https://arquisoft.github.io/) following [these requirements](https://labra.solid.community/public/SoftwareArchitecture/AssignmentDescription/).
 
@@ -12,10 +12,6 @@ More information about how this project has been setup is available [in the wiki
 
 ## Developers
 *  Pablo Cañal Suárez
-*  Carmen Vigo Rodríguez
-*  Miguel Cuesta Martínez
-*  Lucía Megido García
-*  Elena Rodríguez Río
 
 ## Building and running the web app locally
 
