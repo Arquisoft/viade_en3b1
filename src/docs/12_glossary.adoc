@@ -1,0 +1,26 @@
+[[section-glossary]]
+== Glossary
+
+[cols="^.^,^.^,^.^", options=header, %autowidth]
+|===
+| Term | Definition | More Information
+| Solid 
+    | Tim Berners-Lee's project to to create a decentralized web where users data is separated from application and services. 
+    | link:https://solid.inrupt.com/how-it-works[Solid's web page] 
+    link:http://crosscloud.org/2016/www-mansour-pdf.pdf[Solid for Social Web Apps]
+| Pods     
+    | Personal Online DataStore, accessible from the web. Where the information about the user is stored. 
+    | link:https://solid.inrupt.com/get-a-solid-pod[Get yout own Pod]
+| React     
+    | A JavaScript library for creating user interfaces. 
+    | link:https://reactjs.org/[React's web page]
+| Inrupt     
+    | Team of developers, designers, and business people who have been working to ensure Solid is becoming robust, feature-rich, and increasingly ready for wide-scale adoption. 
+    | link:https://inrupt.com/[Inrupt's web page]
+| MVC   
+    | Software Design Pattern commonly used to implement user interfaces, data and business logic.
+    | link:https://www.codecademy.com/articles/mvc[Know MVC better]
+| Scrum 
+    | Framework for effective team collaboration on complex products 
+    | link:https://www.scrum.org/resources/what-is-scrum[Learn more]
+|===

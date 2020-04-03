@@ -1,0 +1,23 @@
+[[section-system-scope-and-context]]
+== System Scope and Context
+
+=== Business Context
+Viade´s main goal is to give the ability to store, visualize and be shared to the routes withou storing the actual data, which is kept by the users.
+
+The public target for the applications is all types of users, but especially non-technical users.
+The application will allow the user to store and visualize their routes in a map.
+
+The users will be able to communicate among them by sharing routes, pictures or videos. The interaction can be between two individuals or multiple, by creating groups of friends. Whenever a user shares content with another one, the target receives a notification. 
+
+The application is decentralize, the application and the data storage are separated, being this last one owned and stored by the user.
+As the application will support interoperability, our users will be able to use the routes and other data in different applications with a similar functionality.
+
+=== Technical Context
+
+The main idea is to separate the data storage from the rest of the app, so each user will be able to store its data. The communication between the different users and the data sharing will be managed by the application itself.
+
+To achieve this, we follow the SOLID specifications as it ensures that our application is decentralized. Each user will be able to store its data in their own POD and grant the applications access to just certain type of data. With SOLID users can use the data of the routes in other applications that also use that kind of data.
+
+Javascript is going to be used as the programming language, since we are going to make use of the framework React, which makes it easier to develop interactive and attractive graphic interfaces, which is key to obtain a usable interface.
+
+image:03_businessContext.png["Class diagram"]

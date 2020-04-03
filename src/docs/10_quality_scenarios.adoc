@@ -1,0 +1,28 @@
+[[section-quality-scenarios]]
+== Quality Requirements
+
+=== Quality Tree
+
+image:10_qualitytree.svg["Quality tree diagram"]
+
+=== Quality Scenarios
+
+We will contemplate two kind of scenarios:
+* Usage scenarios describe the reaction of Viade to a stimulus.
+* Change scenarios indicate whether a modification of the system is done.
+
+
+[options="header",cols="1,1,2,1"]
+|===
+|ref|Quality attribute|Quality scenario|priority
+|1 | Interoperability | A user can share routes with users that use other applications. | High
+|2 | Usability | A user must be able to use the application in an intuitive way. | High
+|3 | Performance | The system must be able to follow in realtime the route a user is doing. | Medium
+|4 | Performance | When finished, a route must be shared within 30 seconds with the user's friends. | High
+|5 | Availability | A user can search all his friend's routes in any moment. | Medium
+|6 | Availability | If a user doesn't have Internet connection when doing a route, he will be able to upload the route when connection is restored. | Low
+|7 | Security | The application must prevent any user's data leak. | Low
+|8 | Scalability | If number of users increase, the application's performance must be the same. | Medium
+|9 | Portability | The system should be easy to port to another platform in a short period of time. | Low
+|10 | Performance | Load times must be under 1 second. | High
+|===

@@ -1,0 +1,37 @@
+[[section-runtime-view]]
+== Runtime View
+
+In this section, some use case scenarios will be described to indicate concrete behaviour of the application to a certain interaction.
+
+This segment will be in continuous development.
+
+=== Sharing a new route
+
+Sharing a route with another user (friend) will be one of the most done operations in the application. To do that, the user that wants to store his route will send the coordinates and map data to the system, which will store it in the user's POD. 
+
+At the same time, to see the route of another user, the application will provide the necessary information for the user to visualize it graphically.
+
+image:6_RuntimeView_sharing.svg["Sharing routes"]
+
+
+=== Sharing contents of an existing route
+
+This is also one of the most frequent scenarios, in which a user will share some contents of the route it has done. 
+
+These contents can be photos, videos or comments of the route. The application will act as a middle intermediate to store the given content as a new element of the selected route. As the diagram below shows, the photo (also video or comment) will be stored in the user's POD, and the system will give feedback to the user about the state of the operation.
+
+image:6_RuntimeView_sharingContents.svg["Sharing contents of routes"]
+
+
+=== Adding a Friend
+
+In Viade, the community is formed by Friends, and they can be added by simply passing the user's ID to the application. Then, if the requested user accepts the invitation, the system will make the proper changes.
+
+image:6_RuntimeView_friends.svg["Adding e new friend"]
+
+
+=== Notifications
+
+Some of the operations of the application will require feedback for the user to know if the action was succesful or, on the contrary, if it has been rejected in any way. For that, we will integrate a notification system that will be the module in charge of giving that mentioned feedback to the user.
+
+image:6_RuntimeView_notificationSystem.svg["Sharing contents of routes"]

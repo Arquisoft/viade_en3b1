@@ -1,0 +1,28 @@
+[[section-architecture-constraints]]
+== Architecture Constraints
+
+[%header, cols=2]
+|===
+|Issue
+|Explanation
+
+|Lack of time
+|The amount of work required for this course project (7.5 hours per week) may prove problematic.
+Even though the project is planned around the amount of time we have, it could end up as too large if we consider coordinating between ourselves consumes extra time.
+
+|Licenses
+|We have limited resources, and some of the licenses that could be interesting to try are not included in the ones provided by our studen accounts.
+Still, the software itself is free, so this could be considered a minor inconvenience.
+
+|Study materials
+|There are a lot of technologies on this course that are new to us, and require us to find courses and books to study them.
+There are some materials about them for free, but of course the best books and courses are locked behind a paywall.
+
+|Coordination issues
+|The problems that may come from working with other people, distributing the tasks and making code understandable by others somehow also limits the development of the project.
+
+|Use of React Framework
+|As we have no previous knowledge of React, its compulsory use limits using the web deveolpment techniques we are used to
+|===
+
+

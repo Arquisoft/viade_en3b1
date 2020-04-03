@@ -1,0 +1,51 @@
+[[section-introduction-and-goals]]
+== Introduction and Goals
+
+=== Requirements Overview
+
+Nowadays, all the average social platforms for hikers are centralized and not totally secure services.
+With Viade, we present a proyect that consists of a decentralized routes management system developed following solid specifications.
+
+The main requirements are:
+
+* The system will be based on a decentralized architecture where data storage is separated from the app.
+* Users can store their routes in their own pods.
+* Users can view the routes stored on a map.
+* The app will allow a user to share pictures, videos or information about a route with other friends.
+* A user can get notifications when some friend shares a route with him.
+* Users can have groups of friends with whom they may want to share a route
+* It should be possible to view routes loaded by users that are using a different app, so interoperability with other route management systems should be taken into account.
+
+.Motivation
+The objective of Viade is to give users a platform where they can share their taste and opinions about the routes they take, in a way that they can be sure all their data will be secure.
+
+==== Developers: 
+
+* link:https://github.com/PabloCanalSuarez[Pablo Cañal Suárez.] 
+* link:https://github.com/CarmenVigo[Carmen Vigo Rodríguez.]
+* link:https://github.com/MiguelCuestaM[Miguel Cuesta Martínez.]
+* link:https://github.com/UO264850[Lucía Megido García.]
+* link:https://github.com/ElenaRodriguezRio[Elena Rodríguez Río.]
+
+=== Quality Goals
+
+[options="header",cols="1,2"]
+|===
+|Goal|Description
+| Usability | All users must be able to use the application with no difficulties. Therefore, the app will be intuitive and will have a user-friendly interface.
+| Interoperability | All the system should allow the users to interact with other applications that use the same standard.
+| Performance | The service should run fluidly, with no problems or restrictions that affect to its performance efficiency. 
+| Availability | The app should always work whevener the user has Internet connection and the server is available.
+|===
+
+
+=== Stakeholders
+
+[options="header",cols="1,2,2"]
+|===
+|Role/Name|Description|Expectations
+| link:https://github.com/labra[Jose Emilio Labra] | He marks the developers work during the project and gives considerations about how it will be done | A well-formed application, accomplishing the requirements that were proposed.
+| Developers | The workforce of this project will develop the main system while understanding the constraints and requests of the client. | End with a good, usable, stable application, that represents the efforts we put during the project.
+| End Users | People who will use the final application. The system must suit the main goals for the users to have the best experience. | Have an intuitive, fluid and easy use of the Viade system.
+| SOLID Devs and link:https://github.com/timbl[Tim Berners-Lee] | They provide the main technology in which the application is based | They are interested in the best results possible of the project, as any work could be helpful as feedback of the SOLID technology.
+|===

@@ -1,0 +1,20 @@
+[[section-concepts]]
+== Cross-cutting Concepts
+
+=== Routes
+
+The basic type of information stored, and showed in our application will be about routes. A route represents a trajectory formed by different points on a the real world. 
+
+They will be able to be stored into the Pod of each user, decoupled from the rest of the application. Routes will be shown to the user employing a graphical interface, preferably a full-fledged map.
+
+More information about the extra information in a route (publications, photos added by the user) will be better defined after the application enters development.
+
+
+=== Profile
+
+A system of authentication comprises more security for our users, and a closed unit of information that can store its own information. The profile of each user will probably include some data like a username, profile picture, favorite set of routes, and so on.
+
+
+=== MVC Pattern
+
+The pattern implemented by the React Framework and our structure of choice. This pattern is based on the necapsulation of the three core parts of an application: Model, View and Controllers. In our application this distinction is easy to recognize. The model is, following the specification of the Solid project, completely encapsulated into the Pod of each user. The controllers run on the node.js project we are provided. The React Framework links said controllers to a dinamic view.

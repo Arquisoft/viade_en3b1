@@ -1,0 +1,39 @@
+[[section-building-block-view]]
+
+
+== Building Block View
+
+
+Viade first block view consist on the division of the application in layers.
+
+image:05_block_view1.PNG["Group interaction"]
+
+The view is responsible of showing the user interface.
+
+The model is responsible of interacting with the user`s pod an obtaining the data.
+
+The controller coordinates both parts.
+
+
+
+
+=== Level 2
+
+Here, we take a look at how the different parts interact one with another. 
+
+First, the user makes a request to our application. The controller is in charge of generating a response by means of the business logic.
+
+Then, the model interacts with the user POD, manipulating the information according to the user request, and tells the controller to update the view.
+
+Finally, the view shows the updated information to the user.
+
+image:05_block_view_2.png["Internal organization"]
+
+=== Level 3
+
+3.1 Model-Controller interaction
+
+When the controller needs the model to return an appropiate response, it interacts with the model service that, by means of a repository, will exchange information with the user POD. 
+
+image:05_block_view_3.png["Controller and model interaction"]
+

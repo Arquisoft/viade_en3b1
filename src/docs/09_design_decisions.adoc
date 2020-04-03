@@ -1,0 +1,29 @@
+[[section-design-decisions]]
+== Design Decisions
+
+
+
+We talked about the decisions we have made at section four (Solution Strategy), but in this part of the documentation we will explain the advantages of them, as well as their disadvantages.
+
+[cols="^.^,^.^,^.^", options=header, %autowidth]
+|=======
+|Decisions |Advantages |Disadvantages
+|JavaScript
+ |Provides more resources in Solid.
+ |Not a programming language we are used to.
+|Solid
+ |Protects user's privacy. Develop without harvesting massive amounts of data.
+ |The scarce sources of documentation.
+|React
+ |Efficient update and render of the UI.
+ |Library of a language we are not used to (JavaScript).
+ |NodeJS
+ |Fast, efficient and nonblocking. 
+ |Uses only JavaScript.
+ |MVC
+ |Separation of concepts and code reusability.
+ |React does not follow this pattern.
+|Github
+ |The version-controll system we are used to. Issue tracker, wiki, etc.
+ |As we are working on a public repository, other teams might copy our work.
+|=======

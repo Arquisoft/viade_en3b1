@@ -1,0 +1,15 @@
+[[section-deployment-view]]
+
+
+== Deployment View
+Viade is a descentralized system where the information from the users is independent from the application.
+
+.Groups
+A group is composed by two or more users. When a user sends information to the group the other members are able to visualize it.
+
+image:07_deployment.PNG["Group interaction"]
+
+=== Infrastructure Level 1
+
+.To Do
+...

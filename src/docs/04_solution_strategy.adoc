@@ -1,0 +1,43 @@
+[[section-solution-strategy]]
+== Solution Strategy
+
+==== Design Decisions
+
+For developing Viade we will be following the next strategy (the necessary reasoning of our decisions is explained in section 9):
+
+* Platform: Solid.
+* Programming Language: JavaScript.
+* Environment: NodeJS.
+* (Continuous) Integration and Testing: Travis, Codecov, Codacy.
+* Architectural Patter: Model-View-Controller.
+* Libraries:
+** Main library: React.
+** POD access: link:https://github.com/jeff-zucker/solid-file-client[Solid-File-Client].
+** Authenticate users: link:https://github.com/solid/solid-auth-client[Solid-Auth-Client].
+** Map display: link:https://leafletjs.com/[Leaflet].
+
+==== Quality Goals
+
+Because of the participation in the Inrupt challenge, we will follow the Solid project principles:
+
+* Freedom to decide where the data is stored.
+
+* No change when switching between apps (modular design).
+
+* Reuse of data.
+
+
+Basic usability goals:
+
+* Uncomplicated interface (visual route interface).
+
+* Feedback for interactions between users.
+
+* Portable to mobile devices (optional).
+
+
+==== Organizational Decisions
+
+We have agreed that the best way for developing Viade is following Scrum.
+
+Functionality will be developed incrementally and at the end of every sprint (three weeks long) we will have working software.
