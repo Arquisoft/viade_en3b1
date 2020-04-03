@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from '../../graphic interface/NavBar.js';
+import NavBar from '../../ui/NavBar.js';
 import { Typography, Grid, Divider } from '@material-ui/core';
 // import 'typeface-roboto';
 import logo1 from '../../../assets/img/logo/logo_1.svg';

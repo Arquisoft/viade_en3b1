@@ -9,6 +9,13 @@ const theme = createMuiTheme(
         palette: {
             primary: {//amber,
                 main: '#302c58',
+                light: '#5c5585',
+                dark: '#09012f'
+            },
+            secondary: {
+                main: '#f7f6fb',
+                light: '#ffffff',
+                dark: '#c4c33c8'
             }
         },
         typography: {

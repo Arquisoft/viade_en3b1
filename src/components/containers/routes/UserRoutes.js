@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from '../../graphic interface/NavBar.js';
-import ListUserRoutes from '../../graphic interface/ListUserRoutes.js';
+import NavBar from '../../ui/NavBar.js';
+import ListUserRoutes from '../../ui/ListUserRoutes';
 
 const UserRoutes = () => {
   return (

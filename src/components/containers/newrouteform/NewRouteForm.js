@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import DataForm from '../stepper/dataform/DataForm';
 import ReviewForm from '../stepper/reviewform/ReviewForm';
 import MapForm from '../stepper/mapform/MapForm';
-import NavBar from '../../graphic interface/NavBar';
+import NavBar from '../../ui/NavBar';
 import Avatar from '@material-ui/core/Avatar';
 import FilterHdrIcon from '@material-ui/icons/FilterHdr';
 import SuccessForm from '../stepper/success/SuccessForm';

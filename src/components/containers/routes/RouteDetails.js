@@ -1,7 +1,7 @@
 import React from "react";
-import NavBar from '../../graphic interface/NavBar.js';
+import NavBar from '../../ui/NavBar.js';
 import { useParams } from "react-router-dom";
-import RouteDetailsCard from "../../graphic interface/RouteDetailsCard.js";
+import RouteDetailsCard from "../../ui/RouteDetailsCard.js";
 import cache from '../../../cache/RoutesChache';
 
 const RouteDetails = () => {

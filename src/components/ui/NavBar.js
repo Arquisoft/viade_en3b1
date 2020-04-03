@@ -3,11 +3,11 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-import Login from "../services/login/Login.js";
+import Login from "../btns/login/Login.js";
 import { LoggedOut, LoggedIn } from '@solid/react';
 import { Link, Typography, Grid } from '@material-ui/core';
 import "typeface-roboto";
-import MisRutas from './MisRutas.js';
+import MisRutas from '../btns/mis-rutas/MisRutas.js';
 import logo1 from '../../assets/img/logo/logo_2.svg';
 
 const NavBar = () => {
@@ -17,9 +17,11 @@ const NavBar = () => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar className={classes.toolbar}>
+
+          {/* Home link */}
           <Grid className={classes.link}>
             <Grid container >
-              <Link underline='none' color='inherit' href={'#/welcome'} >
+              <Link underline='none' color='inherit' href={'#/home'} >
                 <Grid container>
                   <Grid item>
                     <img src={logo1} alt="Viade Logo" style={{ height: '4vh', width: '4vh' }} />
@@ -34,20 +36,11 @@ const NavBar = () => {
             </Grid>
           </Grid>
 
-          {/* <Grid>
-            <Link underline='none' color='inherit' href={'#/welcome'} className={classes.title}>
-              <img src={logo1} alt="Viade Logo" style={{ height: '3vh', width: '3vh' }} />
-              <Typography variant='h4'>
-                Viade
-              </Typography>
-            </Link>
-          </Grid> */}
-
-
           <LoggedIn><MisRutas /></LoggedIn>
+
           <LoggedOut><Button className={classes.menuButton} href={"#/register"} color="inherit">Sign up</Button></LoggedOut>
+          
           <Login />
-          {/* </div> */}
 
         </Toolbar>
       </AppBar>
