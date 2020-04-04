@@ -19,10 +19,8 @@ const theme = createMuiTheme(
             }
         },
         typography: {
-            fontFamily: [
-              '"Proxima Nova"',
-            ].join(','),
-        },
+            fontFamily: 'Nova'
+        }
     }
 );
 
