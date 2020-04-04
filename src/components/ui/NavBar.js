@@ -36,6 +36,7 @@ const NavBar = () => {
             </Grid>
           </Grid>
 
+          <LoggedIn><Button className={classes.menuButton} href={"#/register"} color="inherit">Social Feed</Button></LoggedIn>
           <LoggedIn><MisRutas /></LoggedIn>
 
           <LoggedOut><Button className={classes.menuButton} href={"#/register"} color="inherit">Sign up</Button></LoggedOut>
