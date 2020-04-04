@@ -13,6 +13,11 @@
   }
 }
 
+@font-face {
+  font-family: 'Nova';
+  src: local('Nova'), url(./assets/font/FontsFree-Net-proxima_nova_bold-webfont.ttf) format('truetype');
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
