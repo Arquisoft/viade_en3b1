@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import DataForm from '../stepper/dataform/DataForm';
 import ReviewForm from '../stepper/reviewform/ReviewForm';
 import MapForm from '../stepper/mapform/MapForm';
-import NavBar from '../../graphic interface/NavBar';
+import NavBar from '../../ui/NavBar';
 import Avatar from '@material-ui/core/Avatar';
 import FilterHdrIcon from '@material-ui/icons/FilterHdr';
 import SuccessForm from '../stepper/success/SuccessForm';
@@ -19,6 +19,7 @@ import MuiAlert from '@material-ui/lab/Alert';
 import CloseIcon from '@material-ui/icons/Close';
 import { Snackbar, IconButton } from '@material-ui/core';
 import cache from '../../../cache/RoutesChache';
+import imageSignal from '../../../assets/img/logo/signal.svg'
 
 export class NewRouteForm extends Component {
 
@@ -183,9 +184,10 @@ export class NewRouteForm extends Component {
 
                     <main className={classes.layout}>
                         <Paper className={classes.paper}>
-                            <Avatar className={classes.avatar}>
+                            {/* <Avatar className={classes.avatar}>
                                 <FilterHdrIcon fontSize="large" />
-                            </Avatar>
+                            </Avatar> */}
+                            <img src={imageSignal} className={classes.avatar} />
 
                             <Typography component="h1" variant="h4" align="center">
                                 Create your own route
@@ -297,9 +299,10 @@ const useStyles = (theme) => ({
         marginLeft: theme.spacing(1),
     },
     avatar: {
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        backgroundColor: theme.palette.warning.main,
+        marginLeft: '45%',
+        marginRight: '45%',
+        height: '5vh',
+        width: '5vh',
     },
     icon: {
         width: 65,

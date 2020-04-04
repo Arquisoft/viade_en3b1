@@ -2,21 +2,21 @@ import React, { Fragment } from "react";
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import Welcome  from "./welcome/Welcome.js";
 import PageNotFound from "./pagenotfound/PageNotFound.js";
-import Register from '../services/register/Register.js';
+import Register from './register/Register.js';
 import UserRoutes from './routes/UserRoutes.js';
 import RouteDetails from './routes/RouteDetails.js';
 import NewRouteForm from "./newrouteform/NewRouteForm.js";
 
-const Routes = () => (
+const Router = () => (
   <HashRouter>
     <Fragment>
       <Switch>
         <Route exact path="/404" component={PageNotFound} />
-        <Redirect exact from="/" to="/welcome" />
-        <Route exact path="/welcome" component={Welcome} />
-        <Route exact path="/myroutes" component={UserRoutes} />
+        <Redirect exact from="/" to="/home" />
+        <Route exact path="/home" component={Welcome} />
+        <Route exact path="/dashboard" component={UserRoutes} />
         <Route exact path="/register" component={Register}/>
-        <Route exact path="/newRoute" component={NewRouteForm}/>
+        <Route exact path="/create-route" component={NewRouteForm}/>
         <Route exact path="/RouteDetails/:id" component={RouteDetails}/>
         <Redirect to="/404" />
       </Switch>
@@ -24,4 +24,4 @@ const Routes = () => (
   </HashRouter>
 );
 
-export default Routes;
+export default Router;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Routes from './components/containers/Routes.js';
+import Router from './components/containers/Router.js';
 import "./App.css";
 import { Helmet } from 'react-helmet';
 import cache from './cache/RoutesChache';
@@ -15,7 +15,7 @@ function App() {
       <Helmet>
         <title>{'Viade'}</title>
       </Helmet>
-      <Routes />
+      <Router />
     </div>
   );
 }

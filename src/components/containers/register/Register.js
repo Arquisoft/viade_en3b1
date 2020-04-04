@@ -6,7 +6,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import NavBar from '../../graphic interface/NavBar.js';
+import NavBar from '../../ui/NavBar.js';
 import Card from '@material-ui/core/Card';
 import ContactsOutlinedIcon from '@material-ui/icons/ContactsOutlined';
 import ContactsIcon from '@material-ui/icons/Contacts';

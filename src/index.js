@@ -3,15 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core';
-import teal from '@material-ui/core/colors/teal';
 
 const theme = createMuiTheme(
     {
         palette: {
             primary: {//amber,
-                main: teal[700],
+                main: '#302c58',
+                light: '#5c5585',
+                dark: '#09012f'
+            },
+            secondary: {
+                main: '#f7f6fb',
+                light: '#ffffff',
+                dark: '#c4c33c8'
             }
-        }
+        },
+        typography: {
+            fontFamily: [
+              '"Proxima Nova"',
+            ].join(','),
+        },
     }
 );
 

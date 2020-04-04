@@ -7,12 +7,12 @@ import MapSnapshot from '../map/MapSnapshot.js'
 import Button from '@material-ui/core/Button';
 import { Link, Grid } from '@material-ui/core';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 290,
     marginBottom: '2vh',
     marginTop: '2vh',
-    background: '#f7f7f7'
+    background: theme.palette.secondary.light,
   },
   pos: {
     // marginBottom: 12,
@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     // marginBottom: 20,
     // marginTop: 10,
   },
-});
+}));
 
 function getDate(){
   let dates = ['2/4/2020', '12/3/2020', '1/4/2020', '6/3/2020', '22/2/2020'];
@@ -43,7 +43,7 @@ export default function MyRouteCard(props) {
   const classes = useStyles();
   // console.log(props.route);
   return (
-    <Card elevation={5} className={classes.root}>
+    <Card className={classes.root}>
       <CardContent>
         <Grid container spacing={2}>
 
