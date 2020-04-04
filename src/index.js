@@ -20,7 +20,7 @@ const theme = createMuiTheme(
         },
         typography: {
             fontFamily: [
-              '"Segoe UI"',
+              '"Proxima Nova"',
             ].join(','),
         },
     }

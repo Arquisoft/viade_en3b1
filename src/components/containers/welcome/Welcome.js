@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from '../../ui/NavBar.js';
-import { Typography, Grid, Divider } from '@material-ui/core';
+import { Typography, Grid, Divider, CssBaseline } from '@material-ui/core';
 // import 'typeface-roboto';
 import logo1 from '../../../assets/img/logo/logo_1.svg';
 
@@ -8,6 +8,7 @@ const Welcome = () => {
 
     return (
         <div>
+            <CssBaseline /> 
             <NavBar />
             <Grid
                 container

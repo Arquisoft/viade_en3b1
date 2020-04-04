@@ -23,19 +23,19 @@ export class ListUserRoutes extends Component {
     const { routes } = this.state;
 
     return (
-      <Grid container style={{ flexGrow: 1 }} spacing={2}>
-      <Grid item xs={12}>
-        <Grid container justify="center" spacing={2}>
-        { routes.map(each => (
-          <Grid item>
-          <LoggedIn>
-            <MyRouteCard route={each} />
-          </LoggedIn>
-        </Grid>
-        ))}
+      <Grid container >
+        <Grid item xs={'auto'} >
+          <Grid container justify="center" spacing={2}>
+            {routes.map(each => (
+              <Grid item>
+                <LoggedIn>
+                  <MyRouteCard route={each} />
+                </LoggedIn>
+              </Grid>
+            ))}
+          </Grid>
         </Grid>
       </Grid>
-    </Grid>
     )
   }
 }
