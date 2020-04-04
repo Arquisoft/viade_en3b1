@@ -2,13 +2,14 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import { MenuItem, Menu, Paper, Popper, Grow, MenuList, Typography, Link } from '@material-ui/core';
 import ListIcon from '@material-ui/icons/List';
+import { makeStyles } from '@material-ui/core/styles';
 import EditLocationIcon from '@material-ui/icons/EditLocation';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { withStyles } from '@material-ui/core/styles';
 
 const MisRutas = () => {
-
+    const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleClick = (event) => {
@@ -27,6 +28,7 @@ const MisRutas = () => {
                 variant="contained"
                 color="primary"
                 onClick={handleClick}
+                className={classes.button}
             >
                 Your Activity
             </Button>
@@ -85,6 +87,12 @@ const StyledMenuItem = withStyles((theme) => ({
         },
     },
 }))(MenuItem);
+
+const useStyles = makeStyles((theme) => ({
+    button: {
+        marginRight: theme.spacing(2),
+    }
+}));
 
 
 export default MisRutas;
