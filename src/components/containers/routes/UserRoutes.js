@@ -11,16 +11,16 @@ const UserRoutes = () => {
         <NavBar />
       </div>
 
-      <MyRouteBanner />
+      {/* <MyRouteBanner /> */}
       <Grid
         container
         direction="column"
         alignItems="center"
         justify="center"
       >
-        {/* <Grid item>
+        <Grid item>
           <MyRouteBanner />
-        </Grid> */}
+        </Grid>
         <Grid item style={{maxWidth:'75rem'}}>
           <ListUserRoutes />
         </Grid>

@@ -32,7 +32,7 @@ export default function MyRouteBanner() {
 const useStyles = makeStyles((theme) => ({
 
     root: {
-        height: '60vh',
+        maxHeight: '60vh',
     },
     image: {
         backgroundImage: `url(https://source.unsplash.com/collection/9828433/1600x900)`,
@@ -41,8 +41,6 @@ const useStyles = makeStyles((theme) => ({
             theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        // position: 'relative',
-        // textAlign: 'center',
     },
     text: {
         marginLeft: '4vh',
