@@ -17,10 +17,17 @@ export default function MyRouteBanner() {
                     md={12}
                     className={classes.image}>
                     <Grid container spacing={0}>
-                        
-                        <Typography className={classes.text}>Your routes,</Typography>
-                        <Typography className={classes.text2}>your rules.</Typography>
 
+                        <Grid item sm={12} md={12}>
+                            <Typography className={classes.text}>Your routes,</Typography>
+                        </Grid>
+
+                        <Grid item sm={12} md={12}>
+                            <Typography className={classes.text2}>your rules.</Typography>
+                        </Grid>
+                        
+                        {/* <Typography className={classes.text}>Your routes,</Typography>
+                        <Typography className={classes.text2}>your rules.</Typography> */}
                     </Grid>
                 </Grid>
             </Grid>
@@ -32,7 +39,8 @@ export default function MyRouteBanner() {
 const useStyles = makeStyles((theme) => ({
 
     root: {
-        maxHeight: '60vh',
+        // height: '60em',
+        height: '40vw',
     },
     image: {
         backgroundImage: `url(https://source.unsplash.com/collection/9828433/1600x900)`,
@@ -43,13 +51,13 @@ const useStyles = makeStyles((theme) => ({
         backgroundPosition: 'center',
     },
     text: {
-        marginLeft: '4vh',
-        fontSize: '20vh',
+        marginLeft: '4vw',
+        fontSize: '15vw',
         color: '#ffffff'
     },
     text2: {
-        marginLeft: '7vh',
-        fontSize: '15vh',
+        marginLeft: '6.5vw',
+        fontSize: '10vw',
         color: '#ffffff'
     }
 }));

@@ -24,7 +24,7 @@ const NavBar = () => {
               <Link underline='none' color='inherit' href={'#/home'} >
                 <Grid container>
                   <Grid item>
-                    <img src={logo1} alt="Viade Logo" style={{ height: '4vh', width: '4vh' }} />
+                    <img src={logo1} alt="Viade Logo" style={{ height: '2.5rem', width: '2.5rem' }} />
                   </Grid>
                   <Grid item>
                     <Typography variant='h4'>
