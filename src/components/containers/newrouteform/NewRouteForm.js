@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import DataForm from '../stepper/dataform/DataForm';
 import ReviewForm from '../stepper/reviewform/ReviewForm';
 import MapForm from '../stepper/mapform/MapForm';
-import NavBar from '../../ui/NavBar';
+import NavBar from '../../ui/main/NavBar';
 import Avatar from '@material-ui/core/Avatar';
 import FilterHdrIcon from '@material-ui/icons/FilterHdr';
 import SuccessForm from '../stepper/success/SuccessForm';
@@ -17,9 +17,10 @@ import Route from '../../../entities/Route';
 import { uploadRoute } from '../../../parser/RouteHandler';
 import MuiAlert from '@material-ui/lab/Alert';
 import CloseIcon from '@material-ui/icons/Close';
-import { Snackbar, IconButton } from '@material-ui/core';
+import { Snackbar, IconButton, Grid } from '@material-ui/core';
 import cache from '../../../cache/RoutesChache';
 import imageSignal from '../../../assets/img/logo/signal.svg'
+import Footer from '../../ui/main/Footer';
 
 export class NewRouteForm extends Component {
 
@@ -106,11 +107,11 @@ export class NewRouteForm extends Component {
     handleDownload = () => {
         const fileData = this.route.getJsonLD();
         const blob = new Blob([fileData], { type: "text/plain" });
-		const url = URL.createObjectURL(blob);
-		const link = document.createElement('a');
-		link.download = this.route.getName() + ".json";
-		link.href = url;
-		link.click();
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.download = this.route.getName() + ".json";
+        link.href = url;
+        link.click();
     }
 
     upload(route) {
@@ -182,40 +183,63 @@ export class NewRouteForm extends Component {
                         </Alert>
                     </Snackbar>
 
-                    <main className={classes.layout}>
-                        <Paper className={classes.paper}>
-                            {/* <Avatar className={classes.avatar}>
-                                <FilterHdrIcon fontSize="large" />
-                            </Avatar> */}
-                            <img src={imageSignal} className={classes.avatar} />
+                    {/* Route Banner & Form */}
 
-                            <Typography component="h1" variant="h4" align="center">
-                                Create your own route
-                            </Typography>
+                    <Grid container className={classes.background}>
+                        <Grid
+                            // id='background-image-create-route'
+                            item
+                            xs={false}
+                            sm={12}
+                            md={12}
+                            className={classes.image}>
 
-                            <Stepper activeStep={activeStep} className={classes.stepper}>
-                                {steps.map((label) => (
-                                    <Step key={label}>
-                                        <StepLabel>{label}</StepLabel>
-                                    </Step>
-                                ))}
-                            </Stepper>
+                            <main className={classes.layout}>
+                                <Paper className={classes.paper}>
+                                    <img src={imageSignal} className={classes.avatar} />
 
-                            <React.Fragment>
-                                {getStepContent(activeStep,
-                                    values,
-                                    this.handleNext,
-                                    this.handleBack,
-                                    this.handleChange,
-                                    this.handleDateChange,
-                                    this.handleMediaChange,
-                                    this.handleMapPoints,
-                                    this.handleDownload,
-                                    this.createRoute
-                                )}
-                            </React.Fragment>
-                        </Paper>
-                    </main>
+                                    <Typography component="h1" variant="h4" align="center">
+                                        Create your own route
+                                    </Typography>
+
+                                    <Stepper activeStep={activeStep} className={classes.stepper}>
+                                        {steps.map((label) => (
+                                            <Step key={label}>
+                                                <StepLabel>{label}</StepLabel>
+                                            </Step>
+                                        ))}
+                                    </Stepper>
+
+                                    <React.Fragment>
+                                        {getStepContent(activeStep,
+                                            values,
+                                            this.handleNext,
+                                            this.handleBack,
+                                            this.handleChange,
+                                            this.handleDateChange,
+                                            this.handleMediaChange,
+                                            this.handleMapPoints,
+                                            this.handleDownload,
+                                            this.createRoute
+                                        )}
+                                    </React.Fragment>
+                                </Paper>
+                            </main>
+
+                        </Grid>
+
+                        <Grid 
+                            item
+                            xs={12}
+                            sm={12}
+                            md={12}
+                            // style={{marginTop: '30rem'}}
+                            >
+                            <Footer />
+                        </Grid>
+                    </Grid>
+                    
+                    
                 </React.Fragment>
             </MuiThemeProvider>
         );
@@ -301,8 +325,8 @@ const useStyles = (theme) => ({
     avatar: {
         marginLeft: '45%',
         marginRight: '45%',
-        height: '5vh',
-        width: '5vh',
+        height: '3.5rem',
+        width: '3.5rem',
     },
     icon: {
         width: 65,
@@ -310,7 +334,22 @@ const useStyles = (theme) => ({
     },
     grid: {
         marginLeft: theme.spacing(2),
-    }
+    },
+    background: {
+        // minHeight: '50vmax',
+        // height: 'auto',
+        // width: 'auto'
+    },
+    image: {
+        backgroundImage: `url(https://source.unsplash.com/collection/9828433/1600x900)`,
+        backgroundRepeat: 'no-repeat',
+        backgroundColor:
+            theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        // height: '90vh',
+        minHeight: '90vh',
+    },
 });
 
 function Alert(props) {

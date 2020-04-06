@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 
     root: {
         // height: '60em',
-        height: '40vw',
+        height: '30vw',
     },
     image: {
         backgroundImage: `url(https://source.unsplash.com/collection/9828433/1600x900)`,
@@ -52,12 +52,12 @@ const useStyles = makeStyles((theme) => ({
     },
     text: {
         marginLeft: '4vw',
-        fontSize: '15vw',
+        fontSize: '12vw',
         color: '#ffffff'
     },
     text2: {
         marginLeft: '6.5vw',
-        fontSize: '10vw',
+        fontSize: '7vw',
         color: '#ffffff'
     }
 }));
