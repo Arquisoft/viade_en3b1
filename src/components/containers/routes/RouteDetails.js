@@ -7,7 +7,7 @@ import cache from '../../../cache/RoutesChache';
 const RouteDetails = () => {
   let { id } = useParams();
 
-  let myroute=cache.getRoutesFromCache().filter((r) => (r.getId() === id));
+  let myroute=cache.getRoutes().filter((r) => (r.getId() === id));
 
   return (
     <div>

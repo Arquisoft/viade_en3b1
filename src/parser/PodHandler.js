@@ -20,8 +20,6 @@ class PodHandler {
         this.commentsFolder = "comments/";
     }
 
-    getRoutes
-
     storeRoute(fileName, routeJson, callback = () => { }) {
         let url = this.defaultFolder + this.routesFolder + fileName;
         this.storeFile(url, routeJson, callback);

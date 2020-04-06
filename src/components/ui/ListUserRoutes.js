@@ -1,15 +1,27 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import MyRouteCard from './MyRouteCard';
-import { LoggedIn } from '@solid/react';
 import cache from '../../cache/RoutesChache';
+import Backdrop from '@material-ui/core/Backdrop';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 export class ListUserRoutes extends Component {
   constructor() {
     super();
     this.state = {
-      routes: cache.getRoutesFromCache(),
+      loading: true,
+      routes: [],
     };
+  }
+
+  componentDidMount() {
+    cache.getRoutes().then((routesList) => {
+      this.setState({
+        routes: routesList,
+        loading: false,
+      });
+      this.props.toggleBackground();
+    });
   }
 
   sizeFunction() {
@@ -20,17 +32,20 @@ export class ListUserRoutes extends Component {
   }
 
   render() {
-    const { routes } = this.state;
+    const { routes, loading } = this.state;
 
     return (
       <Grid container >
         <Grid item xs={'auto'} >
           <Grid container justify="center" spacing={2}>
+
+            <Backdrop style={{color: '#5c5585'}} open={loading} invisible>
+              <CircularProgress color="inherit" hidden={loading} />
+            </Backdrop>
+
             {routes.map(each => (
               <Grid item>
-                <LoggedIn>
-                  <MyRouteCard route={each} />
-                </LoggedIn>
+                <MyRouteCard route={each} />
               </Grid>
             ))}
           </Grid>

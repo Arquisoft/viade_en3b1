@@ -26,8 +26,6 @@ export default function MyRouteBanner() {
                             <Typography className={classes.text2}>your rules.</Typography>
                         </Grid>
                         
-                        {/* <Typography className={classes.text}>Your routes,</Typography>
-                        <Typography className={classes.text2}>your rules.</Typography> */}
                     </Grid>
                 </Grid>
             </Grid>
