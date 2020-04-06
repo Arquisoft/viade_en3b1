@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from '../../ui/NavBar.js';
+import NavBar from '../../ui/main/NavBar.js';
 import { useParams } from "react-router-dom";
 import RouteDetailsCard from "../../ui/RouteDetailsCard.js";
 import cache from '../../../cache/RoutesChache';

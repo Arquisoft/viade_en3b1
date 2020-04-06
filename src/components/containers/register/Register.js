@@ -6,16 +6,19 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import NavBar from '../../ui/NavBar.js';
+import NavBar from '../../ui/main/NavBar.js';
 import Card from '@material-ui/core/Card';
 import ContactsOutlinedIcon from '@material-ui/icons/ContactsOutlined';
 import ContactsIcon from '@material-ui/icons/Contacts';
 import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
+import { Grid } from '@material-ui/core';
+import Footer from '../../ui/main/Footer.js';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         minWidth: 275,
         margin: 50,
+        marginTop: '15rem'
     },
     paper: {
         marginTop: theme.spacing(5),
@@ -88,6 +91,15 @@ export default function Register() {
                     </div>
                 </Card>
             </Container>
+            <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    md={12}
+                style={{marginTop: '36rem'}}
+                >
+                    <Footer />
+                </Grid>
         </div>
     );
 }

@@ -3,12 +3,12 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-import Login from "../btns/login/Login.js";
+import Login from "../../btns/login/Login.js";
 import { LoggedOut, LoggedIn } from '@solid/react';
 import { Link, Typography, Grid } from '@material-ui/core';
 import "typeface-roboto";
-import MisRutas from '../btns/mis-rutas/MisRutas.js';
-import logo1 from '../../assets/img/logo/logo_2.svg';
+import MisRutas from '../../btns/mis-rutas/MisRutas.js';
+import logo1 from '../../../assets/img/logo/logo_2.svg';
 
 const NavBar = () => {
   const classes = useStyles();
@@ -24,7 +24,7 @@ const NavBar = () => {
               <Link underline='none' color='inherit' href={'#/home'} >
                 <Grid container>
                   <Grid item>
-                    <img src={logo1} alt="Viade Logo" style={{ height: '4vh', width: '4vh' }} />
+                    <img src={logo1} alt="Viade Logo" style={{ height: '2.5rem', width: '2.5rem' }} />
                   </Grid>
                   <Grid item>
                     <Typography variant='h4'>
