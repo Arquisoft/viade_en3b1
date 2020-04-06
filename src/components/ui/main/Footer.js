@@ -1,5 +1,15 @@
-import React from 'react'
-import { Grid, makeStyles, Typography } from '@material-ui/core'
+import React from 'react';
+import { Grid, makeStyles, Typography } from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => ({
+
+    root: {
+        // height: '60em',
+        minHeight: '35vmin',
+        backgroundColor: theme.palette.primary.dark,
+        // backgroundColor: '#000000',
+    },
+}));
 
 export default function Footer() {
 
@@ -19,15 +29,5 @@ export default function Footer() {
                     </Typography>
             </Grid>
         </div>
-    )
+    );
 }
-
-const useStyles = makeStyles((theme) => ({
-
-    root: {
-        // height: '60em',
-        minHeight: '35vmin',
-        backgroundColor: theme.palette.primary.dark,
-        // backgroundColor: '#000000',
-    },
-}));
