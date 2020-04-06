@@ -341,7 +341,7 @@ const useStyles = (theme) => ({
         // width: 'auto'
     },
     image: {
-        backgroundImage: `url(https://source.unsplash.com/collection/9828433/1600x900)`,
+        backgroundImage: `url(https://source.unsplash.com/collection/9847024/1600x900)`,
         backgroundRepeat: 'no-repeat',
         backgroundColor:
             theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
