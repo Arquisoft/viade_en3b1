@@ -29,7 +29,7 @@ const Welcome = () => {
                     </Grid>
 
                     <Grid item xs={3}>
-                        <Typography style={{ marginBottom: '10px' }} variant="h4" color="inherit" align="center">Welcome to Viade.</Typography>
+                        <Typography style={{ marginBottom: '10px' }} variant="h4" color="inherit" align="center">Welcome to ViaDe.</Typography>
                         <Divider />
                         <Typography style={{ marginTop: '10px' }} variant="body1" color="inherit" align="center">The first routes management system based on SOLID technology.</Typography>
                     </Grid>

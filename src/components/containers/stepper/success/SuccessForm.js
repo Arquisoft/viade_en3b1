@@ -17,7 +17,7 @@ export class SuccessForm extends Component {
                 <Grid container>
                     <Grid item xs={12} sm={2}>
                         <DirectionsWalkIcon fontSize="large" style={{
-                            fill: "#4EF000", width: 65,
+                            fill: "#94E8B4", width: 65, // 93E1D8
                             height: 65
                         }} />
                     </Grid>
