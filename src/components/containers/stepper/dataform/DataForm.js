@@ -68,7 +68,6 @@ export class DataForm extends Component {
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
-                                required
                                 id="description"
                                 name="description"
                                 label="Description"
