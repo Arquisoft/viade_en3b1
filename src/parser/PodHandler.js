@@ -25,6 +25,13 @@ class PodHandler {
         this.storeFile(url, routeJson, callback);
     }
 
+    storeMedia(media, callback = () => { }) {
+        let url = this.defaultFolder + this.resourcesFolder + media.getId() + media.getExtension();
+        console.log(media);
+        this.storeFile(url, media.getContent(), callback);
+        return url;
+    }
+
     storeFile(url, data, callback) {
         let response = fc.createFile(url, data);
         // let successCode = null;
@@ -52,13 +59,13 @@ class PodHandler {
     //     });
     // }
 
-    storeMedia(url, data, contentType, callback) {
-        let response = fc.putFile(url, data, contentType);
-        response.then(
-            (response) => { callback(response.url, response); }
-            , (error) => { callback(null, error); }
-        );
-    }
+    // storeMedia(url, data, contentType, callback) {
+    //     let response = fc.putFile(url, data, contentType);
+    //     response.then(
+    //         (response) => { callback(response.url, response); }
+    //         , (error) => { callback(null, error); }
+    //     );
+    // }
 
     async findAllRoutes() {
         let url = this.defaultFolder + this.routesFolder;

@@ -43,7 +43,7 @@ export class SuccessForm extends Component {
                             }}
                             onClick={this.download}
                         >
-                            <GetAppIcon fontSize="large" style={{ fill: "#4EF000" }} />
+                            <GetAppIcon fontSize="large" style={{ fill: "#5c5585" }} />
                         </IconButton>
                     </Tooltip>
                 </Grid>

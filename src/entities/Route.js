@@ -38,7 +38,7 @@ class Route {
         }
         let finalMedia = [];
         media.forEach((m) => {
-            finalMedia.push(new Media(m, null));
+            finalMedia.push(new Media(m, m.name, null));
         });
         this.media = finalMedia;
     }
@@ -106,7 +106,11 @@ class Route {
 
     toJsonLD() {
         let routePointsJson = [];
-        this.trackPoints.forEach((p) => routePointsJson.push(p.toJsonLatLng()));
+        let routeMediaJson = [];
+
+        this.trackPoints.forEach((p) => routePointsJson.push(p.toJson()));
+        this.media.forEach((m) => routeMediaJson.push(m.toJson()));
+
         return JSON.stringify(
             {
                 "@context": {
@@ -157,7 +161,7 @@ class Route {
                 "author": this.author,
                 "description": this.description,
                 "comments": this.comments,
-                "media": this.media,
+                "media": routeMediaJson,
                 "points": routePointsJson
             }
         );

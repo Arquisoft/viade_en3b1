@@ -7,15 +7,24 @@ class Media{
      * @param {Object} content Video, photo or audio.
      * @param {String} name (Optional) Name of the Media object. 
      */
-    constructor(content, name) {
-        this.id = uuid().toString();
+    constructor(content, name, id) {
         this.content = content;
+        this.name = name;
+        this.url = "";
 
-        if(name === null) {
-            this.name = "";
+        if(id === null) {
+            this.id = uuid().toString();
         } else {
-            this.name = name;
+            this.id = id;
         }
+    }
+
+    setUrl(newUrl) {
+        this.url = newUrl;
+    }
+
+    getId() {
+        return this.id;
     }
 
     getName() {
@@ -26,9 +35,13 @@ class Media{
         return this.content;
     }
 
+    getExtension() {
+        return '.'+this.name.split('.').pop();
+    }
+
     toJson() {
         return {
-            "@id": this.id,
+            "@id": this.url, // url
             "name": this.name
         };
     }
