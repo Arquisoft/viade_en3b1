@@ -49,7 +49,7 @@ export class EditableMap extends Component {
                 <Map
                     center={position}
                     zoom={12}
-                    style={{ width: "52vh", height: "40vh" }}
+                    style={{ width: "34.5rem", height: "20rem" }}
                     onClick={this.addPoint}
                 >
                     <TileLayer
@@ -57,7 +57,7 @@ export class EditableMap extends Component {
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     />
 
-                    <Polyline positions={this.state.points} color='orange' />
+                    <Polyline positions={this.state.points} color='#09012f' />
 
                     {this.state.points.map((position, index) =>
                         <Marker

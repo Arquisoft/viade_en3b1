@@ -36,7 +36,7 @@ export class NewRouteForm extends Component {
             horizontal: 'center',
             severity: '', // success, error, warning, info
             // ----  route ----
-            activeStep: 0,
+            activeStep: 1,
             name: '',
             description: '',
             date: new Date(),

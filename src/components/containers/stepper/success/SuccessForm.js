@@ -17,7 +17,7 @@ export class SuccessForm extends Component {
                 <Grid container>
                     <Grid item xs={12} sm={2}>
                         <DirectionsWalkIcon fontSize="large" style={{
-                            fill: "orange", width: 65,
+                            fill: "#4EF000", width: 65,
                             height: 65
                         }} />
                     </Grid>
@@ -43,7 +43,7 @@ export class SuccessForm extends Component {
                             }}
                             onClick={this.download}
                         >
-                            <GetAppIcon fontSize="large" style={{ fill: "orange" }} />
+                            <GetAppIcon fontSize="large" style={{ fill: "#4EF000" }} />
                         </IconButton>
                     </Tooltip>
                 </Grid>
