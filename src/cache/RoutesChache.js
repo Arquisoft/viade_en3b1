@@ -13,7 +13,6 @@ export default {
     async getRoutes() {
         if (this.routes.length === 0) {
             this.routes = await loadAllRoutes();
-            console.log("ROUTES FROM POD");
         }
         return this.routes;
     },

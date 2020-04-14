@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Map, TileLayer, Marker, Popup, Polyline } from 'react-leaflet';
 
 export default class DetailsMap extends Component {
-  points = this.props.route.getRouteElements().map(point => (
+  points = this.props.route.getTrackPoints().map(point => (
     [point.getLatitude(), point.getLongitude()]
   ));
 
@@ -17,7 +17,7 @@ export default class DetailsMap extends Component {
         />
         <Polyline positions={this.points} color='blue' />
 
-        {this.props.route.getRouteElements().map((point) => (
+        {this.props.route.getTrackPoints().map((point) => (
           <Marker position={[point.getLatitude(), point.getLongitude()]}>
             <Popup>
               <p>{point.getName()}</p>

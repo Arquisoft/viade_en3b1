@@ -21,7 +21,7 @@ export async function uploadRoute(route, callback) {
     let fileName = route.getName() + "@" + route.getId() + ".jsonld";
 
     // let successCode = -1; // -1 if error. 0 otherwise.
-    storageHandler.storeRoute(fileName, route.getJsonLD(), (status) => {
+    storageHandler.storeRoute(fileName, route.toJsonLD(), (status) => {
         callback(status);
     });
 }
