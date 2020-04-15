@@ -1,15 +1,26 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import PageNotFound from './PageNotFound';
+import PageNotFound from "./PageNotFound";
+import { Typography, Link } from "@material-ui/core";
 
-test('renders disclaimer title', () => {
-    const { getByText } = render(<PageNotFound />);
-    const linkElement = getByText(/Sorry, there's nothing to see here/i);
-    expect(linkElement).toBeInTheDocument();
+test("PageNotFound", () => {
+    expect(PageNotFound).toBeDefined();
 });
 
-test('renders home link', () => {
-    const { getByText } = render(<PageNotFound />);
-    const linkElement = getByText(/Home/i);
-    expect(linkElement).toBeInTheDocument();
+test("Renders Correct", () => {
+    const wrapper = render(<PageNotFound />);
+    expect(wrapper).toMatchSnapshot();
+});
+
+test("404 Title", () => {
+    const wrapper = mount(<PageNotFound />);
+    const element = wrapper.find({className: "opps-warning-text"}).first().text();
+    
+    expect(element).toEqual("Sorry, this is not the webpage you are looking for");
+});
+
+test("Home Link", () => {
+    const wrapper = mount(<PageNotFound />);
+    const element = wrapper.find(Link);
+    
+    expect(element.exists()).toBeTruthy();
+    expect(element.text()).toEqual("Home");
 });

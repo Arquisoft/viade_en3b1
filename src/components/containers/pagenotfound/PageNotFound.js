@@ -6,7 +6,7 @@ const PageNotFound = () => {
     
     return (
         <div style={{marginLeft:'5vh', marginTop:'5vh'}}>
-            <Typography variant="h4">Sorry, there's nothing to see here</Typography>
+            <Typography className="opps-warning-text" variant="h4">Sorry, this is not the webpage you are looking for</Typography>
             <p>Go back to <Link href={"#/"}>Home</Link></p>
         </div>
     );
