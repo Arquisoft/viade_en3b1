@@ -9,8 +9,6 @@ import DataForm from '../stepper/dataform/DataForm';
 import ReviewForm from '../stepper/reviewform/ReviewForm';
 import MapForm from '../stepper/mapform/MapForm';
 import NavBar from '../../ui/main/NavBar';
-import Avatar from '@material-ui/core/Avatar';
-import FilterHdrIcon from '@material-ui/icons/FilterHdr';
 import SuccessForm from '../stepper/success/SuccessForm';
 import { withStyles } from '@material-ui/styles';
 import Route from '../../../entities/Route';
@@ -105,7 +103,7 @@ export class NewRouteForm extends Component {
     // ###########################
 
     handleDownload = () => {
-        const fileData = this.route.getJsonLD();
+        const fileData = this.route.toJsonLD();
         const blob = new Blob([fileData], { type: "text/plain" });
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
@@ -131,6 +129,8 @@ export class NewRouteForm extends Component {
 
         this.route = new Route(name, description, points, comments, media, date);
 
+        console.log("ROUTE");
+        console.log(this.route.toJsonLD());
         let statusPromise = this.upload(this.route);
         statusPromise.then((status) => this.checkSuccessCode(status));
     }

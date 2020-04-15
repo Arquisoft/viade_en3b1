@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <Helmet>
-        <title>{'Viade'}</title>
+        <title>{'ViaDe'}</title>
       </Helmet>
       <Router />
     </div>

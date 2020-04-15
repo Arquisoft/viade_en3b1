@@ -1,41 +1,74 @@
 import { v4 as uuid } from "uuid";
-import RouteElement from "./RouteElement";
+import Media from "./Media";
+import TrackPoint from "./TrackPoint";
 
 class Route {
 
     /**
      * Constructor for a new Route. 
      * An id will be automatically generated (uuid v4).
-     * TotalDistance will also be automatically generated.
-     * 
-     * RouteElements have name, latitude, longitude and elevation.
      * 
      * @param {String} name Name of the route.
-     * @param {Date} date Date of the route.
      * @param {String} description Description of the route.
-     * @param {Array} routeElements List of RouteElement objects, which are the trackpoints.
+     * @param {Array} trackPoints List of trackpoints.
      * @param {Array} comments List of comments
-     * @param {Array<String>} media List of urls of media (on the POD)
+     * @param {Array<Object>} media List of objects of media
+     * @param {Date} date Date of the route.
      */
-    constructor(name, description, routeElements, comments, media, date) {
+    constructor(name, description, trackPoints, comments, media, date) {
         this.id = uuid().toString();
         this.name = name;
         this.date = date;
         this.description = description;
 
-        this.media = media;
         this.totalDistance = null;
+        this.media = null;
+        this.trackPoints = null;
+        this.comments = null;
 
+        this.setMedia(media);
+        this.setTrackPoints(trackPoints);
+        this.setComments(comments);
+    }
+
+    setMedia(media) {
+        if(media === null){
+            this.media = [];
+            return;
+        }
+        let finalMedia = [];
+        media.forEach((m) => {
+            finalMedia.push(new Media(m, m.name, null));
+        });
+        this.media = finalMedia;
+    }
+
+    setTrackPoints(points) {
+        if(points === null){
+            this.trackPoints = [];
+            return;
+        }
+        if(points[0] instanceof TrackPoint) {
+            this.trackPoints = points;
+            return;
+        }
+        let finalPoints = [];
+        points.forEach((p) => {
+            finalPoints.push(new TrackPoint(p.lat, p.lng));
+        });
+        this.trackPoints = finalPoints;
+    }
+
+    setComments(comments) {
+        if(comments === null){
+            this.comments = [];
+            return;
+        }
+        // CHANGE WHEN COMMENTS FEATURE
         if (comments === null) {
             this.comments = [];
         } else {
             this.comments = comments;
-        }
-
-        if (routeElements[0] instanceof RouteElement) {
-            this.routeElements = routeElements;
-        } else {
-            this.routeElements = generateRouteElements(routeElements);
         }
     }
 
@@ -51,40 +84,12 @@ class Route {
         return this.date;
     }
 
-    getTime() {
-        return this.time;
-    }
-
     getDescription() {
         return this.description;
     }
 
-    getRouteElements() {
-        return this.routeElements;
-    }
-
-    getTotalDistance() {
-        var total = 0;
-        var aux = 0;
-
-        for (let i = 1; i < this.routeElements.length; i++) {
-            aux = this.routeElements[i].getLatitude() - this.routeElements[i - 1].getLatitude();
-            total += this.addDistance(aux);
-            aux = this.routeElements[i].getLongitude() - this.routeElements[i - 1].getLongitude();
-            total += this.addDistance(aux);
-            aux = this.routeElements[i].getElevation() - this.routeElements[i - 1].getElevation();
-            total += this.addDistance(aux);
-        }
-
-        return total;
-    }
-
-    addDistance(aux) {
-        if (aux < 0) {
-            return -aux;
-        } else {
-            return aux;
-        }
+    getTrackPoints() {
+        return this.trackPoints;
     }
 
     getComments() {
@@ -99,13 +104,13 @@ class Route {
         this.media.push(media);
     }
 
-    addRouteElement(routeElement) {
-        this.routeElements.push(routeElement);
-    }
-
-    getJsonLD() {
+    toJsonLD() {
         let routePointsJson = [];
-        this.routeElements.forEach((p) => routePointsJson.push(p.toJsonLatLng()));
+        let routeMediaJson = [];
+
+        this.trackPoints.forEach((p) => routePointsJson.push(p.toJson()));
+        this.media.forEach((m) => routeMediaJson.push(m.toJson()));
+
         return JSON.stringify(
             {
                 "@context": {
@@ -156,23 +161,12 @@ class Route {
                 "author": this.author,
                 "description": this.description,
                 "comments": this.comments,
-                "media": this.media,
+                "media": routeMediaJson,
                 "points": routePointsJson
             }
         );
     }
 
-}
-
-/**
- * Method that receives a list of points and returns
- * a list of RouteElements
- * @param {Array} points List of points containing name, latitude, longitude, elevation. 
- */
-function generateRouteElements(points) {
-    let routeElements = [];
-    points.forEach((p) => routeElements.push(new RouteElement(p.lat, p.lng)));
-    return routeElements;
 }
 
 export default Route;

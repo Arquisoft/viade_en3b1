@@ -21,7 +21,7 @@ export class MapForm extends Component {
     next = (e) => {
         e.preventDefault();
         if (this.points.current.getTrackPoints() === 'undefined' || this.points.current.getTrackPoints().length === 0) {
-            this.openNotif("You must select at least one track point!!", 'warning');
+            this.openNotif("You must select at least one track point to continue.", 'warning');
             return;
         }
         this.props.handleNext();

@@ -1,5 +1,5 @@
 import Route from '../entities/Route.js';
-import RouteElement from '../entities/RouteElement.js';
+import TrackPoint from '../entities/TrackPoint.js';
 
 class ParserJsonLdToRoute {
     
@@ -13,18 +13,17 @@ class ParserJsonLdToRoute {
         var comments = [];
         var media = [];
         
-        let routeElements = this.parsePoints(points);
+        let trackPoints = this.parsePoints(points);
 
-        
-        return new Route(name, description, routeElements, comments, media);
+        return new Route(name, description, trackPoints, comments, media);
     }
 
     parsePoints(points) {
-        let routeElements = [];
+        let trackPoints = [];
         for(var i = 0; i < points.length; i++ ){
-            routeElements.push(new RouteElement(points[i].latitude, points[i].longitude));
+            trackPoints.push(new TrackPoint(points[i].latitude, points[i].longitude));
         }
-        return routeElements;
+        return trackPoints;
     }
 }
 

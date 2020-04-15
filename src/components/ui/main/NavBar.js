@@ -28,7 +28,7 @@ const NavBar = () => {
                   </Grid>
                   <Grid item>
                     <Typography variant='h4'>
-                      Viade
+                      ViaDe
                     </Typography>
                   </Grid>
                 </Grid>

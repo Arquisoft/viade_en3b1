@@ -1,16 +1,28 @@
-class RouteElement {
+class TrackPoint {
+
+    /**
+     * 
+     * @param {Number} latitude 
+     * @param {Number} longitude 
+     * @param {String} name 
+     * @param {Number} elevation 
+     */
     constructor(latitude, longitude, name, elevation) {
 
         this.latitude = latitude;
         this.longitude = longitude;
-        this.elevation = elevation;
 
-        if (name === undefined) {
+        if (name === null) {
             this.name = "";
         } else {
             this.name = name;
         }
 
+        if(elevation === null){
+            this.elevation = "";
+        } else {
+            this.elevation = elevation;
+        }
     }
 
     getName() {
@@ -29,7 +41,7 @@ class RouteElement {
         return this.longitude;
     }
 
-    toJsonLatLng() {
+    toJson() {
         return {
             "latitude": this.latitude,
             "longitude": this.longitude,
@@ -37,4 +49,4 @@ class RouteElement {
     }
 }
 
-export default RouteElement;
+export default TrackPoint;

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Map, TileLayer, Polyline } from 'react-leaflet';
 
 export default class MapSnapshot extends Component {
-  points = this.props.route.getRouteElements().map((point) => (
+  points = this.props.route.getTrackPoints().map((point) => (
     [point.getLatitude(), point.getLongitude()]
   ));
 
