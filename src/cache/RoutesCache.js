@@ -5,8 +5,6 @@ export default {
     addRouteToCache(route) {
         if (route && !this.routes.find((obj) => route.name === obj.name)) {
             this.routes.push(route);
-        } else {
-            alert("ERROR TRYING TO ADDROUTE TO CACHE");
         }
     },
     async getRoutes() {
@@ -17,6 +15,5 @@ export default {
     },
     clear() {
         this.routes = [];
-        this.selected = null;
     }
 };

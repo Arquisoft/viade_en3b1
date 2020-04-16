@@ -39,6 +39,10 @@ class Media{
         return '.'+this.name.split('.').pop();
     }
 
+    getUrl() {
+        return this.url;
+    }
+
     toJson() {
         return {
             "@id": this.url, // url
