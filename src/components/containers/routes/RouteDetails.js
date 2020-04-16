@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from '../../ui/main/NavBar.js';
 import { useParams } from "react-router-dom";
 import RouteDetailsCard from "../../ui/RouteDetailsCard.js";
-import cache from '../../../cache/RoutesChache';
+import cache from '../../../cache/RoutesCache';
 
 const RouteDetails = () => {
   let { id } = useParams();

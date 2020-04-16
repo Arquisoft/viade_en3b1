@@ -5,7 +5,6 @@ export default {
     addRouteToCache(route) {
         if (route && !this.routes.find((obj) => route.name === obj.name)) {
             this.routes.push(route);
-            // console.log("ROUTE ADDED TO CACHE");
         } else {
             alert("ERROR TRYING TO ADDROUTE TO CACHE");
         }

@@ -16,7 +16,7 @@ import { uploadRoute } from '../../../parser/RouteHandler';
 import MuiAlert from '@material-ui/lab/Alert';
 import CloseIcon from '@material-ui/icons/Close';
 import { Snackbar, IconButton, Grid } from '@material-ui/core';
-import cache from '../../../cache/RoutesChache';
+import cache from '../../../cache/RoutesCache';
 import imageSignal from '../../../assets/img/logo/signal.svg'
 import Footer from '../../ui/main/Footer';
 
