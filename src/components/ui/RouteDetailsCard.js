@@ -14,7 +14,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function RouteDetails(props) {
     const classes = useStyles();
+    const route = props.route;
 
+    if(props.route === null) {
+        return null;
+    }
+    
     return (
         <Grid container className={classes.root} spacing={1}>
             <Grid item xs={6}>
