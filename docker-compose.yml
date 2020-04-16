@@ -5,7 +5,7 @@ services:
     container_name: solidserver
     ports:
     - "8443:8443"
-  viade_en3b1:
+  sampleweb:
     build: .
     ports:
     - "3000:3000"

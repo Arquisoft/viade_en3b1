@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function RouteDetails(props) {
     const classes = useStyles();
-    const route = props.route;
 
     if(props.route === null) {
         return null;

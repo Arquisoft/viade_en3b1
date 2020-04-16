@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import NavBar from '../../ui/main/NavBar.js';
-import { useParams, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import RouteDetailsCard from "../../ui/RouteDetailsCard.js";
 import cache from '../../../cache/RoutesChache';
 
 export class RouteDetails extends Component {
-// let myroute=cache.getRoutes().filter((r) => (r.getId() === id));
+
   constructor(props) {
     super(props);
     this.state = {
