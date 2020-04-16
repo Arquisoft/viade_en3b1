@@ -196,7 +196,7 @@ export class NewRouteForm extends Component {
 
                             <main className={classes.layout}>
                                 <Paper className={classes.paper}>
-                                    <img src={imageSignal} className={classes.avatar} />
+                                    <img alt="NewRouteForm logo" src={imageSignal} className={classes.avatar} />
 
                                     <Typography component="h1" variant="h4" align="center">
                                         Create your own route
