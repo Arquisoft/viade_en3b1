@@ -65,18 +65,3 @@ test("Update point", () => {
     expect(wrapper.instance().getTrackPoints().length).toEqual(1);
     expect(wrapper.instance().getTrackPoints()).toEqual([latlngNew]);
 });
-
-test("Remove point with click", () => {
-    const wrapper = mount(<EditableMap openNotif={mockOpenNotif} />);
-
-    var latlng = L.latLng(50.5, 30.5);
-    expect(wrapper.instance().getTrackPoints().length).toEqual(0);
-    
-    wrapper.instance().addPoint(latlng);
-    expect(wrapper.instance().getTrackPoints().length).toEqual(1);
-
-    const map = wrapper.find({key:"0"}).first();
-    map.simulate("click");
-
-    expect(wrapper.instance().getTrackPoints().length).toEqual(0);
-});
