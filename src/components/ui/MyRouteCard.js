@@ -15,33 +15,13 @@ const useStyles = makeStyles((theme) => ({
     background: theme.palette.secondary.light,
   },
   pos: {
-    // marginBottom: 12,
-    // marginTop: 12,
     color: 'black'
-  },
-  link: {
-    // marginBottom: 20,
-    // marginTop: 10,
   },
 }));
 
-function getDate(){
-  let dates = ['2/4/2020', '12/3/2020', '1/4/2020', '6/3/2020', '22/2/2020'];
-  let randomElement = dates[Math.floor(Math.random() * dates.length)];
-  // console.log("SELECTED DATE: "+randomElement);
-  return randomElement;
-}
-
-function getDistance(){
-  let dist = ['3.63km', '6.3km', '25.4km', '7.96km', '5.42km'];
-  let randomElement = dist[Math.floor(Math.random() * dist.length)];
-  // console.log("SELECTED DIST: "+randomElement);
-  return randomElement;
-}
-
 export default function MyRouteCard(props) {
   const classes = useStyles();
-  // console.log(props.route);
+
   return (
     <Card className={classes.root}>
       <CardContent>
@@ -53,7 +33,7 @@ export default function MyRouteCard(props) {
 
           <Grid item xs={12} >
             <Link underline='none' href={"#/RouteDetails/" + props.route.getId()}>
-              <Typography className={classes.link} variant="h5" component="h2">
+              <Typography variant="h5" component="h2">
                 {props.route.getName()}
               </Typography>
             </Link>
@@ -62,19 +42,18 @@ export default function MyRouteCard(props) {
           <Grid item xs={12} sm={5}>
             <Typography className={classes.pos} color="textSecondary">
               {/* {props.route.getDate()} */}
-              {getDate()}
+              12/3/2020
             </Typography>
           </Grid>
 
           <Grid item xs={12} sm={5}>
             <Typography className={classes.pos} color="textSecondary">
               {/* {props.route.getTotalDistance()} */}
-              {getDistance()}
+              3.63km
             </Typography>
           </Grid>
 
           <Button variant='outlined'
-            // style={{ color: 'white', background: 'black' }} 
             href={"#/RouteDetails/" + props.route.getId()}
             color="inherit"
             style={{marginLeft:'auto', marginRight:'auto'}}>

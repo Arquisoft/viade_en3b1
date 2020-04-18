@@ -23,14 +23,7 @@ export class ListUserRoutes extends Component {
       this.props.toggleBackground();
     });
   }
-
-  sizeFunction() {
-    let size = [];
-    for (let index = 0; index < 5; index++) {
-      size.push(1);
-    }
-  }
-
+  
   render() {
     const { routes, loading } = this.state;
 

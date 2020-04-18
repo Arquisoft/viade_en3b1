@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div
+  class="MuiGrid-root makeStyles-root-1 MuiGrid-container MuiGrid-spacing-xs-1"
+>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+  >
+    <div
+      class="MuiPaper-root MuiCard-root makeStyles-root-1 MuiPaper-elevation5 MuiPaper-rounded"
+    >
+      <div
+        class="MuiCardContent-root"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h5"
+        >
+          Route1
+        </h2>
+        <div
+          id="map"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-direction-xs-column"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <div
+          class="MuiPaper-root MuiCard-root makeStyles-root-1 MuiPaper-elevation5 MuiPaper-rounded"
+        >
+          <div
+            class="MuiCardContent-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1"
+            >
+              Date: 22/3/2020
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <div
+          class="MuiPaper-root MuiCard-root makeStyles-root-1 MuiPaper-elevation5 MuiPaper-rounded"
+        >
+          <div
+            class="MuiCardContent-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1"
+            >
+              Distance: 3.63km
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <div
+          class="MuiPaper-root MuiCard-root makeStyles-root-1 MuiPaper-elevation5 MuiPaper-rounded"
+        >
+          <div
+            class="MuiCardContent-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1"
+            >
+              Time: 42 min
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <div
+          class="MuiPaper-root MuiCard-root makeStyles-root-1 MuiPaper-elevation5 MuiPaper-rounded"
+        >
+          <div
+            class="MuiCardContent-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1"
+            >
+              Description:
+            </p>
+            <p
+              class="MuiTypography-root MuiTypography-body1"
+            >
+              Description 1
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
