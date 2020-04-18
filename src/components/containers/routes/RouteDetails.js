@@ -1,24 +1,40 @@
-import React from "react";
+import React, { Component } from 'react';
 import NavBar from '../../ui/main/NavBar.js';
-import { useParams } from "react-router-dom";
 import RouteDetailsCard from "../../ui/RouteDetailsCard.js";
-import cache from '../../../cache/RoutesChache';
+import cache from '../../../cache/RoutesCache';
 
-const RouteDetails = () => {
-  let { id } = useParams();
+export class RouteDetails extends Component {
 
-  let myroute=cache.getRoutes().filter((r) => (r.getId() === id));
+  constructor(props) {
+    super(props);
+    this.state = {
+      myroute: null,
+      id: this.props.match.params.id,
+    };
+  }
 
-  return (
-    <div>
+  componentDidMount() {
+    cache.getRoutes().then((rList) => {
+      let selectedRoute = rList.find((r) =>  r.getId() === this.state.id );
+      this.setState({
+        myroute: selectedRoute,
+      });
+    });
+  }
+
+  render() {
+    const { myroute } = this.state;
+    return (
       <div>
-        <NavBar />
+        <div>
+          <NavBar />
+        </div>
+        <div>
+          <RouteDetailsCard route={myroute} ></RouteDetailsCard>
+        </div>
       </div>
-      <div>
-        { <RouteDetailsCard route={myroute[0]} ></RouteDetailsCard> }
-      </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default RouteDetails;

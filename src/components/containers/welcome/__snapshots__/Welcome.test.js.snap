@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div>
+  <div
+    class="makeStyles-root-1"
+  >
+    <header
+      class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-2 MuiToolbar-gutters"
+      >
+        <div
+          class="MuiGrid-root makeStyles-link-4"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container"
+          >
+            <a
+              class="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorInherit"
+              href="#/home"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item"
+                >
+                  <img
+                    alt="Viade Logo"
+                    src="logo_2.svg"
+                    style="height:2.5rem;width:2.5rem"
+                  />
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item"
+                >
+                  <h4
+                    class="MuiTypography-root MuiTypography-h4"
+                  >
+                    ViaDe
+                  </h4>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div />
+      </div>
+    </header>
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-container"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-direction-xs-column MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+      style="margin-top:20rem;margin-bottom:30rem"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"
+        style="margin-bottom:2vh"
+      >
+        <img
+          alt="Viade Logo"
+          src="logo_1.svg"
+          style="height:6.5rem;width:6.5rem"
+        />
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 MuiTypography-colorInherit MuiTypography-alignCenter"
+          style="margin-bottom:10px"
+        >
+          Welcome to ViaDe.
+        </h4>
+        <hr
+          class="MuiDivider-root"
+        />
+        <p
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-colorInherit MuiTypography-alignCenter"
+          style="margin-top:10px"
+        >
+          The first routes management system based on SOLID technology.
+        </p>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
+    >
+      <div>
+        <div
+          class="MuiGrid-root makeStyles-root-194 MuiGrid-container"
+          id="footer"
+        >
+          <h3
+            class="MuiTypography-root MuiTypography-h3 MuiTypography-colorSecondary"
+          >
+            Footer
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

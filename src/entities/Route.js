@@ -15,25 +15,38 @@ class Route {
      * @param {Array<Object>} media List of objects of media
      * @param {Date} date Date of the route.
      */
-    constructor(name, description, trackPoints, comments, media, date) {
-        this.id = uuid().toString();
+    constructor(name, description, trackPoints, comments, media, date, id) {
         this.name = name;
         this.date = date;
         this.description = description;
 
+        this.id = null;
         this.totalDistance = null;
         this.media = null;
         this.trackPoints = null;
         this.comments = null;
 
+        this.setID(id);
         this.setMedia(media);
         this.setTrackPoints(trackPoints);
         this.setComments(comments);
     }
 
+    setID(id) {
+        if(id === null || id === undefined) {
+            this.id = uuid().toString();
+        } else {
+            this.id = id;
+        }
+    }
+
     setMedia(media) {
         if(media === null){
             this.media = [];
+            return;
+        }
+        if(media[0] instanceof Media) {
+            this.media = media;
             return;
         }
         let finalMedia = [];
@@ -60,10 +73,6 @@ class Route {
     }
 
     setComments(comments) {
-        if(comments === null){
-            this.comments = [];
-            return;
-        }
         // CHANGE WHEN COMMENTS FEATURE
         if (comments === null) {
             this.comments = [];
@@ -102,6 +111,10 @@ class Route {
 
     addMedia(media) {
         this.media.push(media);
+    }
+
+    deleteMedia(media) {
+        this.media.splice(this.media.indexOf(media), 1);
     }
 
     toJsonLD() {
@@ -150,6 +163,10 @@ class Route {
                     "author": {
                         "@id": "schema:author",
                         "@type": "@id"
+                    },
+                    "date": {
+                        "@id": "schema:DateTime",
+                        "@type": "xsd:dateTime"
                     },
                     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
                     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",

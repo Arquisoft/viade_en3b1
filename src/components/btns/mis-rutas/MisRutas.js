@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import { MenuItem, Menu, Paper, Popper, Grow, MenuList, Typography, Link } from '@material-ui/core';
+import { MenuItem, Menu, Link } from '@material-ui/core';
 import ListIcon from '@material-ui/icons/List';
 import { makeStyles } from '@material-ui/core/styles';
 import EditLocationIcon from '@material-ui/icons/EditLocation';

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import MyRouteCard from './MyRouteCard';
-import cache from '../../cache/RoutesChache';
+import cache from '../../cache/RoutesCache';
 import Backdrop from '@material-ui/core/Backdrop';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
@@ -23,14 +23,7 @@ export class ListUserRoutes extends Component {
       this.props.toggleBackground();
     });
   }
-
-  sizeFunction() {
-    let size = [];
-    for (let index = 0; index < 5; index++) {
-      size.push(1);
-    }
-  }
-
+  
   render() {
     const { routes, loading } = this.state;
 
@@ -44,8 +37,8 @@ export class ListUserRoutes extends Component {
             </Backdrop>
 
             {routes.map(each => (
-              <Grid item>
-                <MyRouteCard route={each} />
+              <Grid key={each.getId()} item>
+                <MyRouteCard key={each.getId()} route={each} />
               </Grid>
             ))}
           </Grid>

@@ -62,6 +62,8 @@ export default function Register() {
                         <div className={classes.form}>
                              
                             <Button
+                                data-testid="btn-how-to-choose-provider"
+                                id="btn-how-to-choose-provider"
                                 fullWidth
                                 color="primary"
                                 className={classes.link}
@@ -70,6 +72,8 @@ export default function Register() {
                             >How to choose a Provider?</Button>
 
                             <Button
+                                data-testid="btn-inrupt-provider"
+                                id="btn-inrupt-provider"
                                 fullWidth
                                 variant="outlined"
                                 color="primary"
@@ -79,6 +83,8 @@ export default function Register() {
                             >Inrupt</Button>
 
                             <Button
+                                data-testid="btn-solid-community-provider"
+                                id="btn-solid-community-provider"
                                 fullWidth
                                 variant="outlined"
                                 color="primary"

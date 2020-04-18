@@ -18,7 +18,9 @@ export default class DetailsMap extends Component {
         <Polyline positions={this.points} color='blue' />
 
         {this.props.route.getTrackPoints().map((point) => (
-          <Marker position={[point.getLatitude(), point.getLongitude()]}>
+          <Marker 
+            key={point.getLatitude()+','+point.getLongitude()} 
+            position={[point.getLatitude(), point.getLongitude()]}>
             <Popup>
               <p>{point.getName()}</p>
               <p>Latitude: {point.getLatitude()}</p>

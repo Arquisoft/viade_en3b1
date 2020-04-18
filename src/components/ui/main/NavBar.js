@@ -36,10 +36,10 @@ const NavBar = () => {
             </Grid>
           </Grid>
 
-          <LoggedIn><Button className={classes.menuButton} href={"#/register"} color="primary" variant='contained'>Social Feed</Button></LoggedIn>
+          <LoggedIn><Button className={classes.menuButton} href={"#/social-feed"} color="primary" variant='contained'>Social Feed</Button></LoggedIn>
           <LoggedIn><MisRutas /></LoggedIn>
 
-          <LoggedOut><Button className={classes.menuButton} href={"#/register"} color="primary" variant='contained'>Sign up</Button></LoggedOut>
+          <LoggedOut><Button className={classes.menuButton} href={"#/register"} color="primary" variant='contained'>Sign Up</Button></LoggedOut>
           
           <Login />
 

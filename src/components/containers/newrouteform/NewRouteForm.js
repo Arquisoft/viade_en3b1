@@ -16,7 +16,7 @@ import { uploadRoute } from '../../../parser/RouteHandler';
 import MuiAlert from '@material-ui/lab/Alert';
 import CloseIcon from '@material-ui/icons/Close';
 import { Snackbar, IconButton, Grid } from '@material-ui/core';
-import cache from '../../../cache/RoutesChache';
+import cache from '../../../cache/RoutesCache';
 import imageSignal from '../../../assets/img/logo/signal.svg'
 import Footer from '../../ui/main/Footer';
 
@@ -129,8 +129,8 @@ export class NewRouteForm extends Component {
 
         this.route = new Route(name, description, points, comments, media, date);
 
-        console.log("ROUTE");
-        console.log(this.route.toJsonLD());
+        // console.log("ROUTE");
+        // console.log(this.route.toJsonLD());
         let statusPromise = this.upload(this.route);
         statusPromise.then((status) => this.checkSuccessCode(status));
     }
@@ -196,7 +196,7 @@ export class NewRouteForm extends Component {
 
                             <main className={classes.layout}>
                                 <Paper className={classes.paper}>
-                                    <img src={imageSignal} className={classes.avatar} />
+                                    <img alt="NewRouteForm logo" src={imageSignal} className={classes.avatar} />
 
                                     <Typography component="h1" variant="h4" align="center">
                                         Create your own route

@@ -16,7 +16,7 @@ export default class MapSnapshot extends Component {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Polyline positions={this.points} color='blue' />
-        ))}
+
       </Map>
     );
   }
