@@ -33,7 +33,7 @@ class Route {
     }
 
     setID(id) {
-        if(id === null) {
+        if(id === null || id === undefined) {
             this.id = uuid().toString();
         } else {
             this.id = id;

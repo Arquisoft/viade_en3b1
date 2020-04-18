@@ -20,7 +20,7 @@ exports[`Renders correctly 1`] = `
       >
         <a
           class="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorPrimary"
-          href="#/RouteDetails/undefined"
+          href="#/RouteDetails/ID1"
         >
           <h2
             class="MuiTypography-root MuiTypography-h5"
@@ -50,7 +50,7 @@ exports[`Renders correctly 1`] = `
       <a
         aria-disabled="false"
         class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-colorInherit"
-        href="#/RouteDetails/undefined"
+        href="#/RouteDetails/ID1"
         style="margin-left:auto;margin-right:auto"
         tabindex="0"
       >

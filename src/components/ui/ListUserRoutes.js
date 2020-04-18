@@ -37,8 +37,8 @@ export class ListUserRoutes extends Component {
             </Backdrop>
 
             {routes.map(each => (
-              <Grid item>
-                <MyRouteCard route={each} />
+              <Grid key={each.getId()} item>
+                <MyRouteCard key={each.getId()} route={each} />
               </Grid>
             ))}
           </Grid>

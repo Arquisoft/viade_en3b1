@@ -129,8 +129,8 @@ export class NewRouteForm extends Component {
 
         this.route = new Route(name, description, points, comments, media, date);
 
-        console.log("ROUTE");
-        console.log(this.route.toJsonLD());
+        // console.log("ROUTE");
+        // console.log(this.route.toJsonLD());
         let statusPromise = this.upload(this.route);
         statusPromise.then((status) => this.checkSuccessCode(status));
     }

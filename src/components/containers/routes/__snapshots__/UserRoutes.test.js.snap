@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div>
+  <div>
+    <div
+      class="makeStyles-root-1"
+    >
+      <header
+        class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
+      >
+        <div
+          class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-2 MuiToolbar-gutters"
+        >
+          <div
+            class="MuiGrid-root makeStyles-link-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container"
+            >
+              <a
+                class="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorInherit"
+                href="#/home"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item"
+                  >
+                    <img
+                      alt="Viade Logo"
+                      src="logo_2.svg"
+                      style="height:2.5rem;width:2.5rem"
+                    />
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item"
+                  >
+                    <h4
+                      class="MuiTypography-root MuiTypography-h4"
+                    >
+                      ViaDe
+                    </h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div />
+        </div>
+      </header>
+    </div>
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item"
+      hidden=""
+    >
+      <div>
+        <main
+          class="MuiGrid-root makeStyles-root-187 MuiGrid-container"
+        >
+          <div
+            class="MuiGrid-root makeStyles-image-188 MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
+              >
+                <p
+                  class="MuiTypography-root makeStyles-text-189 MuiTypography-body1"
+                >
+                  Your routes,
+                </p>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
+              >
+                <p
+                  class="MuiTypography-root makeStyles-text2-190 MuiTypography-body1"
+                >
+                  your rules.
+                </p>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item"
+      style="max-width:75rem"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-justify-xs-center"
+          >
+            <div
+              aria-hidden="true"
+              class="MuiBackdrop-root MuiBackdrop-invisible"
+              style="opacity:0;color:#5c5585"
+            >
+              <div
+                class="MuiCircularProgress-root MuiCircularProgress-indeterminate"
+                hidden=""
+                role="progressbar"
+                style="width:40px;height:40px"
+              >
+                <svg
+                  class="MuiCircularProgress-svg"
+                  viewBox="22 22 44 44"
+                >
+                  <circle
+                    class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                    cx="44"
+                    cy="44"
+                    fill="none"
+                    r="20.2"
+                    stroke-width="3.6"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
+      hidden=""
+      style="margin-top:10rem"
+    >
+      <div>
+        <div
+          class="MuiGrid-root makeStyles-root-205 MuiGrid-container"
+          id="footer"
+        >
+          <h3
+            class="MuiTypography-root MuiTypography-h3 MuiTypography-colorSecondary"
+          >
+            Footer
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

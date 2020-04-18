@@ -30,7 +30,7 @@ test("Avatar", () => {
 
     const element = wrapper.find(Avatar).first();
     expect(element).toBeDefined();
-});;
+});
 
 test("Click", () => {
     const {container} = render(<Register />);

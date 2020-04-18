@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function RouteDetails(props) {
+export default function RouteDetailsCard(props) {
     const classes = useStyles();
 
     if(props.route === null) {

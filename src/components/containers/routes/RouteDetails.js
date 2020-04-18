@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import NavBar from '../../ui/main/NavBar.js';
-import { withRouter } from "react-router-dom";
 import RouteDetailsCard from "../../ui/RouteDetailsCard.js";
 import cache from '../../../cache/RoutesCache';
 
@@ -17,8 +16,6 @@ export class RouteDetails extends Component {
   componentDidMount() {
     cache.getRoutes().then((rList) => {
       let selectedRoute = rList.find((r) =>  r.getId() === this.state.id );
-      console.log("### ID ### "+this.state.id);
-      console.log(selectedRoute);
       this.setState({
         myroute: selectedRoute,
       });
@@ -40,4 +37,4 @@ export class RouteDetails extends Component {
   }
 }
 
-export default withRouter(RouteDetails);
+export default RouteDetails;
