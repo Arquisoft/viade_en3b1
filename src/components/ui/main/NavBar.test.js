@@ -16,7 +16,7 @@ test("Renders correctly", () => {
 test("Title ViaDe", () => {
     const wrapper = mount(<NavBar />);
     const title = wrapper.find(Typography).first().text();
-    expect(title).toEqual("ViaDe")
+    expect(title).toEqual("ViaDe");
 });
 
 test("Btn Social Feed", () => {

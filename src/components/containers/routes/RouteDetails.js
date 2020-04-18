@@ -10,7 +10,7 @@ export class RouteDetails extends Component {
     this.state = {
       myroute: null,
       id: this.props.match.params.id,
-    }
+    };
   }
 
   componentDidMount() {
@@ -33,7 +33,7 @@ export class RouteDetails extends Component {
           <RouteDetailsCard route={myroute} ></RouteDetailsCard>
         </div>
       </div>
-    )
+    );
   }
 }
 

@@ -55,7 +55,7 @@ test("Set trackpoints", () => {
     let tr1 = {
         lat: 0,
         lng: 1,
-    }
+    };
     route4.setTrackPoints([tr1]);
     expect(route4.getTrackPoints()[0].getLatitude()).toEqual(0);
     expect(route4.getTrackPoints()[0].getLongitude()).toEqual(1);
