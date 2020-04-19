@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Grid, CssBaseline, makeStyles, Typography } from '@material-ui/core';
 
 export default function MyRouteBanner() {
@@ -31,7 +31,7 @@ export default function MyRouteBanner() {
             </Grid>
 
         </div>
-    )
+    );
 }
 
 const useStyles = makeStyles((theme) => ({

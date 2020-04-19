@@ -17,7 +17,7 @@ export class Login extends React.Component {
         //     UsersManager.createUserAndLoadRoutes(`${session.webId}`);
         // }
         return (`${session.webId}`); // example of getting user's name. returns something like: "https://pablocanalsuarez.solid.community/profile/card#me"
-    };
+    }
 
     logout(auth) {
         auth.logout();

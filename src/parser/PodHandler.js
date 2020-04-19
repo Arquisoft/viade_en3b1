@@ -27,7 +27,6 @@ class PodHandler {
 
     storeMedia(media, callback = () => { }) {
         let url = this.defaultFolder + this.resourcesFolder + media.getId() + media.getExtension();
-        console.log(media);
         this.storeFile(url, media.getContent(), callback);
         return url;
     }
@@ -89,7 +88,7 @@ class PodHandler {
                 // console.log(error.message); // Just the status code and statusText
             }
         } else {
-            console.log("There is no routes directory");
+            alert("There is no routes directory");
         }
 
         // console.log("RUTAS");

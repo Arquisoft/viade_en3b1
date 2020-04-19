@@ -44,7 +44,7 @@ export class ListUserRoutes extends Component {
           </Grid>
         </Grid>
       </Grid>
-    )
+    );
   }
 }
 

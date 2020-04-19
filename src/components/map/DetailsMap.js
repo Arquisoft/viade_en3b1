@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Map, TileLayer, Marker, Popup, Polyline } from 'react-leaflet';
 
 export default class DetailsMap extends Component {
-  points = this.props.route.getTrackPoints().map(point => (
+  points = this.props.route.getTrackPoints().map((point) => (
     [point.getLatitude(), point.getLongitude()]
   ));
 
@@ -30,6 +30,6 @@ export default class DetailsMap extends Component {
           </Marker>
         ))}
       </Map>
-    )
+    );
   }
 }

@@ -53,8 +53,8 @@ export class UserRoutes extends Component {
           </Grid>
         </Grid>
       </div>
-    )
+    );
   }
 }
 
-export default UserRoutes
+export default UserRoutes;
