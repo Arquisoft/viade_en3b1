@@ -69,7 +69,7 @@ const ProfileMenu = () => {
                     <ListItemText primary={<Value src="user.name" />} />
                 </StyledMenuItem>
 
-                <Link underline='none' href={'#/dashboard'}>
+                <Link underline='none' href={'#/profile'}>
                     <StyledMenuItem>
                         <ListItemIcon>
                             <PersonIcon />
