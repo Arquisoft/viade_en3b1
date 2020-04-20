@@ -8,6 +8,7 @@ import { LoggedOut, LoggedIn } from '@solid/react';
 import { Link, Typography, Grid } from '@material-ui/core';
 import "typeface-roboto";
 import MisRutas from '../../btns/mis-rutas/MisRutas.js';
+import ProfileMenu from '../../btns/profile-menu/ProfileMenu';
 import logo1 from '../../../assets/img/logo/logo_2.svg';
 
 const NavBar = () => {
@@ -40,6 +41,7 @@ const NavBar = () => {
           <LoggedIn><MisRutas /></LoggedIn>
 
           <LoggedOut><Button className={classes.menuButton} href={"#/register"} color="primary" variant='contained'>Sign Up</Button></LoggedOut>
+          <LoggedIn><ProfileMenu /></LoggedIn>
           
           <Login />
 

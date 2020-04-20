@@ -19,19 +19,12 @@ export class Login extends React.Component {
         return (`${session.webId}`); // example of getting user's name. returns something like: "https://pablocanalsuarez.solid.community/profile/card#me"
     }
 
-    logout(auth) {
-        auth.logout();
-    }
-
     render() {
         return (
             <div>
                 <LoggedOut>
                     <Button variant="outlined" color="inherit" onClick={() => this.popupLogin(auth)}>Sign in</Button>
                 </LoggedOut>
-                <LoggedIn>
-                    <Button variant="outlined" color="inherit" onClick={() => this.logout(auth)}>Sign out</Button>
-                </LoggedIn>
             </div>
         );
     }
