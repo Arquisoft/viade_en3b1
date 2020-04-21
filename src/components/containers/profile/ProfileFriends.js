@@ -78,7 +78,7 @@ function FriendCardList() {
                     Oops, it seems you don't have any friends yet.
                 </Typography>
                 <Typography variant="subtitle1">
-                    You can add new friends in <Link style={{ color: "#7c4dff" }} target="_blank" href={webId}>your profile</Link>.
+                    You can add new friends in your <Link style={{ color: "#7c4dff" }} target="_blank" href={webId}>Solid profile</Link>.
                 </Typography>
 
             </div>
