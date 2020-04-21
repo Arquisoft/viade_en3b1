@@ -8,7 +8,7 @@ import { GetUserProfileImage, GetUserWebId } from '../../../parser/UserDataHandl
 import { Value } from '@solid/react';
 import { LogOut } from '../../../parser/SessionHandler';
 
-export default function Profile() {
+export default function ProfileFriends() {
     const classes = useStyles();
 
     // #### PHOTO ####
@@ -41,12 +41,12 @@ export default function Profile() {
                     elevation={0}
                     className={classes.paper}>
                     <Tabs
-                        value={0}
+                        value={1}
                         indicatorColor="primary"
                         textColor="primary"
                     >
-                        <Tab label="General" />
-                        <Tab label="Friends" href="#/profile/friends" />
+                        <Tab selected={false} label="General" href="#/profile" />
+                        <Tab selected={true} label="Friends" href="#/profile/friends" />
                     </Tabs>
                 </Paper>
 
@@ -66,36 +66,6 @@ export default function Profile() {
                                 <Typography variant="h3" >
                                     <Value src="user.name" />
                                 </Typography>
-                            </Grid>
-                        </Grid>
-                    </CardContent>
-                </Card>
-
-                <Card
-                    className={classes.card}
-                    variant="outlined"
-                >
-                    <CardContent>
-                        <Grid container>
-                            <Grid item>
-                                <Typography variant="subtitle1" >Need to change anything?</Typography>
-                            </Grid>
-
-                            <Typography variant="subtitle1" className={classes.link1}>
-                                Go to your {<Link style={{ color: "#7c4dff" }} href={webId}>Solid account</Link>}
-                            </Typography>
-                        </Grid>
-                    </CardContent>
-                </Card>
-
-                <Card
-                    className={classes.card}
-                    variant="outlined"
-                >
-                    <CardContent>
-                        <Grid container>
-                            <Grid item>
-                                <Typography variant="subtitle1" >Or you can also {<Link style={{ color: "#8693E3" }} href={() => LogOut()}>sign out</Link>}.</Typography>
                             </Grid>
                         </Grid>
                     </CardContent>
