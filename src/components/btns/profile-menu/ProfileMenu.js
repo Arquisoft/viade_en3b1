@@ -12,15 +12,12 @@ import PeopleIcon from '@material-ui/icons/People';
 import { GetUserProfileImage } from '../../../parser/UserDataHandler';
 import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-
-const auth = require('solid-auth-client');
+import { LogOut } from '../../../parser/SessionHandler';
 
 const ProfileMenu = () => {
 
     const [url, setUrl] = useState(0);
-    // const [noPhoto, setNoPhoto] = useState(0);
 
-    // const url = null;
     GetUserProfileImage().then((path) => {
         setUrl(path);
     });
@@ -35,10 +32,6 @@ const ProfileMenu = () => {
     const handleClose = () => {
         setAnchorEl(null);
     };
-
-    function logout(auth) {
-        auth.logout();
-    }
 
     // setNoPhoto(true);
 
@@ -96,7 +89,7 @@ const ProfileMenu = () => {
                     </StyledMenuItem>
                 </Link>
 
-                <Link underline='none' onClick={() => logout(auth)}>
+                <Link underline='none' onClick={() => LogOut()}>
                     <StyledMenuItem>
                         <ListItemIcon>
                             <ExitToAppIcon />

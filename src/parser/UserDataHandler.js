@@ -13,6 +13,12 @@ export async function GetUserProfileImage() {
     return photo.value;
 };
 
+export async function GetUserWebId() {
+    const auth = require('solid-auth-client');
+    let session = await auth.currentSession();
+    return session.webId;
+};
+
 export async function GetUserFriends() {
     const friends = useLDflexList('user.friends');
     let friendsAux = [];

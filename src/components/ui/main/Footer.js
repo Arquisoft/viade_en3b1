@@ -1,33 +1,44 @@
 import React from 'react';
-import { Grid, makeStyles, Typography } from '@material-ui/core';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import Link from '@material-ui/core/Link';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const useStyles = makeStyles((theme) => ({
-
-    root: {
-        // height: '60em',
-        minHeight: '35vmin',
-        backgroundColor: theme.palette.primary.dark,
-        // backgroundColor: '#000000',
-    },
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh',
+  },
+  main: {
+    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(2),
+  },
+  footer: {
+    padding: theme.spacing(10, 10),
+    marginTop: 'auto',
+    backgroundColor:
+      theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
+  },
 }));
 
-export default function Footer() {
+export default function StickyFooter() {
+  const classes = useStyles();
 
-    const classes = useStyles();
-
-    return (
-        <div>
-            <Grid
-                container
-                className={classes.root}
-                id='footer'
-                >
-                    <Typography 
-                        color='secondary'
-                        variant='h3'>
-                        Footer
-                    </Typography>
-            </Grid>
-        </div>
-    );
+  return (
+    <div >
+      <CssBaseline />
+      <footer className={classes.footer}>
+        <Container maxWidth="sm">
+          <Typography variant="h6">ViaDe En3B1</Typography>
+          <Typography variant="subtitle2" color="textSecondary">Made by Pablo Cañal</Typography>
+          <Link target="_blank" href="https://github.com/Arquisoft/viade_en3b1/">
+            <GitHubIcon />
+          </Link>
+        </Container>
+      </footer>
+    </div>
+  );
 }
