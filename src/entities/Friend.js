@@ -18,3 +18,5 @@ class Friend {
         return this.photo;
     }
 }
+
+export default Friend;

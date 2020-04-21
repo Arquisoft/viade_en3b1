@@ -16,7 +16,7 @@ import { LogOut } from '../../../parser/SessionHandler';
 
 const ProfileMenu = () => {
 
-    const [url, setUrl] = useState(0);
+    const [url, setUrl] = useState("");
 
     GetUserProfileImage().then((path) => {
         setUrl(path);
@@ -71,7 +71,7 @@ const ProfileMenu = () => {
                     </StyledMenuItem>
                 </Link>
 
-                <Link underline='none' href={'#/friends'}>
+                <Link underline='none' href={'#/profile/friends'}>
                     <StyledMenuItem divider>
                         <ListItemIcon>
                             <PeopleIcon />

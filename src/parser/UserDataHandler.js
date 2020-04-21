@@ -15,8 +15,12 @@ export async function GetUserProfileImage() {
 
 export async function GetUserWebId() {
     const auth = require('solid-auth-client');
-    let session = await auth.currentSession();
-    return session.webId;
+    try {
+        let session = await auth.currentSession();
+        return session.webId;
+    } catch (TypeError) {
+        return null;
+    }
 };
 
 export async function GetUserFriends() {
@@ -28,7 +32,6 @@ export async function GetUserFriends() {
 
         let friendWebIdLDflexValue = friendLDflexValue.value;
         const webId = data[friendWebIdLDflexValue];
-        const webIdString = webId.toString();
 
         //Use the await to retrieve the data from the Promise object.
         const name = await GetSpecificName(webId);

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Typography, makeStyles, CssBaseline, Grid, AppBar, Divider, Paper, Card, Avatar, CardContent, Link } from '@material-ui/core';
+import { Container, Typography, makeStyles, CssBaseline, Grid, AppBar, Divider, Paper, Card, Avatar, CardContent, Link, Button } from '@material-ui/core';
 import NavBar from '../../ui/main/NavBar';
 import Footer from '../../ui/main/Footer';
 import Tabs from '@material-ui/core/Tabs';
@@ -12,7 +12,7 @@ export default function Profile() {
     const classes = useStyles();
 
     // #### PHOTO ####
-    const [url, setUrl] = useState(0);
+    const [url, setUrl] = useState("");
 
     GetUserProfileImage().then((path) => {
         setUrl(path);
@@ -62,8 +62,8 @@ export default function Profile() {
 
                             <Divider orientation="vertical" flexItem />
 
-                            <Grid item className={classes.name}>
-                                <Typography variant="h3" >
+                            <Grid item >
+                                <Typography className={classes.name} variant="h3" >
                                     <Value src="user.name" />
                                 </Typography>
                             </Grid>
@@ -95,7 +95,9 @@ export default function Profile() {
                     <CardContent>
                         <Grid container>
                             <Grid item>
-                                <Typography variant="subtitle1" >Or you can also {<Link style={{ color: "#8693E3" }} href={() => LogOut()}>sign out</Link>}.</Typography>
+                                <Typography variant="subtitle1" >
+                                    Or you can also {<Link style={{ color: "#8693E3" }} href="" onClick={() => LogOut()}>sign out</Link>}.
+                                </Typography>
                             </Grid>
                         </Grid>
                     </CardContent>

@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
-import { Container, Typography, makeStyles, CssBaseline, Grid, AppBar, Divider, Paper, Card, Avatar, CardContent, Link } from '@material-ui/core';
+import React, { useState, useEffect } from 'react';
+import { Container, Typography, makeStyles, CssBaseline, Grid, AppBar, Divider, Paper, Card, Avatar, CardContent, Link, CardActionArea, CardActions, Button, CardMedia, CardHeader, IconButton, Backdrop } from '@material-ui/core';
 import NavBar from '../../ui/main/NavBar';
 import Footer from '../../ui/main/Footer';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import { GetUserProfileImage, GetUserWebId } from '../../../parser/UserDataHandler';
+import { GetUserProfileImage, GetUserWebId, GetUserFriends } from '../../../parser/UserDataHandler';
 import { Value } from '@solid/react';
 import { LogOut } from '../../../parser/SessionHandler';
+import cache from '../../../cache/UserCache';
+import UserCache from '../../../cache/UserCache';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import ShareIcon from '@material-ui/icons/Share';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import LinkIcon from '@material-ui/icons/Link';
+
+var friendsList = [];
 
 export default function ProfileFriends() {
     const classes = useStyles();
-
-    // #### PHOTO ####
-    const [url, setUrl] = useState(0);
-
-    GetUserProfileImage().then((path) => {
-        setUrl(path);
-    });
 
     // #### WEBID ####
     const [webId, setWebId] = useState(0);
@@ -24,6 +25,24 @@ export default function ProfileFriends() {
     GetUserWebId().then((url) => {
         setWebId(url);
     });
+
+
+    // #### FRIENDS ####
+
+
+    // useEffect(() => {
+    //     const [friends, setFriends] = useState(0)
+    //     friendsList = cache.getFriends();
+    //     setFriends(friendsList);
+    //     console.log(friends)
+    //     // console.log(friendsList)
+    // })
+
+    // const [friendsList, setFriends] = useState(0);
+    useEffect(() => {
+        friendsList = cache.getFriends();
+        // setFriends(cache.getFriends());
+    }, []);
 
     return (
         <div className={classes.root}>
@@ -50,31 +69,63 @@ export default function ProfileFriends() {
                     </Tabs>
                 </Paper>
 
-                <Card
-                    className={classes.card}
-                    variant="outlined"
+                <Grid
+                    container
+                    spacing={2}
+                    // direction="column"
+                    alignItems="center"
+                    justify="center"
+                    className={classes.friends}
                 >
-                    <CardContent>
-                        <Grid container>
-                            <Grid item>
-                                <Avatar alt="Profile photo" src={url} className={classes.photo} />
+                    {friendsList.map((each, index) => {
+                        return (
+                            <Grid item key={index}>
+                                <FriendCard friend={each} />
                             </Grid>
+                        )
+                    })}
 
-                            <Divider orientation="vertical" flexItem />
-
-                            <Grid item className={classes.name}>
-                                <Typography variant="h3" >
-                                    <Value src="user.name" />
-                                </Typography>
-                            </Grid>
-                        </Grid>
-                    </CardContent>
-                </Card>
+                </Grid>
             </Container>
 
             {/* <Footer /> */}
         </div>
     )
+}
+
+function FriendCard(props) {
+    const classes = useStyles();
+
+    const { friend } = props;
+
+    var photo = friend.getPhoto();
+    var name = friend.getName();
+    var webid = friend.getWebId();
+
+    return (
+        <Card variant="outlined" className={classes.fCard}>
+            <CardHeader
+                // style={{alignItems: 'center'}}
+
+                avatar={
+                    <Avatar src={photo} style={{ marginLeft: 'auto', marginRight: 'auto' }} className={classes.fPhoto} />
+                }
+                action={
+                    <IconButton aria-label="go to solid">
+                        <Link style={{ color: "#7c4dff" }} href={webid}>
+                            <LinkIcon />
+                        </Link>
+                    </IconButton>
+                }
+            // title={name}
+            />
+            <CardContent style={{ textAlign: 'center' }}>
+                <Typography variant="h6" color="textSecondary" component="p">
+                    {name}
+                </Typography>
+            </CardContent>
+        </Card>
+    );
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -93,7 +144,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#fafafa",
         width: '100%'
     },
-    card: {
+    friends: {
         marginTop: theme.spacing(5),
     },
     photo: {
@@ -103,11 +154,18 @@ const useStyles = makeStyles((theme) => ({
     },
     name: {
         margin: theme.spacing(12),
-        // margin: "1%",
-        // fontSize: '12rem'
     },
     link1: {
         marginLeft: theme.spacing(5),
         color: theme.palette.secondary.dark,
-    }
+    },
+    fPhoto: {
+        width: theme.spacing(13),
+        height: theme.spacing(13),
+    },
+    fCard: {
+        display: 'block',
+        width: '15rem',
+        height: theme.spacing(30)
+    },
 }));
