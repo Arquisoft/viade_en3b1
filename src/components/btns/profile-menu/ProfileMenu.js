@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
-import { MenuItem, Menu, Link, Avatar, Divider, Grid } from '@material-ui/core';
+import { MenuItem, Menu, Link, Avatar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';

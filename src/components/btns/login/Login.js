@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
-import { LoggedIn, LoggedOut } from '@solid/react';
-import UserCache from '../../../cache/UserCache';
+import { LoggedOut } from '@solid/react';
 
 const auth = require('solid-auth-client');
 

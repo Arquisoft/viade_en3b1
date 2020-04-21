@@ -6,7 +6,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import cache from '../../../cache/UserCache';
 import LinkIcon from '@material-ui/icons/Link';
-import UserCache from '../../../cache/UserCache';
 import { GetUserWebId } from '../../../parser/UserDataHandler';
 
 // var friendsList = [];
