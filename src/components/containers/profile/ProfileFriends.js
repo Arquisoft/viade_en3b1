@@ -1,48 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Typography, makeStyles, CssBaseline, Grid, AppBar, Divider, Paper, Card, Avatar, CardContent, Link, CardActionArea, CardActions, Button, CardMedia, CardHeader, IconButton, Backdrop } from '@material-ui/core';
+import React, { useEffect, useState } from 'react';
+import { Container, Typography, makeStyles, CssBaseline, Grid, Paper, Card, Avatar, CardContent, Link, CardHeader, IconButton } from '@material-ui/core';
 import NavBar from '../../ui/main/NavBar';
 import Footer from '../../ui/main/Footer';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import { GetUserProfileImage, GetUserWebId, GetUserFriends } from '../../../parser/UserDataHandler';
-import { Value } from '@solid/react';
-import { LogOut } from '../../../parser/SessionHandler';
 import cache from '../../../cache/UserCache';
-import UserCache from '../../../cache/UserCache';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import LinkIcon from '@material-ui/icons/Link';
+import UserCache from '../../../cache/UserCache';
+import { GetUserWebId } from '../../../parser/UserDataHandler';
 
-var friendsList = [];
+// var friendsList = [];
 
 export default function ProfileFriends() {
     const classes = useStyles();
-
-    // #### WEBID ####
-    const [webId, setWebId] = useState(0);
-
-    GetUserWebId().then((url) => {
-        setWebId(url);
-    });
-
-
-    // #### FRIENDS ####
-
-
-    // useEffect(() => {
-    //     const [friends, setFriends] = useState(0)
-    //     friendsList = cache.getFriends();
-    //     setFriends(friendsList);
-    //     console.log(friends)
-    //     // console.log(friendsList)
-    // })
-
-    // const [friendsList, setFriends] = useState(0);
-    useEffect(() => {
-        friendsList = cache.getFriends();
-        // setFriends(cache.getFriends());
-    }, []);
 
     return (
         <div className={classes.root}>
@@ -56,7 +26,6 @@ export default function ProfileFriends() {
                 <Typography variant="h3">Your Profile</Typography>
 
                 <Paper
-                    // variant="outlined" // change for outline 
                     elevation={0}
                     className={classes.paper}>
                     <Tabs
@@ -69,28 +38,72 @@ export default function ProfileFriends() {
                     </Tabs>
                 </Paper>
 
-                <Grid
-                    container
-                    spacing={2}
-                    // direction="column"
-                    alignItems="center"
-                    justify="center"
-                    className={classes.friends}
-                >
-                    {friendsList.map((each, index) => {
-                        return (
-                            <Grid item key={index}>
-                                <FriendCard friend={each} />
-                            </Grid>
-                        )
-                    })}
-
-                </Grid>
+                <FriendCardList />
             </Container>
 
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
+}
+
+function FriendCardList() {
+    const classes = useStyles();
+
+    // #### WEBID ####
+    const [webId, setWebId] = useState(0);
+
+    GetUserWebId().then((url) => {
+        setWebId(url);
+    });
+
+    // #### FRIENDS ####
+    const [friendsList, setFriendsList] = useState([]);
+    useEffect(() => {
+        // (async function () {
+        //     const list = cache.getFriends();
+        //     setFriendsList(list);
+        // })();
+        // cache.getFriends().then((list) =>{
+        //     setFriendsList(list);
+        // });
+        const list = cache.getFriends();
+        setFriendsList(list);
+        console.log(list);
+
+    }, []);
+
+    if (!friendsList.length) {
+        return (
+            <div className={classes.friendsList}>
+                <Typography variant="h6">
+                    Oops, it seems you don't have any friends yet.
+                </Typography>
+                <Typography variant="subtitle1">
+                    You can add new friends in <Link style={{ color: "#7c4dff" }} target="_blank" href={webId}>your profile</Link>.
+                </Typography>
+
+            </div>
+        );
+    }
+
+    return (
+        <Grid
+            container
+            spacing={2}
+            alignItems="center"
+            justify="center"
+            className={classes.friends}
+        >
+            {friendsList.map((each, index) => {
+                return (
+                    <Grid item key={index}>
+                        <FriendCard friend={each} />
+                    </Grid>
+                )
+            })}
+
+        </Grid>
+    );
 }
 
 function FriendCard(props) {
@@ -105,19 +118,16 @@ function FriendCard(props) {
     return (
         <Card variant="outlined" className={classes.fCard}>
             <CardHeader
-                // style={{alignItems: 'center'}}
-
                 avatar={
-                    <Avatar src={photo} style={{ marginLeft: 'auto', marginRight: 'auto' }} className={classes.fPhoto} />
+                    <Avatar src={photo} className={classes.fPhoto} />
                 }
                 action={
                     <IconButton aria-label="go to solid">
-                        <Link style={{ color: "#7c4dff" }} href={webid}>
+                        <Link style={{ color: "#7c4dff" }} target="_blank" href={webid}>
                             <LinkIcon />
                         </Link>
                     </IconButton>
                 }
-            // title={name}
             />
             <CardContent style={{ textAlign: 'center' }}>
                 <Typography variant="h6" color="textSecondary" component="p">
@@ -132,7 +142,6 @@ const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         flexDirection: 'column',
-        // backgroundColor: "#8693E3"
     },
     main: {
         marginTop: theme.spacing(8),
@@ -147,25 +156,20 @@ const useStyles = makeStyles((theme) => ({
     friends: {
         marginTop: theme.spacing(5),
     },
-    photo: {
-        width: theme.spacing(23),
-        height: theme.spacing(23),
-        margin: theme.spacing(3),
-    },
-    name: {
-        margin: theme.spacing(12),
-    },
-    link1: {
-        marginLeft: theme.spacing(5),
-        color: theme.palette.secondary.dark,
-    },
     fPhoto: {
         width: theme.spacing(13),
         height: theme.spacing(13),
+        marginLeft: '3rem',
+        marginTop: '1rem'
     },
     fCard: {
         display: 'block',
         width: '15rem',
         height: theme.spacing(30)
     },
+    friendsList: {
+        textAlign: 'center',
+        marginTop: theme.spacing(7),
+        marginBottom: theme.spacing(50)
+    }
 }));

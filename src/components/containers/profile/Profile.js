@@ -82,7 +82,7 @@ export default function Profile() {
                             </Grid>
 
                             <Typography variant="subtitle1" className={classes.link1}>
-                                Go to your {<Link style={{ color: "#7c4dff" }} href={webId}>Solid account</Link>}
+                                Go to your {<Link style={{ color: "#7c4dff" }} target="_blank" href={webId}>Solid account</Link>}
                             </Typography>
                         </Grid>
                     </CardContent>
@@ -104,7 +104,7 @@ export default function Profile() {
                 </Card>
             </Container>
 
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }
@@ -135,8 +135,6 @@ const useStyles = makeStyles((theme) => ({
     },
     name: {
         margin: theme.spacing(12),
-        // margin: "1%",
-        // fontSize: '12rem'
     },
     link1: {
         marginLeft: theme.spacing(5),
