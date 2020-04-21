@@ -55,6 +55,8 @@ export default function MyRouteCard(props) {
 
           <Button variant='outlined'
             href={"#/RouteDetails/" + props.route.getId()}
+            onClick={() => props.route.calculateElevation()}
+            // onClick={() => console.log(props.route)}
             color="inherit"
             style={{marginLeft:'auto', marginRight:'auto'}}>
             Details

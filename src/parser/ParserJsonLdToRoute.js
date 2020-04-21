@@ -8,7 +8,7 @@ class ParserJsonLdToRoute {
 
         var name = route.name;
         var id = route.id;
-        var date = route.date;
+        // var date = route.date;
         var description = route.description;
 
         var points = route.points;
@@ -17,14 +17,16 @@ class ParserJsonLdToRoute {
         
         let trackPoints = this.parsePoints(points);
 
+        let finalroute = new Route(name, description, trackPoints, comments, media, null, id);
+        
         // DATE null now.
-        return new Route(name, description, trackPoints, comments, media, null, id);
+        return finalroute;
     }
 
     parsePoints(points) {
         let trackPoints = [];
         for(var i = 0; i < points.length; i++ ){
-            trackPoints.push(new TrackPoint(points[i].latitude, points[i].longitude));
+            trackPoints.push(new TrackPoint(points[i].latitude, points[i].longitude, null, points[i].elevation));
         }
         return trackPoints;
     }

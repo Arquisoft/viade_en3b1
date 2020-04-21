@@ -12,13 +12,13 @@ class TrackPoint {
         this.latitude = latitude;
         this.longitude = longitude;
 
-        if (name === null) {
+        if (!name) {
             this.name = "";
         } else {
             this.name = name;
         }
 
-        if(elevation === null){
+        if(!elevation){
             this.elevation = "";
         } else {
             this.elevation = elevation;
@@ -41,10 +41,15 @@ class TrackPoint {
         return this.longitude;
     }
 
+    setElevation(num) {
+        this.elevation = num;
+    }
+
     toJson() {
         return {
             "latitude": this.latitude,
             "longitude": this.longitude,
+            "elevation": this.elevation,
         };
     }
 }
