@@ -7,15 +7,18 @@ class ParserJsonLdToRoute {
         var route = JSON.parse( file );
 
         var name = route.name;
+        var id = route.id;
+        var date = route.date;
         var description = route.description;
-        // var date = route.date;
+
         var points = route.points;
         var comments = [];
         var media = [];
         
         let trackPoints = this.parsePoints(points);
 
-        return new Route(name, description, trackPoints, comments, media);
+        // DATE null now.
+        return new Route(name, description, trackPoints, comments, media, null, id);
     }
 
     parsePoints(points) {

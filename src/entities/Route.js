@@ -174,6 +174,8 @@ class Route {
                     "viade": "http://arquisoft.github.io/viadeSpec/",
                     "xsd": "http://www.w3.org/2001/XMLSchema#"
                 },
+                "id": this.id,
+                "date": this.date,
                 "name": this.name,
                 "author": this.author,
                 "description": this.description,
