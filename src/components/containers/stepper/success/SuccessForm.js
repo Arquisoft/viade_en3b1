@@ -29,7 +29,7 @@ export class SuccessForm extends Component {
                         </Grid>
                         <Grid item xs={12}>
                             <Typography variant="subtitle1">
-                                Your new track was succesfully created and saved
+                                Don't worry, we are saving your brand new track
                         </Typography>
                         </Grid>
                     </Grid>

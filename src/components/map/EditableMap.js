@@ -19,8 +19,8 @@ export class EditableMap extends Component {
     addPoint = (e) => {
         this.state.points.push(e.latlng);
         const { points } = this.state;
-        // this.setState({ points: points.slice() });
-        this.state.points = points;
+        this.setState({ points: points.slice() });
+        // this.state.points = points;
 
         if (this.firstPoint === true) {
             this.props.openNotif("You can move a point by dragging it and delete it just clicking on it.", 'info');

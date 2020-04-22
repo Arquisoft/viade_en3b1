@@ -33,7 +33,7 @@ class Route {
     }
 
     setID(id) {
-        if(id === null || id === undefined) {
+        if (id === null || id === undefined) {
             this.id = uuid().toString();
         } else {
             this.id = id;
@@ -41,11 +41,11 @@ class Route {
     }
 
     setMedia(media) {
-        if(media === null){
+        if (media === null) {
             this.media = [];
             return;
         }
-        if(media[0] instanceof Media) {
+        if (media[0] instanceof Media) {
             this.media = media;
             return;
         }
@@ -57,11 +57,11 @@ class Route {
     }
 
     setTrackPoints(points) {
-        if(points === null){
+        if (points === null) {
             this.trackPoints = [];
             return;
         }
-        if(points[0] instanceof TrackPoint) {
+        if (points[0] instanceof TrackPoint) {
             this.trackPoints = points;
             return;
         }
@@ -115,6 +115,53 @@ class Route {
 
     deleteMedia(media) {
         this.media.splice(this.media.indexOf(media), 1);
+    }
+
+    async calculateElevation() {
+        if (this.trackPoints === null) { // no trackpoints list
+            return;
+        }
+        if (this.trackPoints[0].getElevation().length !== 0) {
+            // console.log("Route " + this.getName() + " already has elevation!!");
+            // console.log(this);
+            return;
+        }
+
+        var baseUrl = "https://api.jawg.io/elevations?locations=";
+
+        for (let i = 0; i < this.trackPoints.length; i++) {
+            let lastPoint = this.trackPoints.length - 1;
+            let p = this.trackPoints[i];
+
+            if (i === lastPoint) {
+                baseUrl += p.getLatitude() + "," + p.getLongitude();
+            } else {
+                baseUrl += p.getLatitude() + "," + p.getLongitude() + "%7C";
+            }
+        }
+
+        baseUrl += "&access-token=" + process.env.REACT_APP_JAWG_KEY;
+
+        fetch(baseUrl)
+            .then((response) => {
+                if (response.status === 200) {
+                    response.json()
+                        .then((data) => {
+                            for (let i = 0; i < data.length; i++) {
+                                let elevation = parseInt(data[i].elevation, 10);
+                                
+                                if(isNaN(elevation)) {
+                                    alert("Error while parsing elevation data");
+                                    return;
+                                }
+                                this.trackPoints[i].setElevation(elevation);
+                            }
+                        });
+                }
+            })
+            .catch((err) => {
+                alert("Error while trying to fetch trackpoints elevation.");
+            });
     }
 
     toJsonLD() {
@@ -174,6 +221,8 @@ class Route {
                     "viade": "http://arquisoft.github.io/viadeSpec/",
                     "xsd": "http://www.w3.org/2001/XMLSchema#"
                 },
+                "id": this.id,
+                "date": this.date,
                 "name": this.name,
                 "author": this.author,
                 "description": this.description,

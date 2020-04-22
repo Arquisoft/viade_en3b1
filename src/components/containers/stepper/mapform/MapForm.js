@@ -24,8 +24,8 @@ export class MapForm extends Component {
             this.openNotif("You must select at least one track point to continue.", 'warning');
             return;
         }
-        this.props.handleNext();
         this.props.handleMapPoints(this.points.current.getTrackPoints());
+        this.props.handleNext();
     }
 
     back = (e) => {
