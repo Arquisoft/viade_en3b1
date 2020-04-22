@@ -2,41 +2,29 @@
 
 exports[`Renders correctly 1`] = `
 <div
-  class="MuiGrid-root MuiGrid-container"
+  aria-hidden="true"
+  class="MuiBackdrop-root MuiBackdrop-invisible"
+  style="opacity:0;color:#5c5585"
 >
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto"
+    class="MuiCircularProgress-root MuiCircularProgress-indeterminate"
+    hidden=""
+    role="progressbar"
+    style="width:40px;height:40px"
   >
-    <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-justify-xs-center"
+    <svg
+      class="MuiCircularProgress-svg"
+      viewBox="22 22 44 44"
     >
-      <div
-        aria-hidden="true"
-        class="MuiBackdrop-root MuiBackdrop-invisible"
-        style="opacity:0;color:#5c5585"
-      >
-        <div
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate"
-          hidden=""
-          role="progressbar"
-          style="width:40px;height:40px"
-        >
-          <svg
-            class="MuiCircularProgress-svg"
-            viewBox="22 22 44 44"
-          >
-            <circle
-              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
-              cx="44"
-              cy="44"
-              fill="none"
-              r="20.2"
-              stroke-width="3.6"
-            />
-          </svg>
-        </div>
-      </div>
-    </div>
+      <circle
+        class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+        cx="44"
+        cy="44"
+        fill="none"
+        r="20.2"
+        stroke-width="3.6"
+      />
+    </svg>
   </div>
 </div>
 `;

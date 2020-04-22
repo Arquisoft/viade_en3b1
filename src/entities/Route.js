@@ -21,7 +21,6 @@ class Route {
         this.description = description;
 
         this.id = null;
-        this.totalDistance = null;
         this.media = null;
         this.trackPoints = null;
         this.comments = null;
@@ -30,6 +29,8 @@ class Route {
         this.setMedia(media);
         this.setTrackPoints(trackPoints);
         this.setComments(comments);
+
+        this.totalDistance = this.calculateDistance();
     }
 
     setID(id) {
@@ -109,6 +110,10 @@ class Route {
         return this.media;
     }
 
+    getDistance() {
+        return this.totalDistance;
+    }
+
     addMedia(media) {
         this.media.push(media);
     }
@@ -162,6 +167,56 @@ class Route {
             .catch((err) => {
                 alert("Error while trying to fetch trackpoints elevation.");
             });
+    }
+
+    calculateDistance() {
+        if (this.trackPoints === null || !this.trackPoints || this.trackPoints.length === 0) { // no trackpoints list
+            return;
+        }
+
+        let distance = 0;
+        for(let i = 0; i < this.trackPoints.length; i++) {
+            if(i < this.trackPoints.length - 1) {
+                let origin = [this.trackPoints[i].getLatitude(), this.trackPoints[i].getLongitude()];
+                let destination = [this.trackPoints[i + 1].getLatitude(), this.trackPoints[i + 1].getLongitude()];
+                distance += parseInt(this.calculateDistanceTwoPoints(origin, destination), 10);
+            }
+        }
+
+        if(isNaN(distance)) {
+            return -1;
+        }
+
+        return distance;
+    }
+
+    /**
+     * Calculates the distance between two given points.
+     * Those points must be passed as pairs of latitude and longitude.
+     * 
+     * Example: var distance = getDistance([lat1, lng1], [lat2, lng2])
+     * 
+     * @param {Array} origin Pair of lat and lng of origin trackpoint 
+     * @param {Array} destination Pair of lat and lng of destination trackpoint
+     */
+    calculateDistanceTwoPoints(origin, destination) {
+        // return distance in meters
+        var lon1 = this.toRadian(origin[1]),
+            lat1 = this.toRadian(origin[0]),
+            lon2 = this.toRadian(destination[1]),
+            lat2 = this.toRadian(destination[0]);
+    
+        var deltaLat = lat2 - lat1;
+        var deltaLon = lon2 - lon1;
+    
+        var a = Math.pow(Math.sin(deltaLat/2), 2) + Math.cos(lat1) * Math.cos(lat2) * Math.pow(Math.sin(deltaLon/2), 2);
+        var c = 2 * Math.asin(Math.sqrt(a));
+        var EARTH_RADIUS = 6371;
+        return c * EARTH_RADIUS * 1000;
+    }
+    
+    toRadian(degree) {
+        return degree*Math.PI/180;
     }
 
     toJsonLD() {

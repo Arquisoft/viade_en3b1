@@ -95,3 +95,21 @@ test("Comments", () => {
     route4.setComments(["Comment1"]);
     expect(route4.getComments()[0]).toEqual("Comment1");
 });
+
+test("Calculate distance", () => {
+    let distance = route1.getDistance();
+    expect(distance).toBeTruthy();
+    let distance2 = route1.calculateDistance();
+    expect(distance2).toBeTruthy();
+});
+
+test("Calculate elevation", () => {
+    route1.calculateElevation();
+    let points = route1.getTrackPoints();
+    
+    let elevation = 0;
+    for(let i = 0; i < points.length; i++) {
+        elevation += points[i].getElevation();
+    }
+    expect(elevation).toBeTruthy();
+});
