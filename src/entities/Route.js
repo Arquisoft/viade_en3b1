@@ -127,16 +127,16 @@ class Route {
             return;
         }
 
-        var baseUrl = "https://api.jawg.io/elevations?locations="
+        var baseUrl = "https://api.jawg.io/elevations?locations=";
 
         for (let i = 0; i < this.trackPoints.length; i++) {
             let lastPoint = this.trackPoints.length - 1;
             let p = this.trackPoints[i];
 
             if (i === lastPoint) {
-                baseUrl += p.getLatitude() + "," + p.getLongitude()
+                baseUrl += p.getLatitude() + "," + p.getLongitude();
             } else {
-                baseUrl += p.getLatitude() + "," + p.getLongitude() + "%7C"
+                baseUrl += p.getLatitude() + "," + p.getLongitude() + "%7C";
             }
         }
 
@@ -151,17 +151,16 @@ class Route {
                                 let elevation = parseInt(data[i].elevation, 10);
                                 
                                 if(isNaN(elevation)) {
-                                    console.error("Error while parsing elevation data");
+                                    alert("Error while parsing elevation data");
                                     return;
                                 }
                                 this.trackPoints[i].setElevation(elevation);
                             }
-                        })
+                        });
                 }
             })
             .catch((err) => {
-                console.error("Error while trying to fetch trackpoints elevation.");
-                console.error(err);
+                alert("Error while trying to fetch trackpoints elevation.");
             });
     }
 

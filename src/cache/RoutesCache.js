@@ -20,7 +20,7 @@ export default {
         let selectedroute = this.routes.find((r) => r.getId() === id);
         if (selectedroute) {
             await selectedroute.calculateElevation();
-            await new Promise(r => setTimeout(r, 1000));
+            await new Promise((r) => setTimeout(r, 1000));
             return selectedroute;
         } else {
             return -1;

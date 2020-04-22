@@ -8,8 +8,7 @@ export class ElevationChart extends Component {
         this.state = {
             points: props.trackpoints,
         };
-        // console.log(props.trackpoints);
-        this.init(this.state.points)
+        this.init(this.state.points);
     }
 
     init(points) {
@@ -58,8 +57,8 @@ export class ElevationChart extends Component {
                     options={this.lineOptions}
                 />
             </div>
-        )
+        );
     }
 }
 
-export default ElevationChart
+export default ElevationChart;
