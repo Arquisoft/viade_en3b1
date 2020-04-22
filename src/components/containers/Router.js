@@ -6,6 +6,8 @@ import Register from './register/Register.js';
 import UserRoutes from './routes/UserRoutes.js';
 import RouteDetails from './routes/RouteDetails.js';
 import NewRouteForm from "./newrouteform/NewRouteForm.js";
+import Profile from "./profile/Profile.js";
+import ProfileFriends from "./profile/ProfileFriends.js";
 
 const Router = () => (
   <HashRouter>
@@ -17,6 +19,8 @@ const Router = () => (
         <Route exact path="/dashboard" component={UserRoutes} />
         <Route exact path="/register" component={Register}/>
         <Route exact path="/create-route" component={NewRouteForm}/>
+        <Route exact path="/profile" component={Profile}/>
+        <Route exact path="/profile/friends" component={ProfileFriends}/>
         <Route exact path="/RouteDetails/:id" component={RouteDetails}/>
         <Redirect to="/404" />
       </Switch>

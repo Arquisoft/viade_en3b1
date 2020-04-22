@@ -41,7 +41,6 @@ const Welcome = () => {
                     xs={12}
                     sm={12}
                     md={12}
-                // style={{marginTop: '30rem'}}
                 >
                     <Footer />
                 </Grid>

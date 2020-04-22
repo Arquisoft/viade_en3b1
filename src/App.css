@@ -13,9 +13,16 @@
   }
 }
 
+
+
+/* @font-face {
+  font-family: 'Nova';
+  src: local('Nova Light'), url(./assets/font/Proxima\ Nova\ Light.ttf) format('truetype');
+} */
+
 @font-face {
   font-family: 'Nova';
-  src: local('Nova'), url(./assets/font/FontsFree-Net-proxima_nova_bold-webfont.ttf) format('truetype');
+  src: local('Nova'), url(./assets/font/Proxima\ Nova\ Bold.ttf) format('truetype');
 }
 
 .App-header {

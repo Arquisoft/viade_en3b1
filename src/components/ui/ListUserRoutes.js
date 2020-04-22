@@ -36,7 +36,7 @@ export class ListUserRoutes extends Component {
               <CircularProgress color="inherit" hidden={loading} />
             </Backdrop>
 
-            {routes.map(each => (
+            {routes.map((each) => (
               <Grid key={each.getId()} item>
                 <MyRouteCard key={each.getId()} route={each} />
               </Grid>

@@ -7,6 +7,7 @@ import EditLocationIcon from '@material-ui/icons/EditLocation';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { withStyles } from '@material-ui/core/styles';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 const MisRutas = () => {
     const classes = useStyles();
@@ -30,7 +31,7 @@ const MisRutas = () => {
                 onClick={handleClick}
                 className={classes.button}
             >
-                Your Activity
+                Your Activity <ArrowDropDownIcon />
             </Button>
             <StyledMenu
                 id="customized-menu"
