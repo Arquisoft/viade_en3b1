@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavBar from '../../ui/main/NavBar.js';
 import RouteDetailsCard from "../../ui/RouteDetailsCard.js";
 import cache from '../../../cache/RoutesCache';
+import { Redirect } from "react-router-dom";
 
 export class RouteDetails extends Component {
 
@@ -14,16 +15,20 @@ export class RouteDetails extends Component {
   }
 
   componentDidMount() {
-    cache.getRoutes().then((rList) => {
-      let selectedRoute = rList.find((r) =>  r.getId() === this.state.id );
+    cache.getRouteById(this.state.id).then((r) => {
       this.setState({
-        myroute: selectedRoute,
+        myroute: r,
       });
     });
   }
 
   render() {
     const { myroute } = this.state;
+
+    if(!myroute){
+      return(<Redirect to="/404" />);
+    }
+
     return (
       <div>
         <div>

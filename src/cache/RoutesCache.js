@@ -13,6 +13,14 @@ export default {
         }
         return this.routes;
     },
+    async getRouteById(id) {
+        let selectedroute = this.routes.find((r) => r.getId() === id);
+        if (selectedroute) {
+            await selectedroute.calculateElevation();
+            await new Promise(r => setTimeout(r, 200));
+        }
+        return selectedroute;
+    },
     clear() {
         this.routes = [];
     }

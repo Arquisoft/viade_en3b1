@@ -5,6 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import DetailsMap from '../map/DetailsMap.js';
+import ElevationChart from '../elevation-chart/ElevationChart.js';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -76,6 +77,7 @@ export default function RouteDetailsCard(props) {
                             </CardContent>
                         </Card>
                     </Grid>
+                    <ElevationChart trackpoints={props.route.getTrackPoints()} style={{ width: "100%" }} />
                     {/* <Grid item xs={12}>
                         <Card elevation={5} className={classes.root}>
                             <CardContent>

@@ -117,7 +117,7 @@ class Route {
         this.media.splice(this.media.indexOf(media), 1);
     }
 
-    calculateElevation() {
+    async calculateElevation() {
         if (this.trackPoints === null) { // no trackpoints list
             return;
         }
@@ -148,7 +148,12 @@ class Route {
                     response.json()
                         .then((data) => {
                             for (let i = 0; i < data.length; i++) {
-                                let elevation = data[i].elevation;
+                                let elevation = parseInt(data[i].elevation, 10);
+                                
+                                if(isNaN(elevation)) {
+                                    console.error("Error while parsing elevation data");
+                                    return;
+                                }
                                 this.trackPoints[i].setElevation(elevation);
                             }
                         })
@@ -156,9 +161,8 @@ class Route {
             })
             .catch((err) => {
                 console.error("Error while trying to fetch trackpoints elevation.");
+                console.error(err);
             });
-            console.log(this);
-
     }
 
     toJsonLD() {
