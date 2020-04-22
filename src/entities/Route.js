@@ -122,8 +122,8 @@ class Route {
             return;
         }
         if (this.trackPoints[0].getElevation().length !== 0) {
-            console.log("Route " + this.getName() + " already has elevation!!");
-            console.log(this);
+            // console.log("Route " + this.getName() + " already has elevation!!");
+            // console.log(this);
             return;
         }
 

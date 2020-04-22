@@ -3,6 +3,7 @@ import NavBar from '../../ui/main/NavBar.js';
 import RouteDetailsCard from "../../ui/RouteDetailsCard.js";
 import cache from '../../../cache/RoutesCache';
 import { Redirect } from "react-router-dom";
+import { Link, LinearProgress, Backdrop, Typography, Grid } from '@material-ui/core';
 
 export class RouteDetails extends Component {
 
@@ -11,13 +12,19 @@ export class RouteDetails extends Component {
     this.state = {
       myroute: null,
       id: this.props.match.params.id,
+      loading: true,
     };
   }
 
   componentDidMount() {
     cache.getRouteById(this.state.id).then((r) => {
+      if (r === -1) {
+        this.props.history.push("/404");
+        return;
+      }
       this.setState({
         myroute: r,
+        loading: false,
       });
     });
   }
@@ -25,8 +32,13 @@ export class RouteDetails extends Component {
   render() {
     const { myroute } = this.state;
 
-    if(!myroute){
-      return(<Redirect to="/404" />);
+    if (this.state.loading) {
+      return (
+        <div style={{ textAlign: "center" }}>
+          <LinearProgress />
+          <Typography variant="h5">Loading your route...</Typography>
+        </div>
+      );
     }
 
     return (

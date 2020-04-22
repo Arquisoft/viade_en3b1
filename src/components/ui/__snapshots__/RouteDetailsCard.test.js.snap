@@ -103,6 +103,14 @@ exports[`Renders correctly 1`] = `
           </div>
         </div>
       </div>
+      <div
+        style="width:100%"
+      >
+        <canvas
+          height="150"
+          width="300"
+        />
+      </div>
     </div>
   </div>
 </div>

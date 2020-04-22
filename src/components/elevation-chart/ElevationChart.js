@@ -13,7 +13,6 @@ export class ElevationChart extends Component {
     }
 
     init(points) {
-        console.log(points[0].getElevation());
         let index = 1;
         this.data = {
             labels: points.map((p) => `Trackpoint ${index++}`),
@@ -42,23 +41,6 @@ export class ElevationChart extends Component {
             ]
         };
         this.lineOptions = {
-            // scales: {
-            //     xAxes: [{
-            //         gridLines: {
-            //             display: true,
-            //         },
-            //     }],
-            //     yAxes: [{
-            //         // stacked: true,
-            //         gridLines: {
-            //             display: true,
-            //         },
-            //         ticks: {
-            //             beginAtZero: true,
-
-            //         },
-            //     }],
-            // },
             legend: {
                 display: false,
             },
