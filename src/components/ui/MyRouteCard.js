@@ -5,13 +5,13 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import MapSnapshot from '../map/MapSnapshot.js'
 import Button from '@material-ui/core/Button';
-import { Link, Grid } from '@material-ui/core';
+import { Link, Grid, CardMedia, CardHeader } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 290,
+    width: 290,
     marginBottom: '2vh',
-    marginTop: '2vh',
+    marginTop: '4vh',
     background: theme.palette.secondary.light,
   },
   pos: {
@@ -25,16 +25,19 @@ export default function MyRouteCard(props) {
 
   var name = route.getName();
   var distance = route.getDistance();
-  // var distance = 3.5;
 
   return (
-    <Card className={classes.root}>
-      <CardContent style={{textAlign: "center"}}>
-        <Grid container spacing={2}>
-
-          <Grid item xs={12}>
-            <MapSnapshot route={props.route}></MapSnapshot>
-          </Grid>
+    <Card elevation={5} className={classes.root}>
+      <CardMedia>
+        <MapSnapshot route={props.route}></MapSnapshot>
+      </CardMedia>
+      <CardContent style={{ textAlign: "center" }}>
+        <Grid
+          container
+          spacing={2}
+          alignItems="center"
+          justify="center"
+        >
 
           <Grid item xs={12} >
             <Link underline='none' href={"#/RouteDetails/" + props.route.getId()}>
@@ -44,27 +47,26 @@ export default function MyRouteCard(props) {
             </Link>
           </Grid>
 
-          <Grid item xs={12} sm={5}>
+          {/* <Grid item xs={12} >
             <Typography className={classes.pos} color="textSecondary">
-              {/* {props.route.getDate()} */}
               12/3/2020
             </Typography>
           </Grid>
 
-          <Grid item xs={12} sm={5}>
+          <Grid item xs={12} >
             <Typography className={classes.pos} color="textSecondary">
               {distance} m
-              {/* 3.63km */}
             </Typography>
-          </Grid>
+          </Grid> */}
 
-          <Button variant='outlined'
-            href={"#/RouteDetails/" + props.route.getId()}
-            color="inherit"
-            style={{marginLeft:'auto', marginRight:'auto'}}>
-            Details
+          <Grid item>
+            <Button variant='outlined'
+              href={"#/RouteDetails/" + props.route.getId()}
+              color="inherit"
+              style={{ marginLeft: 'auto', marginRight: 'auto' }}>
+              Details
           </Button>
-
+          </Grid>
         </Grid>
       </CardContent>
     </Card >

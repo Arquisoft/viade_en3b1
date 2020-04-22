@@ -38,7 +38,7 @@ export class ListUserRoutes extends Component {
     return (
       <Grid container >
         <Grid item xs={'auto'} >
-          <Grid container justify="center" spacing={2}>
+          <Grid container justify="center" spacing={6}>
 
             {routes.map((each) => (
               <Grid key={each.getId()} item>
