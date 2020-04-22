@@ -28,7 +28,7 @@ export async function GetUserFriends() {
     let friendsAux = [];
 
     //For each value (LDflexValue) in friends(LDflexValue [])
-    friends.forEach(async friendLDflexValue => {
+    friends.forEach(async (friendLDflexValue) => {
 
         let friendWebIdLDflexValue = friendLDflexValue.value;
         const webId = data[friendWebIdLDflexValue];
@@ -61,6 +61,6 @@ export async function GetSpecificProfileImage(webId) {
         return photo.value;
     } catch (TypeError) {
 
-        return "images/userPictureUndefined"
+        return "images/userPictureUndefined";
     }
-};
+}

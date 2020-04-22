@@ -8,8 +8,6 @@ import cache from '../../../cache/UserCache';
 import LinkIcon from '@material-ui/icons/Link';
 import { GetUserWebId } from '../../../parser/UserDataHandler';
 
-// var friendsList = [];
-
 export default function ProfileFriends() {
     const classes = useStyles();
 
@@ -58,17 +56,8 @@ function FriendCardList() {
     // #### FRIENDS ####
     const [friendsList, setFriendsList] = useState([]);
     useEffect(() => {
-        // (async function () {
-        //     const list = cache.getFriends();
-        //     setFriendsList(list);
-        // })();
-        // cache.getFriends().then((list) =>{
-        //     setFriendsList(list);
-        // });
         const list = cache.getFriends();
         setFriendsList(list);
-        console.log(list);
-
     }, []);
 
     if (!friendsList.length) {
