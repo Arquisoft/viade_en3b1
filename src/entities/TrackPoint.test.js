@@ -30,5 +30,5 @@ test("Trackpoint without elevation & name", () => {
 
 test("Trackpoint JSONLD", () => {
     let jsonld = JSON.stringify(tr1.toJson());
-    expect(jsonld).toEqual('{"latitude":1,"longitude":2}');
+    expect(jsonld).toEqual('{"latitude":1,"longitude":2,"elevation":3}');
 });

@@ -1,57 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders correctly 1`] = `
-<div>
-  <div>
+<div
+  style="text-align:center"
+>
+  <div
+    class="MuiLinearProgress-root MuiLinearProgress-colorPrimary MuiLinearProgress-indeterminate"
+    role="progressbar"
+  >
     <div
-      class="makeStyles-root-1"
-    >
-      <header
-        class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
-      >
-        <div
-          class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-2 MuiToolbar-gutters"
-        >
-          <div
-            class="MuiGrid-root makeStyles-link-4"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container"
-            >
-              <a
-                class="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorInherit"
-                href="#/home"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-container"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-item"
-                  >
-                    <img
-                      alt="Viade Logo"
-                      src="logo_2.svg"
-                      style="height:2.5rem;width:2.5rem"
-                    />
-                  </div>
-                  <div
-                    class="MuiGrid-root MuiGrid-item"
-                  >
-                    <h4
-                      class="MuiTypography-root MuiTypography-h4"
-                    >
-                      ViaDe
-                    </h4>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div />
-        </div>
-      </header>
-    </div>
+      class="MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Indeterminate"
+    />
+    <div
+      class="MuiLinearProgress-bar MuiLinearProgress-bar2Indeterminate MuiLinearProgress-barColorPrimary"
+    />
   </div>
-  <div />
+  <h5
+    class="MuiTypography-root MuiTypography-h5"
+  >
+    Loading your route...
+  </h5>
 </div>
 `;

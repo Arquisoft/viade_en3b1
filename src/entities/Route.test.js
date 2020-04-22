@@ -3,7 +3,7 @@ import Media from "./Media";
 import TrackPoint from "./TrackPoint";
 import { v4 as uuid } from "uuid";
 
-var route1 = new Route("Route1", "Description 1", [new TrackPoint(1,1), new TrackPoint(2,1)], null, null, null);
+var route1 = new Route("Route1", "Description 1", [new TrackPoint(1,1), new TrackPoint(2,1)], null, null, null, "ID1");
 
 var route2 = new Route("Route2", "Description 2", [(1,1),(2,1)], null, [new Media("photo", "My Photo", null)], null);
 
@@ -33,7 +33,8 @@ test("Simple route", () => {
 
 test("Simple route in JSONLD", () => {
     let jsonLd = route1.toJsonLD();
-    expect(jsonLd).toEqual('{"@context":{"@version":1.1,"comments":{"@container":"@list","@id":"viade:comments"},"description":{"@id":"schema:description","@type":"xs:string"},"media":{"@container":"@list","@id":"viade:media"},"name":{"@id":"schema:name","@type":"xs:string"},"points":{"@container":"@list","@id":"viade:points"},"latitude":{"@id":"schema:latitude","@type":"xs:double"},"longitude":{"@id":"schema:longitude","@type":"xs:double"},"elevation":{"@id":"schema:elevation","@type":"xsd:double"},"author":{"@id":"schema:author","@type":"@id"},"date":{"@id":"schema:DateTime","@type":"xsd:dateTime"},"rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#","rdfs":"http://www.w3.org/2000/01/rdf-schema#","schema":"http://schema.org/","viade":"http://arquisoft.github.io/viadeSpec/","xsd":"http://www.w3.org/2001/XMLSchema#"},"name":"Route1","description":"Description 1","comments":[],"media":[],"points":[{"latitude":1,"longitude":1},{"latitude":2,"longitude":1}]}');
+    console.log(jsonLd)
+    expect(jsonLd).toEqual('{"@context":{"@version":1.1,"comments":{"@container":"@list","@id":"viade:comments"},"description":{"@id":"schema:description","@type":"xs:string"},"media":{"@container":"@list","@id":"viade:media"},"name":{"@id":"schema:name","@type":"xs:string"},"points":{"@container":"@list","@id":"viade:points"},"latitude":{"@id":"schema:latitude","@type":"xs:double"},"longitude":{"@id":"schema:longitude","@type":"xs:double"},"elevation":{"@id":"schema:elevation","@type":"xsd:double"},"author":{"@id":"schema:author","@type":"@id"},"date":{"@id":"schema:DateTime","@type":"xsd:dateTime"},"rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#","rdfs":"http://www.w3.org/2000/01/rdf-schema#","schema":"http://schema.org/","viade":"http://arquisoft.github.io/viadeSpec/","xsd":"http://www.w3.org/2001/XMLSchema#"},"id":"ID1","date":null,"name":"Route1","description":"Description 1","comments":[],"media":[],"points":[{"latitude":1,"longitude":1,"elevation":""},{"latitude":2,"longitude":1,"elevation":""}]}');
 });
 
 test("Media of route", () => {
