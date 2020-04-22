@@ -6,6 +6,7 @@ exports[`Renders correctly 1`] = `
 >
   <div
     class="MuiCardContent-root"
+    style="text-align:center"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"
@@ -44,7 +45,7 @@ exports[`Renders correctly 1`] = `
         <p
           class="MuiTypography-root makeStyles-pos-2 MuiTypography-body1 MuiTypography-colorTextSecondary"
         >
-          3.63km
+          111194 m
         </p>
       </div>
       <a

@@ -23,18 +23,22 @@ export class ListUserRoutes extends Component {
       this.props.toggleBackground();
     });
   }
-  
+
   render() {
     const { routes, loading } = this.state;
+
+    if (loading) {
+      return (
+        <Backdrop style={{ color: '#5c5585' }} open={loading} invisible>
+          <CircularProgress color="inherit" hidden={loading} />
+        </Backdrop>
+      );
+    }
 
     return (
       <Grid container >
         <Grid item xs={'auto'} >
           <Grid container justify="center" spacing={2}>
-
-            <Backdrop style={{color: '#5c5585'}} open={loading} invisible>
-              <CircularProgress color="inherit" hidden={loading} />
-            </Backdrop>
 
             {routes.map((each) => (
               <Grid key={each.getId()} item>

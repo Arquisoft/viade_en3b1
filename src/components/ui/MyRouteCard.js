@@ -21,10 +21,15 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MyRouteCard(props) {
   const classes = useStyles();
+  const { route } = props;
+
+  var name = route.getName();
+  var distance = route.getDistance();
+  // var distance = 3.5;
 
   return (
     <Card className={classes.root}>
-      <CardContent>
+      <CardContent style={{textAlign: "center"}}>
         <Grid container spacing={2}>
 
           <Grid item xs={12}>
@@ -34,7 +39,7 @@ export default function MyRouteCard(props) {
           <Grid item xs={12} >
             <Link underline='none' href={"#/RouteDetails/" + props.route.getId()}>
               <Typography variant="h5" component="h2">
-                {props.route.getName()}
+                {name}
               </Typography>
             </Link>
           </Grid>
@@ -48,8 +53,8 @@ export default function MyRouteCard(props) {
 
           <Grid item xs={12} sm={5}>
             <Typography className={classes.pos} color="textSecondary">
-              {/* {props.route.getTotalDistance()} */}
-              3.63km
+              {distance} m
+              {/* 3.63km */}
             </Typography>
           </Grid>
 
