@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import NavBar from '../../ui/main/NavBar.js';
 import RouteDetailsCard from "../../ui/RouteDetailsCard.js";
 import cache from '../../../cache/RoutesCache';
-import { Redirect } from "react-router-dom";
-import { Link, LinearProgress, Backdrop, Typography, Grid } from '@material-ui/core';
+import { LinearProgress, Typography } from '@material-ui/core';
 
 export class RouteDetails extends Component {
 
