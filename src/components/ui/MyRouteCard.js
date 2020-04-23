@@ -47,18 +47,6 @@ export default function MyRouteCard(props) {
             </Link>
           </Grid>
 
-          {/* <Grid item xs={12} >
-            <Typography className={classes.pos} color="textSecondary">
-              12/3/2020
-            </Typography>
-          </Grid>
-
-          <Grid item xs={12} >
-            <Typography className={classes.pos} color="textSecondary">
-              {distance} m
-            </Typography>
-          </Grid> */}
-
           <Grid item>
             <Button variant='outlined'
               href={"#/RouteDetails/" + props.route.getId()}

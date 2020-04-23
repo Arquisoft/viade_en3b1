@@ -6,99 +6,82 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import DetailsMap from '../map/DetailsMap.js';
 import ElevationChart from '../elevation-chart/ElevationChart.js';
+import { Box } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        marginTop: theme.spacing(10),
+        // marginLeft: theme.spacing(10),
+        // marginRight: theme.spacing(10),
     },
+    map: {
+        height: '20rem',
+        maxWidth: '40rem',
+        marginTop: theme.spacing(3),
+        marginLeft: theme.spacing(10),
+    },
+    chart: {
+        // height: '15rem',
+        marginTop: theme.spacing(3),
+        marginLeft: theme.spacing(10),
+    },
+    title: {
+        marginLeft: theme.spacing(10),
+    }
 }));
 
 export default function RouteDetailsCard(props) {
     const classes = useStyles();
 
-    if(props.route === null) {
+    if (props.route === null) {
         return null;
     }
-    
-    return (
-        <Grid container className={classes.root} spacing={1}>
-            <Grid item xs={6}>
-                <Card elevation={5} className={classes.root}>
-                    <CardContent>
-                        <Typography variant="h5" component="h2">
-                            {props.route.getName()}
-                        </Typography>
+    const { route } = props;
 
-                        <DetailsMap route={props.route}></DetailsMap>
-                    </CardContent>
-                </Card>
-            </Grid>
-            <Grid item xs={6}>
-                <Grid container direction="column" spacing={1} alignItems="stretch" justify="flex-start">
-                    <Grid item xs={12}>
-                        <Card elevation={5} className={classes.root}>
-                            <CardContent>
-                                <Typography className={classes.pos} >
-                                    {/* Date: {props.route.getDate()} */}
-                                    Date: 22/3/2020
-                                </Typography>
-                            </CardContent>
-                        </Card>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Card elevation={5} className={classes.root}>
-                            <CardContent>
-                                <Typography className={classes.pos} >
-                                    {/* Distance: {props.route.getTotalDistance()} */}
-                                    Distance: 3.63km
-                                </Typography>
-                            </CardContent>
-                        </Card>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Card elevation={5} className={classes.root}>
-                            <CardContent>
-                                <Typography className={classes.pos} >
-                                    {/* Time: {props.route.getTime()} */}
-                                    Time: 42 min
-                                </Typography>
-                            </CardContent>
-                        </Card>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Card elevation={5} className={classes.root}>
-                            <CardContent>
-                                <Typography className={classes.pos} >
-                                    Description:
-                                </Typography>
-                                <Typography className={classes.pos} >
-                                    {props.route.getDescription()}
-                                </Typography>
-                            </CardContent>
-                        </Card>
-                    </Grid>
-                    <ElevationChart trackpoints={props.route.getTrackPoints()} style={{ width: "100%" }} />
-                    {/* <Grid item xs={12}>
-                        <Card elevation={5} className={classes.root}>
-                            <CardContent>
-                                <Typography className={classes.pos} >
-                                    Coments:
-                                </Typography>
-                                {
-                                    Array.isArray(props.route.getComments()) && //is empty??
-                                    props.route.getComments().map((comment) =>
-                                        (
-                                            <Typography className={classes.pos} >
-                                                {comment}
-                                            </Typography>
-                                        )
-                                    )
-                                }
-                            </CardContent>
-                        </Card>
-                    </Grid> */}
+    var name = route.getName();
+    var author = route.getAuthor() || "Author";
+
+    return (
+        <Grid
+            container
+            className={classes.root}
+            spacing={5}
+
+        >
+            <Grid item xs sm={6}>
+                <Grid item className={classes.title}>
+                    <Box fontStyle="italic" fontSize="h4.fontSize" fontWeight="fontWeightBold">
+                        {name}
+                    </Box>
+                    <Typography color="textSecondary" variant="h6">
+                        by {author}
+                    </Typography>
+                </Grid>
+
+                <Grid item >
+                    <Card elevation variant="outlined" className={classes.map}>
+                        <DetailsMap route={route} />
+                    </Card>
+                </Grid>
+
+                <Grid item className={classes.map} >
+                    {/* <Card elevation className={classes.map}> */}
+                        <ElevationChart trackpoints={route.getTrackPoints()} />
+                    {/* </Card> */}
                 </Grid>
             </Grid>
+
+            <Grid item xs sm={4}>
+                <Grid item >
+                    <Card elevation variant="outlined" >
+                        <h1>CHECK</h1>
+                    </Card>
+                </Grid>
+            </Grid>
+
+
+
         </Grid>
     );
 }

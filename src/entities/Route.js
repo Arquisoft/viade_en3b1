@@ -15,7 +15,7 @@ class Route {
      * @param {Array<Object>} media List of objects of media
      * @param {Date} date Date of the route.
      */
-    constructor(name, description, trackPoints, comments, media, date, id) {
+    constructor(name, description, trackPoints, comments, media, date, id, author = null) {
         this.name = name;
         this.date = date;
         this.description = description;
@@ -31,6 +31,7 @@ class Route {
         this.setComments(comments);
 
         this.totalDistance = this.calculateDistance();
+        this.author = author;
     }
 
     setID(id) {
@@ -112,6 +113,10 @@ class Route {
 
     getDistance() {
         return this.totalDistance;
+    }
+
+    getAuthor() {
+        return this.author;
     }
 
     addMedia(media) {

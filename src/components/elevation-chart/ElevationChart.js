@@ -14,24 +14,24 @@ export class ElevationChart extends Component {
     init(points) {
         let index = 1;
         this.data = {
-            labels: points.map((p) => `Trackpoint ${index++}`),
+            labels: points.map((p) => `Point ${index++}`),
             datasets: [
                 {
                     label: 'Elevation',
                     fill: false,
                     lineTension: 0.1,
                     backgroundColor: 'rgba(75,192,192,0.4)',
-                    borderColor: 'rgba(75,192,192,1)',
+                    borderColor: '#44dba1',
                     borderCapStyle: 'butt',
                     borderDash: [],
                     borderDashOffset: 0.0,
                     borderJoinStyle: 'miter',
-                    pointBorderColor: 'rgba(75,192,192,1)',
-                    pointBackgroundColor: '#fff',
+                    pointBorderColor: '#302c58',
+                    pointBackgroundColor: '#302c58',
                     pointBorderWidth: 1,
                     pointHoverRadius: 5,
                     pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-                    pointHoverBorderColor: 'rgba(220,220,220,1)',
+                    pointHoverBorderColor: '#302c58',
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 15,
@@ -51,12 +51,11 @@ export class ElevationChart extends Component {
 
     render() {
         return (
-            <div style={this.props.style}>
-                <Line
-                    data={this.data}
-                    options={this.lineOptions}
-                />
-            </div>
+            <Line
+                data={this.data}
+                options={this.lineOptions}
+                height={100}
+            />
         );
     }
 }
