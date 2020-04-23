@@ -10,6 +10,7 @@ import "typeface-roboto";
 import MisRutas from '../../btns/mis-rutas/MisRutas.js';
 import ProfileMenu from '../../btns/profile-menu/ProfileMenu';
 import logo1 from '../../../assets/img/logo/logo_2.svg';
+import ImportRoute from '../../btns/import-route/ImportRoute.js';
 
 const NavBar = () => {
   const classes = useStyles();
@@ -36,6 +37,8 @@ const NavBar = () => {
               </Link>
             </Grid>
           </Grid>
+
+          <LoggedIn><ImportRoute /></LoggedIn>
 
           <LoggedIn><Button className={classes.menuButton} href={"#/social-feed"} color="primary" variant='contained'>Social Feed</Button></LoggedIn>
           <LoggedIn><MisRutas /></LoggedIn>
