@@ -2,20 +2,20 @@
 
 exports[`Renders correctly 1`] = `
 <div
-  class="MuiPaper-root MuiCard-root makeStyles-root-1 MuiPaper-elevation1 MuiPaper-rounded"
+  class="MuiPaper-root MuiCard-root makeStyles-root-1 MuiPaper-elevation5 MuiPaper-rounded"
 >
+  <div
+    class="MuiCardMedia-root"
+  >
+    <div />
+  </div>
   <div
     class="MuiCardContent-root"
     style="text-align:center"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
     >
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
-      >
-        <div />
-      </div>
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
       >
@@ -31,36 +31,22 @@ exports[`Renders correctly 1`] = `
         </a>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5"
+        class="MuiGrid-root MuiGrid-item"
       >
-        <p
-          class="MuiTypography-root makeStyles-pos-2 MuiTypography-body1 MuiTypography-colorTextSecondary"
+        <a
+          aria-disabled="false"
+          class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-colorInherit"
+          href="#/RouteDetails/ID1"
+          style="margin-left:auto;margin-right:auto"
+          tabindex="0"
         >
-          12/3/2020
-        </p>
+          <span
+            class="MuiButton-label"
+          >
+            Details
+          </span>
+        </a>
       </div>
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5"
-      >
-        <p
-          class="MuiTypography-root makeStyles-pos-2 MuiTypography-body1 MuiTypography-colorTextSecondary"
-        >
-          111194 m
-        </p>
-      </div>
-      <a
-        aria-disabled="false"
-        class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-colorInherit"
-        href="#/RouteDetails/ID1"
-        style="margin-left:auto;margin-right:auto"
-        tabindex="0"
-      >
-        <span
-          class="MuiButton-label"
-        >
-          Details
-        </span>
-      </a>
     </div>
   </div>
 </div>

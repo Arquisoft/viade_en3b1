@@ -6,28 +6,84 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import DetailsMap from '../map/DetailsMap.js';
 import ElevationChart from '../elevation-chart/ElevationChart.js';
-import { Box } from '@material-ui/core';
+import { Box, Tooltip, Fab } from '@material-ui/core';
+import photo from '../../assets/img/fondo/city_1.jpg';
+import photo2 from '../../assets/img/fondo/city_2.jpg';
+import MyCarousel from './MyCarousel.js';
+import Media from '../../entities/Media.js';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import svgIconCamera from '../../assets/img/logo/camera.svg';
+import svgIconMap from '../../assets/img/logo/map.svg';
+import svgIconMountain from '../../assets/img/logo/mountain.svg';
+import svgIconArrows from '../../assets/img/logo/arrows.svg';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        marginTop: theme.spacing(10),
+        marginTop: theme.spacing(1),
         // marginLeft: theme.spacing(10),
         // marginRight: theme.spacing(10),
+    },
+    maplogo: {
+        height: '2rem',
+        width: '2rem',
+        marginRight: theme.spacing(1),
+    },
+    mapTitle: {
+        marginTop: theme.spacing(5),
+        marginLeft: theme.spacing(15),
     },
     map: {
         height: '20rem',
         maxWidth: '40rem',
-        marginTop: theme.spacing(3),
-        marginLeft: theme.spacing(10),
+        marginTop: theme.spacing(2),
+        marginLeft: theme.spacing(15),
     },
     chart: {
-        // height: '15rem',
-        marginTop: theme.spacing(3),
-        marginLeft: theme.spacing(10),
+        // height: '20rem',
+        maxWidth: '40rem',
+        marginTop: theme.spacing(2),
+        marginLeft: theme.spacing(15),
+    },
+    elevationlogo: {
+        height: '2rem',
+        width: '2rem',
+        marginRight: theme.spacing(1),
+    },
+    elevationTitle: {
+        marginTop: theme.spacing(8),
+        marginLeft: theme.spacing(15),
     },
     title: {
-        marginLeft: theme.spacing(10),
+        marginLeft: theme.spacing(15),
+    },
+    cameralogo: {
+        height: '2rem',
+        width: '2rem',
+        marginRight: theme.spacing(1),
+    },
+    carouselTitle: {
+        marginTop: theme.spacing(15),
+    },
+    carousel: {
+        height: '23rem',
+        width: '33rem',
+        marginTop: theme.spacing(2),
+    },
+    data: {
+        width: '33rem',
+        marginTop: theme.spacing(2),
+    },
+    datalogo: {
+        height: '2rem',
+        width: '2rem',
+        marginRight: theme.spacing(1),
+    },
+    dataTitle: {
+        marginTop: theme.spacing(3),
+    },
+    backBtn: {
+        margin: theme.spacing(3),
     }
 }));
 
@@ -40,48 +96,140 @@ export default function RouteDetailsCard(props) {
     const { route } = props;
 
     var name = route.getName();
-    var author = route.getAuthor() || "Author";
+    var author = route.getAuthor() || "you";
+    var date = route.getDate() || "--";
+    var description = route.getDescription() || "--";
+    var distance = route.getDistance() || "--";
+    // var media = route.getMedia();
+    // console.log(media);
+
+    var media = [new Media(photo), new Media(photo2)];
 
     return (
-        <Grid
-            container
-            className={classes.root}
-            spacing={5}
+        <div>
+            <Tooltip title="Back" aria-label="back" className={classes.backBtn}>
+                <Fab size="small" href={"#/dashboard"}>
+                    <ArrowBackIcon />
+                </Fab>
+            </Tooltip>
+            <Grid
+                container
+                className={classes.root}
+                spacing={3}
 
-        >
-            <Grid item xs sm={6}>
-                <Grid item className={classes.title}>
-                    <Box fontStyle="italic" fontSize="h4.fontSize" fontWeight="fontWeightBold">
-                        {name}
-                    </Box>
-                    <Typography color="textSecondary" variant="h6">
-                        by {author}
-                    </Typography>
+            >
+                <Grid item xs sm={6}>
+
+                    {/* ##### ROUTE NAME ##### */}
+                    <Grid item className={classes.title}>
+                        <Box fontStyle="italic" fontSize="h4.fontSize" fontWeight="fontWeightBold">
+                            {name}
+                        </Box>
+                        <Typography color="textSecondary" variant="h6">
+                            by {author}
+                        </Typography>
+                    </Grid>
+
+                    {/* ##### MAP ##### */}
+                    <Grid item >
+                        <Grid className={classes.mapTitle} container item>
+                            <img src={svgIconMap} alt="Map logo" className={classes.maplogo} />
+                            <Box fontSize="h5.fontSize" fontWeight="fontWeightBold">
+                                Map
+                            </Box>
+                        </Grid>
+
+                        <Card elevation variant="outlined" className={classes.map}>
+                            <DetailsMap route={route} />
+                        </Card>
+                    </Grid>
+
+                    {/* ##### ELEVATION CHART ##### */}
+                    <Grid item >
+                        <Grid className={classes.elevationTitle} container item>
+                            <img src={svgIconMountain} alt="Elevation logo" className={classes.elevationlogo} />
+                            <Box fontSize="h5.fontSize" fontWeight="fontWeightBold">
+                                Elevation
+                            </Box>
+                        </Grid>
+
+                        <Grid item className={classes.chart} >
+                            <ElevationChart trackpoints={route.getTrackPoints()} />
+                        </Grid>
+                    </Grid>
+
                 </Grid>
 
-                <Grid item >
-                    <Card elevation variant="outlined" className={classes.map}>
-                        <DetailsMap route={route} />
-                    </Card>
+                <Grid item xs sm={4}>
+
+                    {/* ##### IMAGE GALLERY ##### */}
+                    <Grid item >
+                        <Grid className={classes.carouselTitle} container item>
+                            <img src={svgIconCamera} alt="Camera logo" className={classes.cameralogo} />
+                            <Box fontSize="h5.fontSize" fontWeight="fontWeightBold">
+                                Gallery
+                            </Box>
+                        </Grid>
+
+                        <Card elevation className={classes.carousel}>
+                            <MyCarousel photos={media} />
+                        </Card>
+                    </Grid>
+
+                    {/* ##### DATA PANEL ##### */}
+                    <Grid item >
+                        <Grid className={classes.dataTitle} container item>
+                            <img src={svgIconArrows} alt="Map logo" className={classes.datalogo} />
+                            <Box fontSize="h5.fontSize" fontWeight="fontWeightBold">
+                                Info
+                            </Box>
+                        </Grid>
+
+                        <Card variant="outlined" elevation className={classes.data} >
+                            <CardContent>
+                                <Grid container spacing={3}>
+
+                                    <Grid item container spacing={3}>
+                                        <Grid item >
+                                            <Box fontSize="h6.fontSize" fontWeight="fontWeightBold">
+                                                Date
+                                            </Box>
+                                            <Box fontSize="fontSize" fontWeight="fontWeightMedium">
+                                                {date}
+                                            </Box>
+                                        </Grid>
+
+                                        <Grid item >
+                                            <Box fontSize="h6.fontSize" fontWeight="fontWeightBold">
+                                                Distance
+                                            </Box>
+                                            <Box fontSize="fontSize" fontWeight="fontWeightMedium">
+                                                {distance}
+                                            </Box>
+                                        </Grid>
+                                    </Grid>
+
+                                    <Grid item>
+                                        <Grid item >
+                                            <Box fontSize="h6.fontSize" fontWeight="fontWeightBold">
+                                                Description
+                                            </Box>
+                                            <Box fontSize="fontSize" fontWeight="fontWeightMedium">
+                                                {description}
+                                            </Box>
+                                        </Grid>
+                                    </Grid>
+
+                                </Grid>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+
                 </Grid>
 
-                <Grid item className={classes.map} >
-                    {/* <Card elevation className={classes.map}> */}
-                        <ElevationChart trackpoints={route.getTrackPoints()} />
-                    {/* </Card> */}
-                </Grid>
+
+
             </Grid>
-
-            <Grid item xs sm={4}>
-                <Grid item >
-                    <Card elevation variant="outlined" >
-                        <h1>CHECK</h1>
-                    </Card>
-                </Grid>
-            </Grid>
-
-
-
-        </Grid>
+        </div>
     );
 }

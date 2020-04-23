@@ -5,7 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import MapSnapshot from '../map/MapSnapshot.js'
 import Button from '@material-ui/core/Button';
-import { Link, Grid, CardMedia, CardHeader } from '@material-ui/core';
+import { Link, Grid, CardMedia } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,7 +24,6 @@ export default function MyRouteCard(props) {
   const { route } = props;
 
   var name = route.getName();
-  var distance = route.getDistance();
 
   return (
     <Card elevation={5} className={classes.root}>
