@@ -284,7 +284,7 @@ class Route {
                 "id": this.id,
                 "date": this.date,
                 "name": this.name,
-                "author": this.author,
+                "author": this.author || "",
                 "description": this.description,
                 "comments": this.comments,
                 "media": routeMediaJson,

@@ -101,6 +101,66 @@ Object {
                 −
               </a>
             </div>
+            <div
+              class="leaflet-search-wrap leaflet-control"
+            >
+              <article
+                class="search-control-wrap"
+              >
+                <section
+                  class="search-control"
+                >
+                  <button
+                    class="search-control-icon-button"
+                  >
+                    <svg
+                      viewBox="0 0 50 50"
+                    >
+                      <line
+                        x1="35"
+                        x2="46"
+                        y1="35"
+                        y2="46"
+                      />
+                      <circle
+                        cx="23"
+                        cy="23"
+                        fill="none"
+                        r="16"
+                      />
+                      Sorry, your browser does not support inline SVG.
+                    </svg>
+                  </button>
+                  <input
+                    class="search-input search-control-input"
+                    name="SearchInput"
+                    placeholder="Search Lat,Lng"
+                    tabindex="1"
+                    type="text"
+                    value=""
+                  />
+                  <button
+                    class="search-control-close-button"
+                  >
+                    <svg
+                      viewBox="0 0 50 50"
+                    >
+                      <path
+                        d="M5 5 L45 45 M45 5 L5 45"
+                      />
+                      Sorry, your browser does not support inline SVG.
+                    </svg>
+                  </button>
+                </section>
+                <section
+                  class="search-control-info-wrapper search-control-info-wrapper-close"
+                >
+                  <section
+                    class="search-control-info"
+                  />
+                </section>
+              </article>
+            </div>
           </div>
           <div
             class="leaflet-top leaflet-right"
@@ -229,6 +289,66 @@ Object {
             >
               −
             </a>
+          </div>
+          <div
+            class="leaflet-search-wrap leaflet-control"
+          >
+            <article
+              class="search-control-wrap"
+            >
+              <section
+                class="search-control"
+              >
+                <button
+                  class="search-control-icon-button"
+                >
+                  <svg
+                    viewBox="0 0 50 50"
+                  >
+                    <line
+                      x1="35"
+                      x2="46"
+                      y1="35"
+                      y2="46"
+                    />
+                    <circle
+                      cx="23"
+                      cy="23"
+                      fill="none"
+                      r="16"
+                    />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                </button>
+                <input
+                  class="search-input search-control-input"
+                  name="SearchInput"
+                  placeholder="Search Lat,Lng"
+                  tabindex="1"
+                  type="text"
+                  value=""
+                />
+                <button
+                  class="search-control-close-button"
+                >
+                  <svg
+                    viewBox="0 0 50 50"
+                  >
+                    <path
+                      d="M5 5 L45 45 M45 5 L5 45"
+                    />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                </button>
+              </section>
+              <section
+                class="search-control-info-wrapper search-control-info-wrapper-close"
+              >
+                <section
+                  class="search-control-info"
+                />
+              </section>
+            </article>
           </div>
         </div>
         <div
