@@ -12,3 +12,8 @@ test('Renders correctly', () => {
     const wrapper = render(<RouteDetailsCard route={route1} />);
     expect(wrapper).toMatchSnapshot();
 });
+
+test('Renders null', () => {
+    const wrapper = render(<RouteDetailsCard route={null} />);
+    expect(wrapper).toMatchSnapshot();
+});
