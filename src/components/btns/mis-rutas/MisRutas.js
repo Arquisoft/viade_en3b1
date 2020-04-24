@@ -41,7 +41,7 @@ const MisRutas = () => {
                 onClose={handleClose}
             >
                 <Link underline='none' href={'#/dashboard'}>
-                    <StyledMenuItem>
+                    <StyledMenuItem divider>
                         <ListItemIcon>
                             <ListIcon />
                         </ListItemIcon>

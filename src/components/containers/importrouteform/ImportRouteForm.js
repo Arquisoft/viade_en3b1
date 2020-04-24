@@ -6,6 +6,7 @@ export class ImportRouteForm extends Component {
 
     constructor(props) {
         super(props);
+        console.log(this.props.location.routes);
     }
 
     render() {
@@ -13,7 +14,7 @@ export class ImportRouteForm extends Component {
 
         return (
             <div>
-                {/* <NavBar /> */}
+                <NavBar />
                 <h1>CHECK</h1>
             </div>
         )

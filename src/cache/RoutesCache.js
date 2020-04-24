@@ -1,4 +1,4 @@
-import { loadAllRoutes } from '../parser/RouteHandler';
+import { loadAllRoutes } from '../handler/RouteHandler';
 
 export default {
     routes: [],

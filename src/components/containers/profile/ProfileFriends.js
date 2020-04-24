@@ -6,7 +6,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import cache from '../../../cache/UserCache';
 import LinkIcon from '@material-ui/icons/Link';
-import { GetUserWebId } from '../../../parser/UserDataHandler';
+import { GetUserWebId } from '../../../handler/UserDataHandler';
 
 export default function ProfileFriends() {
     const classes = useStyles();

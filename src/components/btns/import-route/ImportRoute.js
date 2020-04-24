@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { Button, withStyles } from '@material-ui/core';
 import { DropzoneDialog } from 'material-ui-dropzone';
 import { ImportRouteForm } from '../../containers/importrouteform/ImportRouteForm';
+import {Redirect, Link, withRouter} from 'react-router-dom';
 
 export class ImportRoute extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            open: false
+            open: false,
         };
     }
 
@@ -27,10 +28,12 @@ export class ImportRoute extends Component {
     handleSave(files) {
         //Saving files to state for further use and closing Modal.
         this.setState({
-            open: false
+            open: false,
         });
-        console.log("CHECK")
-        return (<ImportRouteForm files={files}/>);
+        this.props.history.push({
+            pathname: '/import-route',
+            routes: files
+          })
     }
 
     render() {
@@ -66,4 +69,4 @@ const useStyles = (theme) => ({
     },
 });
 
-export default withStyles(useStyles)(ImportRoute);
+export default withRouter(withStyles(useStyles)(ImportRoute));

@@ -26,7 +26,7 @@ class ParserJsonLdToRoute {
     parsePoints(points) {
         let trackPoints = [];
         for(var i = 0; i < points.length; i++ ){
-            trackPoints.push(new TrackPoint(points[i].latitude, points[i].longitude, null, points[i].elevation));
+            trackPoints.push(new TrackPoint(points[i].latitude, points[i].longitude, points[i].elevation));
         }
         return trackPoints;
     }

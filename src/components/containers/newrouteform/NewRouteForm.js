@@ -11,7 +11,7 @@ import NavBar from '../../ui/main/NavBar';
 import SuccessForm from '../stepper/success/SuccessForm';
 import { withStyles } from '@material-ui/styles';
 import Route from '../../../entities/Route';
-import { uploadRoute } from '../../../parser/RouteHandler';
+import { uploadRoute } from '../../../handler/RouteHandler';
 import MuiAlert from '@material-ui/lab/Alert';
 import CloseIcon from '@material-ui/icons/Close';
 import { Snackbar, IconButton, Grid } from '@material-ui/core';
