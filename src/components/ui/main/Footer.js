@@ -29,7 +29,6 @@ export default function StickyFooter() {
 
   return (
     <div >
-      <CssBaseline />
       <footer className={classes.footer}>
         <Container maxWidth="sm">
           <Typography variant="h6">ViaDe En3B1</Typography>

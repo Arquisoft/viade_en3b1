@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Card, CardContent, IconButton, CardMedia, Typography, makeStyles, CardActions, Collapse, Box } from '@material-ui/core';
 import MapSnapshot from '../map/MapSnapshot';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 import clsx from 'clsx';
 
 function ImportRouteCard(props) {
@@ -40,10 +39,10 @@ function ImportRouteCard(props) {
                     <Collapse in={expanded} timeout="auto" unmountOnExit>
                         <CardContent >
                             <Box fontSize="h6.fontSize" fontWeight="fontWeightBold">
-                            Description:
+                                Description:
                             </Box>
-                            <Box fontWeight="fontWeightRegular">
-                            {route.getDescription()}
+                            <Box display="block" fontWeight="fontWeightRegular">
+                                {route.getDescription()}
                             </Box>
                         </CardContent>
                     </Collapse>
