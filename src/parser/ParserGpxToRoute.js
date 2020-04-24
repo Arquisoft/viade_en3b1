@@ -6,9 +6,9 @@ export function parseGpxToRoutes(gpxString, callback) {
 
     parseGpx(gpxString, ((error, gpxData) => {
         var routes = [];
-        var routeWaypoints = [];
+        // var routeWaypoints = [];
 
-        var waypoints = gpxData.waypoints;
+        // var waypoints = gpxData.waypoints;
         var tracks = gpxData.tracks;
 
         tracks.forEach(track => {

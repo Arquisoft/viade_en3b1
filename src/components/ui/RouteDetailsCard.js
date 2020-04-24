@@ -20,7 +20,7 @@ import svgIconArrows from '../../assets/img/logo/arrows.svg';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        marginTop: theme.spacing(1),
+        marginTop: theme.spacing(-6),
         // marginLeft: theme.spacing(10),
         // marginRight: theme.spacing(10),
     },
@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
         marginRight: theme.spacing(1),
     },
     carouselTitle: {
-        marginTop: theme.spacing(15),
+        marginTop: theme.spacing(17),
     },
     carousel: {
         height: '23rem',
@@ -112,6 +112,7 @@ export default function RouteDetailsCard(props) {
                     <ArrowBackIcon />
                 </Fab>
             </Tooltip>
+
             <Grid
                 container
                 className={classes.root}
@@ -122,7 +123,7 @@ export default function RouteDetailsCard(props) {
 
                     {/* ##### ROUTE NAME ##### */}
                     <Grid item className={classes.title}>
-                        <Box fontStyle="italic" fontSize="h4.fontSize" fontWeight="fontWeightBold">
+                        <Box fontStyle="italic" fontSize="h3.fontSize" fontWeight="fontWeightBold">
                             {name}
                         </Box>
                         <Typography color="textSecondary" variant="h6">
@@ -194,7 +195,7 @@ export default function RouteDetailsCard(props) {
                                             <Box fontSize="h6.fontSize" fontWeight="fontWeightBold">
                                                 Date
                                             </Box>
-                                            <Box fontSize="fontSize" fontWeight="fontWeightMedium">
+                                            <Box fontSize="fontSize" fontWeight="fontWeightRegular">
                                                 {date}
                                             </Box>
                                         </Grid>
@@ -203,7 +204,7 @@ export default function RouteDetailsCard(props) {
                                             <Box fontSize="h6.fontSize" fontWeight="fontWeightBold">
                                                 Distance
                                             </Box>
-                                            <Box fontSize="fontSize" fontWeight="fontWeightMedium">
+                                            <Box fontSize="fontSize" fontWeight="fontWeightRegular">
                                                 {distance}
                                             </Box>
                                         </Grid>
@@ -214,7 +215,7 @@ export default function RouteDetailsCard(props) {
                                             <Box fontSize="h6.fontSize" fontWeight="fontWeightBold">
                                                 Description
                                             </Box>
-                                            <Box fontSize="fontSize" fontWeight="fontWeightMedium">
+                                            <Box fontSize="fontSize" fontWeight="fontWeightRegular">
                                                 {description}
                                             </Box>
                                         </Grid>

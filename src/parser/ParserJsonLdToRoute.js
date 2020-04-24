@@ -3,7 +3,8 @@ import TrackPoint from '../entities/TrackPoint.js';
 
 class ParserJsonLdToRoute {
     
-    parse(file){    
+    parse(file){   
+
         var route = JSON.parse( file );
 
         var name = route.name;

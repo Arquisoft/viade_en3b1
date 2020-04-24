@@ -5,6 +5,8 @@ import { withStyles, Typography, Paper, Grid, Button } from '@material-ui/core';
 import Route from '../../../entities/Route';
 import TrackPoint from '../../../entities/TrackPoint';
 import ImportRouteCard from '../../ui/ImportRouteCard';
+import { parseGpxToRoutes } from '../../../parser/ParserGpxToRoute';
+import ParserJsonLdToRoute from '../../../parser/ParserJsonLdToRoute';
 
 export class ImportRouteForm extends Component {
 
@@ -12,16 +14,76 @@ export class ImportRouteForm extends Component {
         super(props);
         // console.log(this.props.location.routes);
         this.state = {
-            // routes: this.props.location.routes,
-            routes: [new Route("San Silvestre", "Esto es una ruta de prueba", [new TrackPoint(43, 5, 10), new TrackPoint(47, 8, 10)], null, null, null, null, null),
-            new Route("Recorrido por Oviedo", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", [new TrackPoint(41, 5, 10), new TrackPoint(43, 8, 10)], null, null, null, null, null)]
-
+            files: this.props.location.routes,
+            routes: []
+            // routes: [new Route("San Silvestre", "Esto es una ruta de prueba", [new TrackPoint(43, 5, 10), new TrackPoint(47, 8, 10)], null, null, null, null, null),
+            // new Route("Recorrido por Oviedo", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", [new TrackPoint(41, 5, 10), new TrackPoint(43, 8, 10)], null, null, null, null, null)]        }
         }
+    }
+
+    componentDidMount() {
+        if (!this.state.files) {
+            this.props.history.push('/404');
+            return;
+        }
+        this.handleFiles();
+    }
+
+    handleFiles() {
+        let re = /(?:\.([^.]+))?$/;
+
+        this.state.files.forEach((file) => {
+
+            const fileReader = new FileReader();
+
+            fileReader.onerror = () => alert("ERROR IMPORTING ROUTE");
+            fileReader.onabort = () => alert("ABORT IMPORTING ROUTE");
+            fileReader.onload = () => {
+                const content = fileReader.result;
+                try {
+                    let ext = re.exec(file.name)[0];
+                    if (ext === '.gpx') {
+                        this.handleGPX(content);
+                    } else if (ext === '.jsonld' || ext === '.json') {
+                        this.handleJSON(content);
+                    }
+                } catch (error) {
+                    alert(error);
+                }
+            };
+            fileReader.readAsText(file);
+        });
+    }
+
+    handleGPX(file) {
+        let routesList = [];
+        parseGpxToRoutes(file, function (routeArray) {
+            routeArray.forEach((route) => {
+                routesList.push(route);
+            });
+        });
+
+        routesList.forEach((r) => {
+            this.state.routes.push(r);
+        });
+
+        const { routes } = this.state;
+        this.setState({ routes: routes.slice() });
+    }
+
+    handleJSON(file) {
+        let parser = new ParserJsonLdToRoute();
+        let route = parser.parse(file);
+        this.state.routes.push(route);
+        const { routes } = this.state;
+        this.setState({ routes: routes.slice() });
     }
 
     render() {
         const { classes } = this.props;
+        const { files } = this.state;
         const { routes } = this.state;
+
         return (
             <div>
                 <NavBar />
@@ -41,8 +103,10 @@ export class ImportRouteForm extends Component {
                                     Please, review your routes
                                 </Typography>
 
-                                {routes.map((each) => (
-                                    <ImportRouteCard route={each} />
+                                {routes.map((each, index) => (
+                                    <div key={index}>
+                                        <ImportRouteCard route={each} />
+                                    </div>
                                 ))}
 
                                 <div className={classes.btnArea} >
@@ -63,7 +127,7 @@ export class ImportRouteForm extends Component {
                         <Footer />
                     </Grid>
                 </Grid>
-            </div>
+            </div >
         )
     }
 }
@@ -97,7 +161,8 @@ const useStyles = (theme) => ({
         textAlign: 'center'
     },
     image: {
-        backgroundImage: `url(https://source.unsplash.com/collection/9992041/1600x900)`,
+        // backgroundImage: `url(https://source.unsplash.com/collection/9992041/1600x900)`,9847024
+        backgroundImage: `url(https://source.unsplash.com/collection/9847024/1600x900)`,
         backgroundRepeat: 'no-repeat',
         backgroundColor:
             theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],

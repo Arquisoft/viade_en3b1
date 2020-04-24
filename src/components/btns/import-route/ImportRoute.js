@@ -50,6 +50,7 @@ export class ImportRoute extends Component {
                     showPreviews={true}
                     showPreviewsInDropzone={false}
                     maxFileSize={5000000}
+                    filesLimit={10}
                     clearOnUnmount={true}
                     onSave={(files) => this.handleSave(files)}
                     onClose={this.handleClose.bind(this)}

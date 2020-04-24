@@ -38,12 +38,20 @@ function ImportRouteCard(props) {
                     </CardActions>
                     <Collapse in={expanded} timeout="auto" unmountOnExit>
                         <CardContent >
-                            <Box fontSize="h6.fontSize" fontWeight="fontWeightBold">
-                                Description:
-                            </Box>
-                            <Box display="block" fontWeight="fontWeightRegular">
-                                {route.getDescription()}
-                            </Box>
+                            {(route.getDescription()) ? (
+                                <div>
+                                    <Box fontSize="h6.fontSize" fontWeight="fontWeightBold">
+                                        Description:
+                                    </Box>
+                                    <Box fontWeight="fontWeightRegular">
+                                        {route.getDescription()}
+                                    </Box>
+                                </div>
+                            ) : (
+                                    <Box fontWeight="fontWeightRegular">
+                                        No description provided.
+                                    </Box>
+                                )}
                         </CardContent>
                     </Collapse>
                 </div>
