@@ -26,7 +26,6 @@ export class ImportRoute extends Component {
     }
 
     handleSave(files) {
-        //Saving files to state for further use and closing Modal.
         this.setState({
             open: false,
         });
@@ -51,6 +50,7 @@ export class ImportRoute extends Component {
                     showPreviews={true}
                     showPreviewsInDropzone={false}
                     maxFileSize={5000000}
+                    clearOnUnmount={true}
                     onSave={(files) => this.handleSave(files)}
                     onClose={this.handleClose.bind(this)}
                     submitButtonText={"import"}
