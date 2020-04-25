@@ -1,6 +1,7 @@
 import { loadAllRoutes } from '../handler/RouteHandler';
 
 export default {
+    first: true,
     routes: [],
     addRouteToCache(route) {
         if (route && !this.routes.find((obj) => route.name === obj.name)) {
@@ -8,8 +9,9 @@ export default {
         }
     },
     async getRoutes() {
-        if (this.routes.length === 0) {
+        if (this.routes.length === 0 || this.first) {
             this.routes = await loadAllRoutes();
+            this.first = false;
         }
         return this.routes;
     },

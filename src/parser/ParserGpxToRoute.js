@@ -4,21 +4,26 @@ import TrackPoint from "../entities/TrackPoint";
 
 export function parseGpxToRoutes(gpxString, callback) {
 
-    parseGpx(gpxString, ((error, gpxData) => {
-        var routes = [];
-        // var routeWaypoints = [];
-
-        // var waypoints = gpxData.waypoints;
-        var tracks = gpxData.tracks;
-
-        tracks.forEach(track => {
-            let route = parseRouteTrack(track);
-            routes.push(route);
-
-        });
-
-        return callback(routes);
-    }));
+    try {
+        parseGpx(gpxString, ((error, gpxData) => {
+            var routes = [];
+            // var routeWaypoints = [];
+    
+            // var waypoints = gpxData.waypoints;
+            var tracks = gpxData.tracks;
+    
+            tracks.forEach(track => {
+                let route = parseRouteTrack(track);
+                routes.push(route);
+    
+            });
+    
+            return callback(routes);
+        }));
+    } catch(TypeError) {
+        alert(TypeError);
+    }
+    
 }
 
 function parseRouteTrack(track) {

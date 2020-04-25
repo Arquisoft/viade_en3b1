@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Button, withStyles } from '@material-ui/core';
 import { DropzoneDialog } from 'material-ui-dropzone';
-import { ImportRouteForm } from '../../containers/importrouteform/ImportRouteForm';
-import {Redirect, Link, withRouter} from 'react-router-dom';
+import { withRouter} from 'react-router-dom';
 
 export class ImportRoute extends Component {
 
@@ -41,7 +40,7 @@ export class ImportRoute extends Component {
 
         return (
             <div>
-                <Button color="primary" variant='contained' className={classes.btn} onClick={() => this.handleOpen()}>
+                <Button data-testid="btn-import-route-test" color="primary" variant='contained' className={classes.btn} onClick={() => this.handleOpen()}>
                     Import Route
                 </Button>
                 <DropzoneDialog

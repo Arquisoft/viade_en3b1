@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div
+  class="awssld awssld--organic-arrows"
+>
+  <div
+    class="awssld__wrapper"
+  >
+    <div
+      class="awssld__container"
+    >
+      <div
+        class="awssld__box"
+      >
+        <div
+          class="awssld__content"
+        >
+          <img
+            src="city_1.jpg"
+          />
+        </div>
+      </div>
+      <div
+        class="awssld__box"
+      />
+    </div>
+    <div
+      class="awssld__controls awssld__controls--hidden"
+    >
+      <button
+        aria-label="next"
+        class="awssld__next"
+      >
+        <span
+          class="awssld__controls__arrow-right"
+        />
+      </button>
+      <button
+        aria-label="previous"
+        class="awssld__prev"
+      >
+        <span
+          class="awssld__controls__arrow-left"
+        />
+      </button>
+    </div>
+  </div>
+  <nav
+    class="awssld__bullets"
+  >
+    <button
+      class="awssld__bullets--active"
+      data-index="0"
+    >
+      0
+    </button>
+    <button
+      data-index="1"
+    >
+      1
+    </button>
+  </nav>
+</div>
+`;

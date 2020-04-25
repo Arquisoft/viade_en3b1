@@ -1,0 +1,767 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <div
+          class="makeStyles-root-6"
+        >
+          <header
+            class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
+          >
+            <div
+              class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-7 MuiToolbar-gutters"
+            >
+              <div
+                class="MuiGrid-root makeStyles-link-9"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container"
+                >
+                  <a
+                    class="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorInherit"
+                    href="#/home"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item"
+                      >
+                        <img
+                          alt="Viade Logo"
+                          src="logo_2.svg"
+                          style="height: 2.5rem; width: 2.5rem;"
+                        />
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item"
+                      >
+                        <h4
+                          class="MuiTypography-root MuiTypography-h4"
+                        >
+                          ViaDe
+                        </h4>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <a
+                aria-disabled="false"
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-menuButton-8 MuiButton-containedPrimary"
+                href="#/register"
+                tabindex="0"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Sign Up
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </a>
+              <div>
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-colorInherit"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    Sign in
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container"
+        >
+          <div
+            class="MuiGrid-root ImportRouteForm-image-5 MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
+          >
+            <main
+              class="ImportRouteForm-layout-1"
+            >
+              <div
+                class="MuiPaper-root ImportRouteForm-paper-2 MuiPaper-elevation1 MuiPaper-rounded"
+              >
+                <h1
+                  class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter"
+                >
+                  Please, review your routes
+                </h1>
+                <div
+                  class="ImportRouteForm-btnArea-4"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained ImportRouteForm-btn-3 MuiButton-containedPrimary"
+                    data-testid="btn-test-accept"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      Accept
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+              </div>
+            </main>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
+          >
+            <div>
+              <footer
+                class="makeStyles-footer-233"
+              >
+                <div
+                  class="MuiContainer-root MuiContainer-maxWidthSm"
+                >
+                  <h6
+                    class="MuiTypography-root MuiTypography-h6"
+                  >
+                    ViaDe En3B1
+                  </h6>
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-colorTextSecondary"
+                  >
+                    Made by Pablo Cañal
+                  </h6>
+                  <a
+                    class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                    href="https://github.com/Arquisoft/viade_en3b1/"
+                    target="_blank"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <div
+        class="makeStyles-root-6"
+      >
+        <header
+          class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
+        >
+          <div
+            class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-7 MuiToolbar-gutters"
+          >
+            <div
+              class="MuiGrid-root makeStyles-link-9"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <a
+                  class="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorInherit"
+                  href="#/home"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item"
+                    >
+                      <img
+                        alt="Viade Logo"
+                        src="logo_2.svg"
+                        style="height: 2.5rem; width: 2.5rem;"
+                      />
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item"
+                    >
+                      <h4
+                        class="MuiTypography-root MuiTypography-h4"
+                      >
+                        ViaDe
+                      </h4>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <a
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-menuButton-8 MuiButton-containedPrimary"
+              href="#/register"
+              tabindex="0"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Sign Up
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </a>
+            <div>
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-colorInherit"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Sign in
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container"
+      >
+        <div
+          class="MuiGrid-root ImportRouteForm-image-5 MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
+        >
+          <main
+            class="ImportRouteForm-layout-1"
+          >
+            <div
+              class="MuiPaper-root ImportRouteForm-paper-2 MuiPaper-elevation1 MuiPaper-rounded"
+            >
+              <h1
+                class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter"
+              >
+                Please, review your routes
+              </h1>
+              <div
+                class="ImportRouteForm-btnArea-4"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained ImportRouteForm-btn-3 MuiButton-containedPrimary"
+                  data-testid="btn-test-accept"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    Accept
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </main>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
+        >
+          <div>
+            <footer
+              class="makeStyles-footer-233"
+            >
+              <div
+                class="MuiContainer-root MuiContainer-maxWidthSm"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-h6"
+                >
+                  ViaDe En3B1
+                </h6>
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-colorTextSecondary"
+                >
+                  Made by Pablo Cañal
+                </h6>
+                <a
+                  class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                  href="https://github.com/Arquisoft/viade_en3b1/"
+                  target="_blank"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Renders correctly: No files 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <div
+          class="makeStyles-root-266"
+        >
+          <header
+            class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
+          >
+            <div
+              class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-267 MuiToolbar-gutters"
+            >
+              <div
+                class="MuiGrid-root makeStyles-link-269"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container"
+                >
+                  <a
+                    class="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorInherit"
+                    href="#/home"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item"
+                      >
+                        <img
+                          alt="Viade Logo"
+                          src="logo_2.svg"
+                          style="height: 2.5rem; width: 2.5rem;"
+                        />
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item"
+                      >
+                        <h4
+                          class="MuiTypography-root MuiTypography-h4"
+                        >
+                          ViaDe
+                        </h4>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <a
+                aria-disabled="false"
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-menuButton-268 MuiButton-containedPrimary"
+                href="#/register"
+                tabindex="0"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Sign Up
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </a>
+              <div>
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-colorInherit"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    Sign in
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container"
+        >
+          <div
+            class="MuiGrid-root ImportRouteForm-image-265 MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
+          >
+            <main
+              class="ImportRouteForm-layout-261"
+            >
+              <div
+                class="MuiPaper-root ImportRouteForm-paper-262 MuiPaper-elevation1 MuiPaper-rounded"
+              >
+                <h1
+                  class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter"
+                >
+                  Please, review your routes
+                </h1>
+                <div
+                  class="ImportRouteForm-btnArea-264"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained ImportRouteForm-btn-263 MuiButton-containedPrimary"
+                    data-testid="btn-test-accept"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      Accept
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+              </div>
+            </main>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
+          >
+            <div>
+              <footer
+                class="makeStyles-footer-493"
+              >
+                <div
+                  class="MuiContainer-root MuiContainer-maxWidthSm"
+                >
+                  <h6
+                    class="MuiTypography-root MuiTypography-h6"
+                  >
+                    ViaDe En3B1
+                  </h6>
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-colorTextSecondary"
+                  >
+                    Made by Pablo Cañal
+                  </h6>
+                  <a
+                    class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                    href="https://github.com/Arquisoft/viade_en3b1/"
+                    target="_blank"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <div
+        class="makeStyles-root-266"
+      >
+        <header
+          class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
+        >
+          <div
+            class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-267 MuiToolbar-gutters"
+          >
+            <div
+              class="MuiGrid-root makeStyles-link-269"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <a
+                  class="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorInherit"
+                  href="#/home"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item"
+                    >
+                      <img
+                        alt="Viade Logo"
+                        src="logo_2.svg"
+                        style="height: 2.5rem; width: 2.5rem;"
+                      />
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item"
+                    >
+                      <h4
+                        class="MuiTypography-root MuiTypography-h4"
+                      >
+                        ViaDe
+                      </h4>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <a
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-menuButton-268 MuiButton-containedPrimary"
+              href="#/register"
+              tabindex="0"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                Sign Up
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </a>
+            <div>
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-colorInherit"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Sign in
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container"
+      >
+        <div
+          class="MuiGrid-root ImportRouteForm-image-265 MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
+        >
+          <main
+            class="ImportRouteForm-layout-261"
+          >
+            <div
+              class="MuiPaper-root ImportRouteForm-paper-262 MuiPaper-elevation1 MuiPaper-rounded"
+            >
+              <h1
+                class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter"
+              >
+                Please, review your routes
+              </h1>
+              <div
+                class="ImportRouteForm-btnArea-264"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained ImportRouteForm-btn-263 MuiButton-containedPrimary"
+                  data-testid="btn-test-accept"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    Accept
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+            </div>
+          </main>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
+        >
+          <div>
+            <footer
+              class="makeStyles-footer-493"
+            >
+              <div
+                class="MuiContainer-root MuiContainer-maxWidthSm"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-h6"
+                >
+                  ViaDe En3B1
+                </h6>
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-colorTextSecondary"
+                >
+                  Made by Pablo Cañal
+                </h6>
+                <a
+                  class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                  href="https://github.com/Arquisoft/viade_en3b1/"
+                  target="_blank"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -84,7 +84,7 @@ export class ImportRouteForm extends Component {
         this.setState({ routes: routes.slice() });
     }
 
-    upload() {
+    async upload() {
         const { routes } = this.state;
         let success = [];
         routes.forEach((r) => {
@@ -97,6 +97,8 @@ export class ImportRouteForm extends Component {
         } else {
             this.openNotif("Your route was successfully saved", 'success');
         }
+        await new Promise((r) => setTimeout(r, 1000));
+        this.props.history.push('/dashboard');
     }
 
     uploadRoute(route) {
@@ -175,7 +177,7 @@ export class ImportRouteForm extends Component {
                                 ))}
 
                                 <div className={classes.btnArea} >
-                                    <Button onClick={() => this.upload()} className={classes.btn} color="primary" variant="contained">Accept</Button>
+                                    <Button data-testid="btn-test-accept" onClick={() => this.upload()} className={classes.btn} color="primary" variant="contained">Accept</Button>
                                 </div>
                             </Paper>
                         </main>
