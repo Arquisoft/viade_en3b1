@@ -39,7 +39,7 @@ function parseRouteTrack(track) {
 function parseTrackpoints(track) {
     var pointsList = [];
     track.segments.forEach((segment) => {
-        segment.forEach(trackPoint => {
+        segment.forEach((trackPoint) => {
             pointsList.push(new TrackPoint(trackPoint.lat, trackPoint.lon, trackPoint.elevation));
         });
     });

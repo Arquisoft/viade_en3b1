@@ -23,7 +23,7 @@ export class ImportRouteForm extends Component {
             // --- files ---
             files: this.props.location.routes,
             routes: []
-        }
+        };
     }
 
     componentDidMount() {
@@ -195,7 +195,7 @@ export class ImportRouteForm extends Component {
                     </Grid>
                 </Grid>
             </div >
-        )
+        );
     }
 }
 

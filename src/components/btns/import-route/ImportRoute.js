@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, withStyles } from '@material-ui/core';
 import { DropzoneDialog } from 'material-ui-dropzone';
-import { withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 export class ImportRoute extends Component {
 
@@ -31,7 +31,7 @@ export class ImportRoute extends Component {
         this.props.history.push({
             pathname: '/import-route',
             routes: files
-          })
+        });
     }
 
     render() {

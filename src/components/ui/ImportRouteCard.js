@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Card, CardContent, IconButton, CardMedia, Typography, makeStyles, CardActions, Collapse, Box } from '@material-ui/core';
 import MapSnapshot from '../map/MapSnapshot';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -63,7 +63,7 @@ function ImportRouteCard(props) {
                 </CardMedia>
             </Card>
         </div>
-    )
+    );
 }
 
 const useStyles = makeStyles((theme) => ({
