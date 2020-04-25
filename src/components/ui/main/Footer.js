@@ -1,5 +1,4 @@
 import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -29,7 +28,6 @@ export default function StickyFooter() {
 
   return (
     <div >
-      <CssBaseline />
       <footer className={classes.footer}>
         <Container maxWidth="sm">
           <Typography variant="h6">ViaDe En3B1</Typography>

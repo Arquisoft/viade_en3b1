@@ -1,7 +1,7 @@
 import RoutesCache from "./RoutesCache";
 import Route from "../entities/Route";
 import TrackPoint from "../entities/TrackPoint";
-import * as RouteHandler from "../parser/RouteHandler";
+import * as RouteHandler from "../handler/RouteHandler";
 
 const mockGetRoutes = jest.spyOn(RouteHandler, "loadAllRoutes");
 

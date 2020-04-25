@@ -4,9 +4,9 @@ import NavBar from '../../ui/main/NavBar';
 import Footer from '../../ui/main/Footer';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import { GetUserProfileImage, GetUserWebId } from '../../../parser/UserDataHandler';
+import { GetUserProfileImage, GetUserWebId } from '../../../handler/UserDataHandler';
 import { Value } from '@solid/react';
-import { LogOut } from '../../../parser/SessionHandler';
+import { LogOut } from '../../../handler/SessionHandler';
 
 export default function Profile() {
     const classes = useStyles();

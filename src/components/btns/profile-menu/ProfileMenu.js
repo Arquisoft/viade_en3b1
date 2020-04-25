@@ -9,10 +9,10 @@ import { Value } from '@solid/react';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import PersonIcon from '@material-ui/icons/Person';
 import PeopleIcon from '@material-ui/icons/People';
-import { GetUserProfileImage } from '../../../parser/UserDataHandler';
+import { GetUserProfileImage } from '../../../handler/UserDataHandler';
 import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import { LogOut } from '../../../parser/SessionHandler';
+import { LogOut } from '../../../handler/SessionHandler';
 
 const ProfileMenu = () => {
 

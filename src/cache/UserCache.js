@@ -1,4 +1,4 @@
-import { GetUserFriends, GetUserWebId, GetUserName } from "../parser/UserDataHandler";
+import { GetUserFriends, GetUserWebId, GetUserName } from "../handler/UserDataHandler";
 
 export default {
     name: "",

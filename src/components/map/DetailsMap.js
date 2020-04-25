@@ -27,7 +27,6 @@ export default class DetailsMap extends Component {
             key={point.getLatitude()+','+point.getLongitude()} 
             position={[point.getLatitude(), point.getLongitude()]}>
             <Popup>
-              <p>{point.getName()}</p>
               <p>Latitude: {point.getLatitude()}</p>
               <p>Longitude: {point.getLongitude()}</p>
               <p>Elevation: {point.getElevation()}</p>

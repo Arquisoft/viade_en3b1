@@ -7,26 +7,16 @@ class TrackPoint {
      * @param {String} name 
      * @param {Number} elevation 
      */
-    constructor(latitude, longitude, name, elevation) {
+    constructor(latitude, longitude, elevation) {
 
         this.latitude = latitude;
         this.longitude = longitude;
-
-        if (!name) {
-            this.name = "";
-        } else {
-            this.name = name;
-        }
 
         if(!elevation){
             this.elevation = "";
         } else {
             this.elevation = elevation;
         }
-    }
-
-    getName() {
-        return this.name;
     }
 
     getLatitude() {

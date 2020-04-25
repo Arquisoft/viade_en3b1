@@ -1,4 +1,4 @@
-import ParserJsonLdToRoute from "./ParserJsonLdToRoute";
+import ParserJsonLdToRoute from "../parser/ParserJsonLdToRoute";
 
 const auth = require('solid-auth-client');
 const FC = require('solid-file-client');
