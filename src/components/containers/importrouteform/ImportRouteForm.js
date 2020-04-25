@@ -1,23 +1,28 @@
 import React, { Component } from 'react';
 import NavBar from '../../ui/main/NavBar';
 import Footer from '../../ui/main/Footer';
-import { withStyles, Typography, Paper, Grid, Button } from '@material-ui/core';
-import Route from '../../../entities/Route';
-import TrackPoint from '../../../entities/TrackPoint';
+import { withStyles, Typography, Paper, Grid, Button, Snackbar, IconButton } from '@material-ui/core';
 import ImportRouteCard from '../../ui/ImportRouteCard';
 import { parseGpxToRoutes } from '../../../parser/ParserGpxToRoute';
 import ParserJsonLdToRoute from '../../../parser/ParserJsonLdToRoute';
+import RoutesCache from '../../../cache/RoutesCache';
+import { uploadRoute } from '../../../handler/RouteHandler';
+import CloseIcon from '@material-ui/icons/Close';
+import MuiAlert from '@material-ui/lab/Alert';
 
 export class ImportRouteForm extends Component {
 
     constructor(props) {
         super(props);
-        // console.log(this.props.location.routes);
         this.state = {
+            open: false,
+            message: '',
+            vertical: 'top',
+            horizontal: 'center',
+            severity: '', // success, error, warning, info
+            // --- files ---
             files: this.props.location.routes,
             routes: []
-            // routes: [new Route("San Silvestre", "Esto es una ruta de prueba", [new TrackPoint(43, 5, 10), new TrackPoint(47, 8, 10)], null, null, null, null, null),
-            // new Route("Recorrido por Oviedo", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", [new TrackPoint(41, 5, 10), new TrackPoint(43, 8, 10)], null, null, null, null, null)]        }
         }
     }
 
@@ -81,12 +86,17 @@ export class ImportRouteForm extends Component {
 
     upload() {
         const { routes } = this.state;
-        let success = 0;
+        let success = [];
         routes.forEach((r) => {
             this.uploadRoute(r).then((code) => {
-                
+                success.push(code); 
             });
         });
+        if(success.includes(-1)) {
+            this.openNotif("There was an error uploading your routes", 'error');
+        } else {
+            this.openNotif("Your route was successfully saved", 'success');
+        }
     }
 
     uploadRoute(route) {
@@ -96,27 +106,52 @@ export class ImportRouteForm extends Component {
         });
     }
 
-    checkSuccessCode(code) {
-        switch (code) {
-            case -1: // error
-                this.openNotif("There was an error during this operation", 'error');
-                break;
-            case 0: // success
-                this.openNotif("Your route was successfully saved", 'success');
-                break;
-            default:
-                throw new Error('Unknown Success Code ' + code);
-        }
-    }
+    // ###########################
+    //        Notification
+    // ###########################
+
+    openNotif = (text, newSeverity) => {
+        this.setState({
+            open: true,
+            message: text,
+            severity: newSeverity
+        });
+    };
+
+    closeNotif = () => {
+        this.setState({ open: false });
+    };
 
     render() {
         const { classes } = this.props;
-        const { files } = this.state;
         const { routes } = this.state;
+
+        const { open, message, severity } = this.state;
+        const { vertical, horizontal } = this.state;
 
         return (
             <div>
                 <NavBar />
+
+                <Snackbar
+                    anchorOrigin={{ vertical, horizontal }}
+                    open={open}
+                    action={
+                        <React.Fragment>
+                            <IconButton
+                                aria-label="close"
+                                color="inherit"
+                                onClick={this.closeNotif}
+                            >
+                                <CloseIcon />
+                            </IconButton>
+                        </React.Fragment>
+                    }
+                >
+                    <Alert onClose={this.closeNotif} severity={severity}>
+                        {message}
+                    </Alert>
+                </Snackbar>
 
                 <Grid container className={classes.background}>
                     <Grid
@@ -140,7 +175,7 @@ export class ImportRouteForm extends Component {
                                 ))}
 
                                 <div className={classes.btnArea} >
-                                    <Button className={classes.btn} color="primary" variant="contained">Accept</Button>
+                                    <Button onClick={() => this.upload()} className={classes.btn} color="primary" variant="contained">Accept</Button>
                                 </div>
                             </Paper>
                         </main>
@@ -191,8 +226,8 @@ const useStyles = (theme) => ({
         textAlign: 'center'
     },
     image: {
-        // backgroundImage: `url(https://source.unsplash.com/collection/9992041/1600x900)`,9847024
-        backgroundImage: `url(https://source.unsplash.com/collection/9847024/1600x900)`,
+        backgroundImage: `url(https://source.unsplash.com/collection/9992041/1600x900)`,
+        // backgroundImage: `url(https://source.unsplash.com/collection/9847024/1600x900)`,
         backgroundRepeat: 'no-repeat',
         backgroundColor:
             theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
@@ -201,5 +236,9 @@ const useStyles = (theme) => ({
         minHeight: '90vh',
     },
 });
+
+function Alert(props) {
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
 export default withStyles(useStyles)(ImportRouteForm);
