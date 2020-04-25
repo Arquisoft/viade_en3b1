@@ -79,6 +79,36 @@ export class ImportRouteForm extends Component {
         this.setState({ routes: routes.slice() });
     }
 
+    upload() {
+        const { routes } = this.state;
+        let success = 0;
+        routes.forEach((r) => {
+            this.uploadRoute(r).then((code) => {
+                
+            });
+        });
+    }
+
+    uploadRoute(route) {
+        RoutesCache.addRouteToCache(route);
+        return new Promise((resolve) => {
+            uploadRoute(route, (response) => resolve(response));
+        });
+    }
+
+    checkSuccessCode(code) {
+        switch (code) {
+            case -1: // error
+                this.openNotif("There was an error during this operation", 'error');
+                break;
+            case 0: // success
+                this.openNotif("Your route was successfully saved", 'success');
+                break;
+            default:
+                throw new Error('Unknown Success Code ' + code);
+        }
+    }
+
     render() {
         const { classes } = this.props;
         const { files } = this.state;

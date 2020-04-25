@@ -46,6 +46,7 @@ export class ImportRoute extends Component {
                 </Button>
                 <DropzoneDialog
                     open={this.state.open}
+                    disableRejectionFeedback={true}
                     acceptedFiles={['.gpx', '.json', '.jsonld']}
                     showPreviews={true}
                     showPreviewsInDropzone={false}
