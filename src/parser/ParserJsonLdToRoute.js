@@ -4,8 +4,6 @@ import { loadMedia } from '../handler/MediaHandler.js';
 
 class ParserJsonLdToRoute {
 
-    constructor(){}
-
     async parse(file) {
         try {
             var route = JSON.parse(file);

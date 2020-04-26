@@ -43,14 +43,14 @@ export class ImportRouteForm extends Component {
 
             fileReader.onerror = () => alert("ERROR IMPORTING ROUTE");
             fileReader.onabort = () => alert("ABORT IMPORTING ROUTE");
-            fileReader.onload = () => {
+            fileReader.onload = async () => {
                 const content = fileReader.result;
                 try {
                     let ext = re.exec(file.name)[0];
                     if (ext === '.gpx') {
                         this.handleGPX(content);
                     } else if (ext === '.jsonld' || ext === '.json') {
-                        this.handleJSON(content);
+                        await this.handleJSON(content);
                     }
                 } catch (error) {
                     alert(error);
@@ -76,9 +76,9 @@ export class ImportRouteForm extends Component {
         this.setState({ routes: routes.slice() });
     }
 
-    handleJSON(file) {
+    async handleJSON(file) {
         let parser = new ParserJsonLdToRoute();
-        let route = parser.parse(file);
+        let route = await parser.parse(file);
         this.state.routes.push(route);
         const { routes } = this.state;
         this.setState({ routes: routes.slice() });

@@ -1,10 +1,10 @@
-import ParserJsonLdToRoute from "../parser/ParserJsonLdToRoute";
 import Media from "../entities/Media";
+import ParserJsonLdToRoute from "../parser/ParserJsonLdToRoute";
 
 const auth = require('solid-auth-client');
 const FC = require('solid-file-client');
 const fc = new FC(auth);
-const parser = new ParserJsonLdToRoute();
+// const parser = new ParserJsonLdToRoute();
 
 class PodHandler {
 
@@ -52,7 +52,7 @@ class PodHandler {
 
                 for (let i = 0; i < files.length; i++) {
                     let fileContent = await fc.readFile(files[i].url);
-                    routes.push(await parser.parse(fileContent));
+                    routes.push(await new ParserJsonLdToRoute().parse(fileContent));
                 }
 
             } catch (error) {
