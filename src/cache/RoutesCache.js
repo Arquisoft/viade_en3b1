@@ -1,5 +1,4 @@
 import { loadAllRoutes } from '../handler/RouteHandler';
-import { loadMedia } from '../handler/MediaHandler';
 
 export default {
     first: true,

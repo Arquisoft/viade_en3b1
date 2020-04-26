@@ -46,8 +46,8 @@ test('Methods', () => {
     const instance = wrapper.shallow().instance();
 
     instance.handleFiles();
-    instance.handleGPX(RouteGPX);
-    instance.handleJSON(RouteJSON);
+    // instance.handleGPX(RouteGPX);
+    // instance.handleJSON(RouteJSON);
     instance.openNotif("There was an error uploading your routes", 'error');
     instance.closeNotif();
 });

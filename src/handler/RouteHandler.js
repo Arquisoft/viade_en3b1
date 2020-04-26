@@ -1,6 +1,6 @@
 import auth from 'solid-auth-client';
 import PodHandler from './PodHandler';
-import { uploadMedia, loadMedia } from './MediaHandler';
+import { uploadMedia } from './MediaHandler';
 
 export async function uploadRoute(route, callback) {
     let session = await auth.currentSession();

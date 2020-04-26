@@ -15,11 +15,7 @@ exports[`Renders correctly 1`] = `
       >
         <div
           class="awssld__content"
-        >
-          <img
-            src="city_1.jpg"
-          />
-        </div>
+        />
       </div>
       <div
         class="awssld__box"

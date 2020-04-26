@@ -1,9 +1,10 @@
 import Route from '../entities/Route.js';
 import TrackPoint from '../entities/TrackPoint.js';
-import Media from '../entities/Media.js';
 import { loadMedia } from '../handler/MediaHandler.js';
 
 class ParserJsonLdToRoute {
+
+    constructor(){}
 
     async parse(file) {
         try {
