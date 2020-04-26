@@ -1,4 +1,5 @@
 import ParserJsonLdToRoute from "../parser/ParserJsonLdToRoute";
+import Media from "../entities/Media";
 
 const auth = require('solid-auth-client');
 const FC = require('solid-file-client');
@@ -33,38 +34,11 @@ class PodHandler {
 
     storeFile(url, data, callback) {
         let response = fc.createFile(url, data);
-        // let successCode = null;
         response.then(
             (response) => { callback(0); }
             , (error) => { callback(-1); }
         );
-        // return successCode;
     }
-
-    // async storeMedia(mediaList, callback = () => { }) {
-    //     if (!mediaList.length) {
-    //         return Promise.reject('No media to upload');
-    //     }
-    //     if (!validMediaType(mediaList)) {
-    //         return Promise.reject('Media must be image or video');
-    //     }
-
-    //     let url = this.defaultFolder + this.resourcesFolder;
-
-    //     let buildPath = '';
-    //     Array.from(mediaList).forEach(file => {
-    //         buildPath = url + file.name;
-    //         this.storeMedia(buildPath, file, file.type, callback)
-    //     });
-    // }
-
-    // storeMedia(url, data, contentType, callback) {
-    //     let response = fc.putFile(url, data, contentType);
-    //     response.then(
-    //         (response) => { callback(response.url, response); }
-    //         , (error) => { callback(null, error); }
-    //     );
-    // }
 
     async findAllRoutes() {
         let url = this.defaultFolder + this.routesFolder;
@@ -78,43 +52,38 @@ class PodHandler {
 
                 for (let i = 0; i < files.length; i++) {
                     let fileContent = await fc.readFile(files[i].url);
-                    routes.push(parser.parse(fileContent));
+                    routes.push(await parser.parse(fileContent));
                 }
 
             } catch (error) {
-                // console.log("##### ERROR #####");
-                // console.log(error);         // A full error response 
-                // console.log(error.status);  // Just the status code of the error
-                // console.log(error.message); // Just the status code and statusText
+                alert(error);
             }
         } else {
             alert("There is no routes directory");
         }
 
-        // console.log("RUTAS");
-        // console.log(routes);
-
         return routes;
     }
+
+    async findMedia(urlJson) {
+        
+        let url = urlJson["@id"]; 
+        let media;
+
+        if(await fc.itemExists(url)) {
+            try {
+                let file = await fc.readFile(url);
+                media = new Media(file, urlJson["name"]);
+                media.setUrl(url);
+            } catch(error) {
+                alert(error);
+            }
+        } else {
+            alert(`Media doesn't exist: ${url}`);
+        }
+
+        return media;
+    }
 }
-
-// const mediaType = {
-//     image: /\.(jpe?g|gif|bmp|png|svg|tiff?)$/i,
-//     video: /\.(mp4|webm|ogg)$/i
-// }
-
-// function validMediaType(mediaList) {
-//     let valid = true;
-
-//     mediaList.forEach(file => {
-//         if (!(mediaType.image.test(file.name) || mediaType.video.test(file.name))) {
-//             valid = false;
-//         }
-//     });
-
-//     return valid;
-// }
-
-
 
 export default PodHandler;

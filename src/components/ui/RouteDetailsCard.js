@@ -16,6 +16,7 @@ import svgIconCamera from '../../assets/img/logo/camera.svg';
 import svgIconMap from '../../assets/img/logo/map.svg';
 import svgIconMountain from '../../assets/img/logo/mountain.svg';
 import svgIconArrows from '../../assets/img/logo/arrows.svg';
+import svgIconCameraRetro from '../../assets/img/logo/camera-retro.svg';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -84,6 +85,13 @@ const useStyles = makeStyles((theme) => ({
     },
     backBtn: {
         margin: theme.spacing(3),
+    },
+    cameraRetrologo: {
+        height: '10rem',
+        width: '10rem',
+    },
+    defaultGallery: {
+        marginTop: theme.spacing(6),
     }
 }));
 
@@ -100,10 +108,7 @@ export default function RouteDetailsCard(props) {
     var date = route.getDate() || "--";
     var description = route.getDescription() || "--";
     var distance = route.getDistance() || "--";
-    // var media = route.getMedia();
-    // console.log(media);
-
-    var media = [new Media(photo), new Media(photo2)];
+    var media = route.getMedia();
 
     return (
         <div>
@@ -140,7 +145,7 @@ export default function RouteDetailsCard(props) {
                             </Box>
                         </Grid>
 
-                        <Card elevation variant="outlined" className={classes.map}>
+                        <Card variant="outlined" className={classes.map}>
                             <DetailsMap route={route} />
                         </Card>
                     </Grid>
@@ -172,8 +177,15 @@ export default function RouteDetailsCard(props) {
                             </Box>
                         </Grid>
 
-                        <Card elevation className={classes.carousel}>
-                            <MyCarousel photos={media} />
+                        <Card elevation={0} className={classes.carousel}>
+                            {(media.length !== 0) ? (
+                                <MyCarousel photos={media} />
+                            ) : (
+                                    <div style={{textAlign: 'center'}} className={classes.defaultGallery}>
+                                        <img src={svgIconCameraRetro} alt="Camera retro logo" className={classes.cameraRetrologo} />
+                                        <Typography variant="h6">You don't have any photos or videos</Typography>
+                                    </div>
+                                )}
                         </Card>
                     </Grid>
 
@@ -186,7 +198,7 @@ export default function RouteDetailsCard(props) {
                             </Box>
                         </Grid>
 
-                        <Card variant="outlined" elevation className={classes.data} >
+                        <Card variant="outlined" className={classes.data} >
                             <CardContent>
                                 <Grid container spacing={3}>
 

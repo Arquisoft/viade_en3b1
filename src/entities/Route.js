@@ -51,6 +51,11 @@ class Route {
             this.media = media;
             return;
         }
+        if (media instanceof Media) {
+            this.media = [];
+            this.media.push(media);
+            return;
+        }
         let finalMedia = [];
         media.forEach((m) => {
             finalMedia.push(new Media(m, m.name, null));
@@ -131,9 +136,7 @@ class Route {
         if (this.trackPoints === null) { // no trackpoints list
             return;
         }
-        if (this.trackPoints[0].getElevation().length !== 0) {
-            // console.log("Route " + this.getName() + " already has elevation!!");
-            // console.log(this);
+        if (this.trackPoints[0].getElevation().length !== 0) { // route already has elevation
             return;
         }
 

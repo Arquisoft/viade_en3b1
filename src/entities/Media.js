@@ -7,7 +7,7 @@ class Media{
      * @param {Object} content Video, photo or audio.
      * @param {String} name (Optional) Name of the Media object. 
      */
-    constructor(content, name, id) {
+    constructor(content, name, id = null) {
         this.content = content;
         this.name = name;
         this.url = "";

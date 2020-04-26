@@ -15,14 +15,12 @@ export class MyCarousel extends Component {
 
         this.media = [];
         this.state.photos.forEach((p) => {
-            this.media.push({ source: p.getContent() });
+            this.media.push({ source: p.getUrl() });
         });
     }
 
     render() {
-
         return (
-
             <AutoplaySlider
                 play={true}
                 cancelOnInteraction={false}

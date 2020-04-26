@@ -40,7 +40,7 @@ function parseTrackpoints(track) {
     var pointsList = [];
     track.segments.forEach((segment) => {
         segment.forEach((trackPoint) => {
-            pointsList.push(new TrackPoint(trackPoint.lat, trackPoint.lon, trackPoint.elevation));
+            pointsList.push(new TrackPoint(trackPoint.lat, trackPoint.lon, parseInt( trackPoint.elevation, 10 )));
         });
     });
     return pointsList;

@@ -1,4 +1,5 @@
 import { loadAllRoutes } from '../handler/RouteHandler';
+import { loadMedia } from '../handler/MediaHandler';
 
 export default {
     first: true,
@@ -32,5 +33,6 @@ export default {
     },
     clear() {
         this.routes = [];
+        this.first = true;
     }
 };

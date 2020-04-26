@@ -1,6 +1,6 @@
 import auth from 'solid-auth-client';
 import PodHandler from './PodHandler';
-import { uploadMedia } from './MediaHandler';
+import { uploadMedia, loadMedia } from './MediaHandler';
 
 export async function uploadRoute(route, callback) {
     let session = await auth.currentSession();
@@ -21,6 +21,7 @@ export async function loadAllRoutes() {
     let session = await auth.currentSession();
     let storageHandler = new PodHandler(session);
 
-    let loadedRoutes = storageHandler.findAllRoutes();
+    let loadedRoutes = await storageHandler.findAllRoutes();
+    
     return loadedRoutes;
 }
