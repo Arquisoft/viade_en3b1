@@ -21,6 +21,7 @@ export async function loadAllRoutes() {
     let session = await auth.currentSession();
     let storageHandler = new PodHandler(session);
 
-    let loadedRoutes = storageHandler.findAllRoutes();
+    let loadedRoutes = await storageHandler.findAllRoutes();
+    
     return loadedRoutes;
 }

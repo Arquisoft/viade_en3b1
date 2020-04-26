@@ -32,5 +32,6 @@ export default {
     },
     clear() {
         this.routes = [];
+        this.first = true;
     }
 };

@@ -15,3 +15,13 @@ export async function uploadMedia(media) {
         m.setUrl(url);
     });
 }
+
+export async function loadMedia(mediaJson) {
+
+    let session = await auth.currentSession();
+    let storageHandler = new PodHandler(session);
+
+    let loadedMedia = await storageHandler.findMedia(mediaJson);
+
+    return loadedMedia;
+}

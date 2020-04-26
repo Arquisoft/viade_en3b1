@@ -112,6 +112,7 @@ export class NewRouteForm extends Component {
     }
 
     upload(route) {
+        cache.clear();
         cache.addRouteToCache(route);
         return new Promise((resolve) => {
             uploadRoute(route, (response) => resolve(response));

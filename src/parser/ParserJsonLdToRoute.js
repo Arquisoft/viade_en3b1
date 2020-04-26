@@ -1,9 +1,10 @@
 import Route from '../entities/Route.js';
 import TrackPoint from '../entities/TrackPoint.js';
+import { loadMedia } from '../handler/MediaHandler.js';
 
 class ParserJsonLdToRoute {
 
-    parse(file) {
+    async parse(file) {
         try {
             var route = JSON.parse(file);
 
@@ -14,12 +15,14 @@ class ParserJsonLdToRoute {
 
             var points = route.points;
             var comments = [];
-            var media = [];
+            var mediaData = route.media;
 
             let trackPoints = this.parsePoints(points);
+            let media = await this.parseMedia(mediaData);
 
-            let finalroute = new Route(name, description, trackPoints, comments, media, null, id);
+            let finalroute = new Route(name, description, trackPoints, comments, null, null, id);
 
+            finalroute.setMedia(media);
             // DATE null now.
             return finalroute;
             
@@ -28,9 +31,18 @@ class ParserJsonLdToRoute {
         }
     }
 
+    async parseMedia(media) {
+        let mediaList = [];
+        for (let i = 0; i < media.length; i++) {
+            let m = await loadMedia( media[i] );
+            mediaList.push(m);
+        }
+        return mediaList;
+    }
+
     parsePoints(points) {
         let trackPoints = [];
-        for (var i = 0; i < points.length; i++) {
+        for (let i = 0; i < points.length; i++) {
             trackPoints.push(new TrackPoint(points[i].latitude, points[i].longitude, points[i].elevation));
         }
         return trackPoints;

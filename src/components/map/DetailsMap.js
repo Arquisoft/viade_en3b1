@@ -29,7 +29,7 @@ export default class DetailsMap extends Component {
             <Popup>
               <p>Latitude: {point.getLatitude()}</p>
               <p>Longitude: {point.getLongitude()}</p>
-              <p>Elevation: {point.getElevation()}</p>
+              <p>Elevation: {parseInt( point.getElevation(), 10 )}</p>
             </Popup>
           </Marker>
         ))}

@@ -35,7 +35,7 @@ export class ElevationChart extends Component {
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 15,
-                    data: points.map((p) => p.getElevation()),
+                    data: points.map((p) => parseInt( p.getElevation(), 10 )),
                 }
             ]
         };
