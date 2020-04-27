@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div>
+  <div
+    class="makeStyles-root-2"
+  >
+    <header
+      class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-3 MuiToolbar-gutters"
+      >
+        <div
+          class="MuiGrid-root makeStyles-link-5"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container"
+          >
+            <a
+              class="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorInherit"
+              href="#/home"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item"
+                >
+                  <img
+                    alt="Viade Logo"
+                    src="logo_2.svg"
+                    style="height:2.5rem;width:2.5rem"
+                  />
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item"
+                >
+                  <h4
+                    class="MuiTypography-root MuiTypography-h4"
+                  >
+                    ViaDe
+                  </h4>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <main
+    class="MuiContainer-root MuiContainer-maxWidthSm"
+  >
+    <div
+      class="MuiPaper-root MuiCard-root makeStyles-root-1 MuiPaper-elevation4 MuiPaper-rounded"
+    >
+      <div
+        class="MuiCardContent-root"
+      >
+        <div
+          class="sc-Axmtr hNtgwq solid-provider-login-component solid-provider-login-component null"
+        >
+          <form>
+            <input
+              class="sc-AxhCb deVEyJ"
+              data-testid="input-webid"
+              name="idp"
+              placeholder="Introduza la url de su webId"
+              type="text"
+            />
+            <button
+              class="sc-AxhUy cLoezo link "
+              data-testid="change-mode-button"
+              type="button"
+            >
+              Log In with Provider
+            </button>
+            <button
+              class="sc-AxgMl gigcwx"
+              data-testid="provider-form-button"
+              type="submit"
+            >
+              Login
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+`;

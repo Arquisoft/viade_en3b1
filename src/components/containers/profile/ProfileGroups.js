@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Typography, makeStyles, CssBaseline, Grid, Paper, Link, Backdrop, CircularProgress } from '@material-ui/core';
+import { Container, Typography, makeStyles, CssBaseline, Grid, Paper, Link, Backdrop, CircularProgress, Button } from '@material-ui/core';
 import NavBar from '../../ui/main/NavBar';
 import Footer from '../../ui/main/Footer';
 import Tabs from '@material-ui/core/Tabs';
@@ -16,12 +16,6 @@ export default function ProfileGroups() {
 
     useEffect(() => {
         GroupsCache.getGroups().then((gList) => {
-            let groupsList = [];
-            // gList.forEach((g) => {
-            //     groupsList.push(g);
-            //     console.log(g)
-            // })
-            groupsList.push(groupsList);
             setGroups(gList);
             setLoading(false);
         })
@@ -60,7 +54,14 @@ export default function ProfileGroups() {
                     </div>
                 ) : (
                         (groups) ? (
-                            <GroupsList groups={groups} />
+                            <div>
+                                <div style={{textAlign: 'right', marginTop: '3rem'}}>
+                                    <Button variant="outlined" color="primary" href={"#/profile/groups/create"}>Create New</Button>
+                                </div>
+                                <div style={{ marginBottom: '10rem' }}>
+                                    <GroupsList groups={groups} />
+                                </div>
+                            </div>
                         ) : (
                                 <DefaultPlaceHolder />
                             )
@@ -92,15 +93,14 @@ function GroupsList(props) {
             xs={false}
             sm={12}
             md={12}
-            className={classes.groups}
         >
 
             <main className={classes.layout}>
-                    {groups.map((each, index) => (
-                        <div key={index}>
-                            <GroupCard group={each} />
-                        </div>
-                    ))}
+                {groups.map((each, index) => (
+                    <div key={index}>
+                        <GroupCard group={each} />
+                    </div>
+                ))}
             </main>
 
         </Grid>

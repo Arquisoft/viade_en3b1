@@ -160,7 +160,10 @@ export default function CreateGroup() {
                                     onChange={(e) => setName(e.target.value)}
                                 />
 
-                                <div style={{ textAlign: "center", marginTop: '2rem', marginBottom: '2rem' }}>
+                                
+                                <div style={{ marginTop: '2rem', marginBottom: '2rem' }}>
+                                <Typography variant="subtitle1" color="inherit">Select the members of your group:</Typography>
+                                    <div style={{ textAlign: "center"}}>
                                     {friends.map((each, index) => (
                                         <Grid key={index} container style={{ textAlign: "center", marginTop: '0.5rem', marginBottom: '0.5rem' }}>
                                             <Checkbox
@@ -176,6 +179,7 @@ export default function CreateGroup() {
                                             </Card>
                                         </Grid>
                                     ))}
+                                    </div>
                                 </div>
                                 <div style={{ textAlign: 'center' }}>
                                     <Button

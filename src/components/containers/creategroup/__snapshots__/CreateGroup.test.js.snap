@@ -110,8 +110,17 @@ exports[`Renders correctly 1`] = `
               </div>
             </div>
             <div
-              style="text-align:center;margin-top:2rem;margin-bottom:2rem"
-            />
+              style="margin-top:2rem;margin-bottom:2rem"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorInherit"
+              >
+                Select the members of your group:
+              </h6>
+              <div
+                style="text-align:center"
+              />
+            </div>
             <div
               style="text-align:center"
             >
