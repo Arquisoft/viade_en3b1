@@ -1,8 +1,6 @@
 import NavBar from "./NavBar";
 import { Typography, Button } from "@material-ui/core";
-import Login from "../../btns/login/Login";
 import MisRutas from "../../btns/mis-rutas/MisRutas";
-import Register from "../../containers/register/Register";
 
 test("Define NavBar", () => {
     expect(NavBar).toBeDefined();
@@ -38,9 +36,9 @@ test("Btn MisRutas", () => {
 
 test("Btn Login", () => {
     const wrapper = mount(<NavBar />);
-    const login = wrapper.find(Login);
+    const login = wrapper.find({ href: '#/login' }).first().text();
     expect(login).toBeDefined();
-    expect(login).toHaveLength(1);
+    expect(login).toEqual("Sign In");
 });
 
 test("Btn Sign Up", () => {

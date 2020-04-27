@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
+import { HashRouter, Switch, Redirect } from "react-router-dom";
 import Welcome  from "./welcome/Welcome.js";
 import PageNotFound from "./pagenotfound/PageNotFound.js";
 import Register from './register/Register.js';
@@ -9,22 +9,26 @@ import NewRouteForm from "./newrouteform/NewRouteForm.js";
 import ImportRouteForm from "./importrouteform/ImportRouteForm";
 import Profile from "./profile/Profile.js";
 import ProfileFriends from "./profile/ProfileFriends.js";
+import Login from "./login/Login.js";
+import PrivateLayout from "../layouts/PrivateLayout.js";
+import PublicLayout from "../layouts/PublicLayout.js";
+import NotLoggedInLayout from "../layouts/NotLoggedInLayout.js";
 
 const Router = () => (
   <HashRouter>
     <Fragment>
       <Switch>
-        <Route exact path="/404" component={PageNotFound} />
+        <PublicLayout exact path="/404" component={PageNotFound} />
         <Redirect exact from="/" to="/home" />
-        <Route exact path="/home" component={Welcome} />
-        <Route exact path="/dashboard" component={UserRoutes} />
-        <Route exact path="/register" component={Register}/>
-        <Route exact path="/create-route" component={NewRouteForm}/>
-        <Route exact path="/import-route" component={ImportRouteForm}/>
-        <Route exact path="/profile" component={Profile}/>
-        <Route exact path="/profile/friends" component={ProfileFriends}/>
-        <Route exact path="/RouteDetails/:id" component={RouteDetails}/>
-        <Redirect to="/404" />
+        <PublicLayout exact path="/home" component={Welcome} />
+        <PrivateLayout exact path="/dashboard" component={UserRoutes} />
+        <NotLoggedInLayout exact path="/register" component={Register}/>
+        <NotLoggedInLayout exact path="/login" component={Login} />
+        <PrivateLayout exact path="/create-route" component={NewRouteForm}/>
+        <PrivateLayout exact path="/import-route" component={ImportRouteForm}/>
+        <PrivateLayout exact path="/profile" component={Profile}/>
+        <PrivateLayout exact path="/profile/friends" component={ProfileFriends}/>
+        <PrivateLayout exact path="/RouteDetails/:id" component={RouteDetails}/>
       </Switch>
     </Fragment>
   </HashRouter>

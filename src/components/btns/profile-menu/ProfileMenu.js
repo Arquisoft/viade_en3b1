@@ -33,8 +33,6 @@ const ProfileMenu = () => {
         setAnchorEl(null);
     };
 
-    // setNoPhoto(true);
-
     return (
         <div>
             <Button
