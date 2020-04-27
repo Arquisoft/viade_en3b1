@@ -47,6 +47,7 @@ export default function Profile() {
                     >
                         <Tab label="General" />
                         <Tab label="Friends" href="#/profile/friends" />
+                        <Tab label="Groups" href="#/profile/groups" />
                     </Tabs>
                 </Paper>
 

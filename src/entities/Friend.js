@@ -17,6 +17,14 @@ class Friend {
     getPhoto() {
         return this.photo;
     }
+
+    toJson() {
+        return JSON.stringify(
+            {
+                "url": this.webId
+            }
+        );
+    }
 }
 
 export default Friend;

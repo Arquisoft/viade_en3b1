@@ -1,6 +1,6 @@
-test('renders form', () => {
-    // const { getByText } = render(<App />);
-    // const linkElement = getByText(/Sign in/i);
-    // expect(linkElement).toBeInTheDocument();
+import NewRouteForm from './NewRouteForm';
+import { shallow } from 'enzyme';
+
+test('Define NewRouteForm', () => {
+  expect(NewRouteForm).toBeDefined();
 });
-  

@@ -13,6 +13,7 @@ import { GetUserProfileImage } from '../../../handler/UserDataHandler';
 import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { LogOut } from '../../../handler/SessionHandler';
+import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
 
 const ProfileMenu = () => {
 
@@ -70,11 +71,20 @@ const ProfileMenu = () => {
                 </Link>
 
                 <Link underline='none' href={'#/profile/friends'}>
-                    <StyledMenuItem divider>
+                    <StyledMenuItem>
                         <ListItemIcon>
                             <PeopleIcon />
                         </ListItemIcon>
                         <ListItemText primary="Friends" />
+                    </StyledMenuItem>
+                </Link>
+
+                <Link underline='none' href={'#/profile/groups'}>
+                    <StyledMenuItem divider>
+                        <ListItemIcon>
+                            <SupervisedUserCircleIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Groups" />
                     </StyledMenuItem>
                 </Link>
 

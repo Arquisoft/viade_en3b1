@@ -13,6 +13,8 @@ import Login from "./login/Login.js";
 import PrivateLayout from "../layouts/PrivateLayout.js";
 import PublicLayout from "../layouts/PublicLayout.js";
 import NotLoggedInLayout from "../layouts/NotLoggedInLayout.js";
+import ProfileGroups from "./profile/ProfileGroups.js";
+import CreateGroup from "./creategroup/CreateGroup.js";
 
 const Router = () => (
   <HashRouter>
@@ -28,6 +30,8 @@ const Router = () => (
         <PrivateLayout exact path="/import-route" component={ImportRouteForm}/>
         <PrivateLayout exact path="/profile" component={Profile}/>
         <PrivateLayout exact path="/profile/friends" component={ProfileFriends}/>
+        <PrivateLayout exact path="/profile/groups" component={ProfileGroups}/>
+        <PrivateLayout exact path="/profile/groups/create" component={CreateGroup}/>
         <PrivateLayout exact path="/RouteDetails/:id" component={RouteDetails}/>
       </Switch>
     </Fragment>
