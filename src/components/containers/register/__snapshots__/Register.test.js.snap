@@ -65,22 +65,21 @@ Object {
                   class="MuiTouchRipple-root"
                 />
               </a>
-              <div>
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-colorInherit"
-                  tabindex="0"
-                  type="button"
+              <a
+                aria-disabled="false"
+                class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-menuButton-9 MuiButton-colorInherit"
+                href="#/login"
+                tabindex="0"
+              >
+                <span
+                  class="MuiButton-label"
                 >
-                  <span
-                    class="MuiButton-label"
-                  >
-                    Sign in
-                  </span>
-                  <span
-                    class="MuiTouchRipple-root"
-                  />
-                </button>
-              </div>
+                  Sign In
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </a>
             </div>
           </header>
         </div>
@@ -319,22 +318,21 @@ Object {
                 class="MuiTouchRipple-root"
               />
             </a>
-            <div>
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-colorInherit"
-                tabindex="0"
-                type="button"
+            <a
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-menuButton-9 MuiButton-colorInherit"
+              href="#/login"
+              tabindex="0"
+            >
+              <span
+                class="MuiButton-label"
               >
-                <span
-                  class="MuiButton-label"
-                >
-                  Sign in
-                </span>
-                <span
-                  class="MuiTouchRipple-root"
-                />
-              </button>
-            </div>
+                Sign In
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </a>
           </div>
         </header>
       </div>

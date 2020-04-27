@@ -46,7 +46,6 @@ exports[`Renders correctly 1`] = `
             </a>
           </div>
         </div>
-        <div />
       </div>
     </header>
   </div>

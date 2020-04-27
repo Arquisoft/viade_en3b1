@@ -3,7 +3,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-import LoginPage from "../../btns/login/LoginPage.js";
 import { LoggedOut, LoggedIn } from '@solid/react';
 import { Link, Typography, Grid } from '@material-ui/core';
 import "typeface-roboto";
@@ -46,7 +45,7 @@ const NavBar = () => {
           <LoggedOut><Button className={classes.menuButton} href={"#/register"} color="primary" variant='contained'>Sign Up</Button></LoggedOut>
           <LoggedIn><ProfileMenu /></LoggedIn>
 
-          <LoginPage />
+          <LoggedOut><Button className={classes.menuButton} href={"#/login"} color="inherit" variant='outlined'>Sign In</Button></LoggedOut>
 
         </Toolbar>
       </AppBar>
