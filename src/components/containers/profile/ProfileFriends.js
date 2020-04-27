@@ -20,7 +20,7 @@ export default function ProfileFriends() {
                 className={classes.main}
                 maxWidth="md"
             >
-                <Typography variant="h3">Your Profile</Typography>
+                <Typography variant="h3">Your Friends</Typography>
 
                 <Paper
                     elevation={0}
@@ -32,6 +32,7 @@ export default function ProfileFriends() {
                     >
                         <Tab selected={false} label="General" href="#/profile" />
                         <Tab selected={true} label="Friends" href="#/profile/friends" />
+                        <Tab label="Groups" href="#/profile/groups" />
                     </Tabs>
                 </Paper>
 

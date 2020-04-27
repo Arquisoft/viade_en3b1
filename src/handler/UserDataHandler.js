@@ -37,7 +37,7 @@ export async function GetUserFriends() {
         const name = await GetSpecificName(webId);
         const profilePic = await GetSpecificProfileImage(webId);
 
-        let friendAux = new Friend(webId, name, profilePic);
+        let friendAux = new Friend(webId.toString(), name, profilePic);
 
         friendsAux.push(friendAux);
     });

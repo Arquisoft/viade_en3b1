@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div
+  class="makeStyles-root-1"
+>
+  <div
+    class="makeStyles-root-8"
+  >
+    <header
+      class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-9 MuiToolbar-gutters"
+      >
+        <div
+          class="MuiGrid-root makeStyles-link-11"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container"
+          >
+            <a
+              class="MuiTypography-root MuiLink-root MuiLink-underlineNone MuiTypography-colorInherit"
+              href="#/home"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item"
+                >
+                  <img
+                    alt="Viade Logo"
+                    src="logo_2.svg"
+                    style="height:2.5rem;width:2.5rem"
+                  />
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item"
+                >
+                  <h4
+                    class="MuiTypography-root MuiTypography-h4"
+                  >
+                    ViaDe
+                  </h4>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <main
+    class="MuiContainer-root makeStyles-main-2 MuiContainer-maxWidthMd"
+  >
+    <h3
+      class="MuiTypography-root MuiTypography-h3"
+    >
+      Your Friends
+    </h3>
+    <div
+      class="MuiPaper-root makeStyles-paper-3 MuiPaper-elevation0 MuiPaper-rounded"
+    >
+      <div
+        class="MuiTabs-root"
+      >
+        <div
+          class="MuiTabs-scroller MuiTabs-fixed"
+          style="overflow:hidden"
+        >
+          <div
+            class="MuiTabs-flexContainer"
+            role="tablist"
+          >
+            <a
+              aria-disabled="false"
+              aria-selected="false"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary"
+              href="#/profile"
+              role="tab"
+              tabindex="0"
+            >
+              <span
+                class="MuiTab-wrapper"
+              >
+                General
+              </span>
+            </a>
+            <a
+              aria-disabled="false"
+              aria-selected="true"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected"
+              href="#/profile/friends"
+              role="tab"
+              tabindex="0"
+            >
+              <span
+                class="MuiTab-wrapper"
+              >
+                Friends
+              </span>
+              <span
+                class="PrivateTabIndicator-root-226 PrivateTabIndicator-colorPrimary-227 MuiTabs-indicator"
+              />
+            </a>
+            <a
+              aria-disabled="false"
+              aria-selected="false"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary"
+              href="#/profile/groups"
+              role="tab"
+              tabindex="0"
+            >
+              <span
+                class="MuiTab-wrapper"
+              >
+                Groups
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="makeStyles-friendsList-7"
+    >
+      <h6
+        class="MuiTypography-root MuiTypography-h6"
+      >
+        Oops, it seems you don't have any friends yet.
+      </h6>
+      <h6
+        class="MuiTypography-root MuiTypography-subtitle1"
+      >
+        You can add new friends in your 
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          href="0"
+          style="color:#7c4dff"
+          target="_blank"
+        >
+          Solid profile
+        </a>
+        .
+      </h6>
+    </div>
+  </main>
+  <div>
+    <footer
+      class="makeStyles-footer-232"
+    >
+      <div
+        class="MuiContainer-root MuiContainer-maxWidthSm"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-h6"
+        >
+          ViaDe En3B1
+        </h6>
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-colorTextSecondary"
+        >
+          Made by Pablo Cañal
+        </h6>
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          href="https://github.com/Arquisoft/viade_en3b1/"
+          target="_blank"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </div>
+</div>
+`;

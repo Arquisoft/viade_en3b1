@@ -1,10 +1,10 @@
 import Media from "../entities/Media";
 import ParserJsonLdToRoute from "../parser/ParserJsonLdToRoute";
+import ParserJsonLdToGroup from "../parser/ParserJsonLdToGroup";
 
 const auth = require('solid-auth-client');
 const FC = require('solid-file-client');
 const fc = new FC(auth);
-// const parser = new ParserJsonLdToRoute();
 
 class PodHandler {
 
@@ -19,6 +19,7 @@ class PodHandler {
         this.routesFolder = "routes/";
         this.resourcesFolder = "resources/"; // for photos and videos 
         this.commentsFolder = "comments/";
+        this.groupsFolder = "groups/";
     }
 
     storeRoute(fileName, routeJson, callback = () => { }) {
@@ -30,6 +31,11 @@ class PodHandler {
         let url = this.defaultFolder + this.resourcesFolder + media.getId() + media.getExtension();
         this.storeFile(url, media.getContent(), callback);
         return url;
+    }
+
+    storeGroup(fileName, groupJson, callback = () => { }) {
+        let url = this.defaultFolder + this.groupsFolder + fileName;
+        this.storeFile(url, groupJson, callback);
     }
 
     storeFile(url, data, callback) {
@@ -83,6 +89,31 @@ class PodHandler {
         }
 
         return media;
+    }
+
+    async findAllGroups() {
+        let url = this.defaultFolder + this.groupsFolder;
+
+        var groups = [];
+        
+        if (await fc.itemExists(url)) {
+            try {
+                let contents = await fc.readFolder(url);
+                let files = contents.files;
+
+                for (let i = 0; i < files.length; i++) {
+                    let fileContent = await fc.readFile(files[i].url);
+                    groups.push(new ParserJsonLdToGroup().parse(fileContent));
+                }
+
+            } catch (error) {
+                alert(error);
+            }
+        } else {
+            alert("There is no groups directory");
+        }
+
+        return groups;
     }
 }
 
