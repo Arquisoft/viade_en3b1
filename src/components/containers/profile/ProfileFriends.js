@@ -7,12 +7,9 @@ import Tab from '@material-ui/core/Tab';
 import cache from '../../../cache/UserCache';
 import LinkIcon from '@material-ui/icons/Link';
 import { GetUserWebId } from '../../../handler/UserDataHandler';
-import UserCache from '../../../cache/UserCache';
 
 export default function ProfileFriends() {
     const classes = useStyles();
-
-    UserCache.loadFriends();
 
     return (
         <div className={classes.root}>
