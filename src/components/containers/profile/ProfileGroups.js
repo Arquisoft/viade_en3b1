@@ -53,7 +53,7 @@ export default function ProfileGroups() {
                         </Backdrop>
                     </div>
                 ) : (
-                        (groups) ? (
+                        (groups.length > 0) ? (
                             <div>
                                 <div style={{textAlign: 'right', marginTop: '3rem'}}>
                                     <Button variant="outlined" color="primary" href={"#/profile/groups/create"}>Create New</Button>
