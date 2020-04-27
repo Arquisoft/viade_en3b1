@@ -65,7 +65,8 @@ class PodHandler {
                 alert(error);
             }
         } else {
-            alert("There is no routes directory");
+            // There is no routes directory
+            await fc.createFolder(url);
         }
 
         return routes;
@@ -110,7 +111,8 @@ class PodHandler {
                 alert(error);
             }
         } else {
-            alert("There is no groups directory");
+            // There is no groups directory
+            await fc.createFolder(url);
         }
 
         return groups;
