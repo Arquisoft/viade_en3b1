@@ -65,7 +65,7 @@ exports[`Renders correctly 1`] = `
             id="date"
             name="date"
             type="text"
-            value="4/27/2020"
+            value="4/28/2020"
           />
         </div>
       </div>
@@ -145,6 +145,7 @@ exports[`Renders correctly 1`] = `
     </button>
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+      id="btn-next"
       style="margin-top:12px;margin-left:auto"
       tabindex="0"
       type="button"

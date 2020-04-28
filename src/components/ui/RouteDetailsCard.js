@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import DetailsMap from '../map/DetailsMap.js';
 import ElevationChart from '../elevation-chart/ElevationChart.js';
-import { Box, Tooltip, Fab } from '@material-ui/core';
+import { Box, Tooltip, Fab, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, Button } from '@material-ui/core';
 import MyCarousel from './MyCarousel.js';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import svgIconCamera from '../../assets/img/logo/camera.svg';
@@ -14,11 +14,15 @@ import svgIconMap from '../../assets/img/logo/map.svg';
 import svgIconMountain from '../../assets/img/logo/mountain.svg';
 import svgIconArrows from '../../assets/img/logo/arrows.svg';
 import svgIconCameraRetro from '../../assets/img/logo/camera-retro.svg';
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import RoutesCache from '../../cache/RoutesCache';
+import { deleteRoute } from '../../handler/RouteHandler.js';
+import { withRouter } from 'react-router';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        marginTop: theme.spacing(-6),
+        marginTop: theme.spacing(-15),
         // marginLeft: theme.spacing(10),
         // marginRight: theme.spacing(10),
     },
@@ -83,6 +87,11 @@ const useStyles = makeStyles((theme) => ({
     backBtn: {
         margin: theme.spacing(3),
     },
+    deleteBtn: {
+        margin: theme.spacing(3),
+        backgroundColor: '#000000',
+        color: theme.palette.secondary.light,
+    },
     cameraRetrologo: {
         height: '10rem',
         width: '10rem',
@@ -92,8 +101,9 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function RouteDetailsCard(props) {
+function RouteDetailsCard(props) {
     const classes = useStyles();
+    const [open, setOpen] = useState(false);
 
     if (props.route === null) {
         return null;
@@ -107,13 +117,61 @@ export default function RouteDetailsCard(props) {
     var distance = route.getDistance() || "--";
     var media = route.getMedia();
 
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    async function handleDelete() {
+        RoutesCache.clear();
+        await deleteRoute(route);
+        props.history.push('/dashboard');
+    }
+
     return (
         <div>
-            <Tooltip title="Back" aria-label="back" className={classes.backBtn}>
-                <Fab size="small" href={"#/dashboard"}>
-                    <ArrowBackIcon />
-                </Fab>
-            </Tooltip>
+            <div style={{ alignItems: 'left' }}>
+                <Tooltip title="Back" aria-label="back" className={classes.backBtn}>
+                    <Fab size="small" href={"#/dashboard"}>
+                        <ArrowBackIcon />
+                    </Fab>
+                </Tooltip>
+            </div>
+
+            <div style={{ alignItems: 'right' }}>
+                <Tooltip title="Delete route" aria-label="back" >
+                    <Fab size="small" className={classes.deleteBtn} onClick={handleClickOpen}>
+                        <DeleteForeverIcon />
+                    </Fab>
+                </Tooltip>
+            </div>
+
+
+            <Dialog
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+            >
+                <DialogTitle id="alert-dialog-title">{`Delete route ${name}?`}</DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        The route will be permanently deleted from your Solid POD.
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleClose} color="primary">
+                        Cancel
+                    </Button>
+                    <Button onClick={() => handleDelete()} color="primary" autoFocus>
+                        Delete
+                    </Button>
+                </DialogActions>
+            </Dialog>
+
 
             <Grid
                 container
@@ -178,7 +236,7 @@ export default function RouteDetailsCard(props) {
                             {(media.length !== 0) ? (
                                 <MyCarousel photos={media} />
                             ) : (
-                                    <div style={{textAlign: 'center'}} className={classes.defaultGallery}>
+                                    <div style={{ textAlign: 'center' }} className={classes.defaultGallery}>
                                         <img src={svgIconCameraRetro} alt="Camera retro logo" className={classes.cameraRetrologo} />
                                         <Typography variant="h6">You don't have any photos or videos</Typography>
                                     </div>
@@ -243,3 +301,5 @@ export default function RouteDetailsCard(props) {
         </div>
     );
 }
+
+export default withRouter(RouteDetailsCard);

@@ -35,8 +35,9 @@ export class ListUserRoutes extends Component {
         </Backdrop>
       );
     }
-
+    
     if (!loading && routes.length === 0) {
+      
       return (
         <div style={{ textAlign: 'center', marginTop: '15rem', marginBottom: '15rem' }}>
           <Typography variant="h6">You don't have any routes yet.</Typography>

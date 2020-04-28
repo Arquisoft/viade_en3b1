@@ -46,6 +46,24 @@ class PodHandler {
         );
     }
 
+    async deleteRoute(routeUrl) {
+        if(routeUrl !== null) {
+            this.deleteFile(routeUrl);
+        } else {
+            alert('Route url cannot be null');
+        }
+    }
+
+    async deleteFile(url) {
+        if (await fc.itemExists(url)) {
+            try {
+                fc.delete(url);
+            } catch(error) {
+                alert(error);
+            }
+        }
+    }
+
     async findAllRoutes() {
         let url = this.defaultFolder + this.routesFolder;
 
@@ -58,7 +76,9 @@ class PodHandler {
 
                 for (let i = 0; i < files.length; i++) {
                     let fileContent = await fc.readFile(files[i].url);
-                    routes.push(await new ParserJsonLdToRoute().parse(fileContent));
+                    let route = await new ParserJsonLdToRoute().parse(fileContent);
+                    route.setUrl(files[i].url);
+                    routes.push(route);
                 }
 
             } catch (error) {

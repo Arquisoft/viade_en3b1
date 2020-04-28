@@ -107,6 +107,7 @@ export class ReviewForm extends Component {
                         </Button>
 
                         <Button
+                            id="btn-next"
                             variant="contained"
                             color="primary"
                             style={{

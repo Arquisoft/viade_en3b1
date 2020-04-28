@@ -45,7 +45,7 @@ const NavBar = () => {
           <LoggedOut><Button className={classes.menuButton} href={"#/register"} color="primary" variant='contained'>Sign Up</Button></LoggedOut>
           <LoggedIn><ProfileMenu /></LoggedIn>
 
-          <LoggedOut><Button className={classes.menuButton} href={"#/login"} color="inherit" variant='outlined'>Sign In</Button></LoggedOut>
+          <LoggedOut><Button data-testid="btn-login-navbar" className={classes.menuButton} href={"#/login"} color="inherit" variant='outlined'>Sign In</Button></LoggedOut>
 
         </Toolbar>
       </AppBar>
