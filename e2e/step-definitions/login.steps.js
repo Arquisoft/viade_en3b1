@@ -35,31 +35,31 @@ defineFeature(feature, (test) => {
 
         when('The user clicks the login button and fills the form', async () => {
 
-            await page.waitForSelector('.makeStyles-root-1 > .MuiPaper-root > .MuiToolbar-root > .MuiButtonBase-root:nth-child(3) > .MuiButton-label')
-            await page.click('.makeStyles-root-1 > .MuiPaper-root > .MuiToolbar-root > .MuiButtonBase-root:nth-child(3) > .MuiButton-label')
+            await page.waitForSelector('.makeStyles-root-1 > .MuiPaper-root > .MuiToolbar-root > .MuiButtonBase-root:nth-child(3) > .MuiButton-label');
+            await page.click('.makeStyles-root-1 > .MuiPaper-root > .MuiToolbar-root > .MuiButtonBase-root:nth-child(3) > .MuiButton-label');
 
-            await page.waitForSelector('.MuiPaper-root > .MuiCardContent-root > .sc-Axmtr > form > .sc-AxhCb')
-            await page.click('.MuiPaper-root > .MuiCardContent-root > .sc-Axmtr > form > .sc-AxhCb')
+            await page.waitForSelector('.MuiPaper-root > .MuiCardContent-root > .sc-Axmtr > form > .sc-AxhCb');
+            await page.click('.MuiPaper-root > .MuiCardContent-root > .sc-Axmtr > form > .sc-AxhCb');
 
             await expect(page).toFill('.MuiPaper-root > .MuiCardContent-root > .sc-Axmtr > form > .sc-AxhCb', webId);
 
-            await page.waitForSelector('.MuiPaper-root > .MuiCardContent-root > .sc-Axmtr > form > .sc-AxgMl')
-            await page.click('.MuiPaper-root > .MuiCardContent-root > .sc-Axmtr > form > .sc-AxgMl')
+            await page.waitForSelector('.MuiPaper-root > .MuiCardContent-root > .sc-Axmtr > form > .sc-AxgMl');
+            await page.click('.MuiPaper-root > .MuiCardContent-root > .sc-Axmtr > form > .sc-AxgMl');
 
             await navigationPromise
 
-            await page.waitForSelector('.panel-body #username')
-            await page.click('.panel-body #username')
+            await page.waitForSelector('.panel-body #username');
+            await page.click('.panel-body #username');
 
             await expect(page).toFill('.panel-body #username', username);
 
-            await page.waitForSelector('.panel-body #password')
-            await page.click('.panel-body #password')
+            await page.waitForSelector('.panel-body #password');
+            await page.click('.panel-body #password');
 
             await expect(page).toFill('.panel-body #password', password);
 
-            await page.waitForSelector('.col-md-6 #login')
-            await page.click('.col-md-6 #login')
+            await page.waitForSelector('.col-md-6 #login');
+            await page.click('.col-md-6 #login');
 
             await navigationPromise
 
