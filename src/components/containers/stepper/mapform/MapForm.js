@@ -93,6 +93,7 @@ export class MapForm extends Component {
                         </Button>
 
                         <Button
+                            id="btn-next"
                             variant="contained"
                             color="primary"
                             style={{

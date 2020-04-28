@@ -122,6 +122,7 @@ export class DataForm extends Component {
                         </Grid>
 
                         <Button
+                            id="btn-next"
                             variant="contained"
                             color="primary"
                             style={{

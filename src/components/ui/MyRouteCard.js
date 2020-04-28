@@ -47,7 +47,9 @@ export default function MyRouteCard(props) {
           </Grid>
 
           <Grid item>
-            <Button variant='outlined'
+            <Button 
+              id={name}
+              variant='outlined'
               href={"#/RouteDetails/" + props.route.getId()}
               color="inherit"
               style={{ marginLeft: 'auto', marginRight: 'auto' }}>
