@@ -22,6 +22,10 @@ beforeAll(async () => {
     await page.setViewport({ width: 1160, height: 1057 });
 });
 
+afterAll(async () => {
+    await browser.close();
+});
+
 defineFeature(feature, (test) => {
 
     test('The user is not logged in the site', ({ given, when, then }) => {
@@ -46,7 +50,7 @@ defineFeature(feature, (test) => {
             await page.waitForSelector('.MuiPaper-root > .MuiCardContent-root > .sc-Axmtr > form > .sc-AxgMl');
             await page.click('.MuiPaper-root > .MuiCardContent-root > .sc-Axmtr > form > .sc-AxgMl');
 
-            await navigationPromise
+            await navigationPromise;
 
             await page.waitForSelector('.panel-body #username');
             await page.click('.panel-body #username');
@@ -61,9 +65,9 @@ defineFeature(feature, (test) => {
             await page.waitForSelector('.col-md-6 #login');
             await page.click('.col-md-6 #login');
 
-            await navigationPromise
+            await navigationPromise;
 
-            await navigationPromise
+            await navigationPromise;
         });
 
         then('A welcome message should be shown in the screen', async () => {
