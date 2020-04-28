@@ -182,8 +182,8 @@ defineFeature(feature3, (test3) => {
 
             await delay(5000);
 
-            await page.waitForSelector('.MuiGrid-root:nth-child(1) > .MuiPaper-root > .MuiCardContent-root > .MuiGrid-root > .MuiGrid-root > #Route-Cucumber-Puppeteer > .MuiButton-label')
-            await page.click('.MuiGrid-root:nth-child(1) > .MuiPaper-root > .MuiCardContent-root > .MuiGrid-root > .MuiGrid-root > #Route-Cucumber-Puppeteer > .MuiButton-label')
+            await page.waitForSelector('.MuiGrid-root:nth-child(1) > .MuiPaper-root > .MuiCardContent-root > .MuiGrid-root > .MuiGrid-root > #Route-Cucumber-Puppeteer > .MuiButton-label');
+            await page.click('.MuiGrid-root:nth-child(1) > .MuiPaper-root > .MuiCardContent-root > .MuiGrid-root > .MuiGrid-root > #Route-Cucumber-Puppeteer > .MuiButton-label');
 
             await delay(5000);
 
@@ -192,8 +192,8 @@ defineFeature(feature3, (test3) => {
 
             await delay(5000);
 
-            await page.waitForSelector('.MuiDialog-container > .MuiPaper-root > .MuiDialogActions-root > .MuiButtonBase-root:nth-child(2) > .MuiButton-label')
-            await page.click('.MuiDialog-container > .MuiPaper-root > .MuiDialogActions-root > .MuiButtonBase-root:nth-child(2) > .MuiButton-label')
+            await page.waitForSelector('.MuiDialog-container > .MuiPaper-root > .MuiDialogActions-root > .MuiButtonBase-root:nth-child(2) > .MuiButton-label');
+            await page.click('.MuiDialog-container > .MuiPaper-root > .MuiDialogActions-root > .MuiButtonBase-root:nth-child(2) > .MuiButton-label');
 
             // console.log('############### CLICK DETAILS ###############');
         });
@@ -207,46 +207,3 @@ defineFeature(feature3, (test3) => {
         });
     });
 });
-
-
-
-
-
-// const puppeteer = require('puppeteer');
-// (async () => {
-//   const browser = await puppeteer.launch()
-//   const page = await browser.newPage()
-
-//   await page.goto('http://localhost:3001/viade_en3b1#/RouteDetails/4c7878f6-abd6-442f-a565-c675a0e14f37')
-
-//   await page.setViewport({ width: 1404, height: 1057 })
-
-//   await page.waitForSelector('div > .makeStyles-deleteBtn-1017 > .MuiFab-label > .MuiSvgIcon-root > path')
-//   await page.click('div > .makeStyles-deleteBtn-1017 > .MuiFab-label > .MuiSvgIcon-root > path')
-
-//   await page.waitForSelector('.MuiDialog-container > .MuiPaper-root > .MuiDialogActions-root > .MuiButtonBase-root:nth-child(2) > .MuiButton-label')
-//   await page.click('.MuiDialog-container > .MuiPaper-root > .MuiDialogActions-root > .MuiButtonBase-root:nth-child(2) > .MuiButton-label')
-
-//   await browser.close()
-// })()
-
-// const puppeteer = require('puppeteer');
-// (async () => {
-//   const browser = await puppeteer.launch()
-//   const page = await browser.newPage()
-
-//   await page.goto('http://localhost:3001/viade_en3b1#/dashboard')
-
-//   await page.setViewport({ width: 1404, height: 1057 })
-
-//   await page.waitForSelector('.MuiGrid-root:nth-child(1) > .MuiPaper-root > .MuiCardContent-root > .MuiGrid-root > .MuiGrid-root > #Route-Cucumber-Puppeteer > .MuiButton-label')
-//   await page.click('.MuiGrid-root:nth-child(1) > .MuiPaper-root > .MuiCardContent-root > .MuiGrid-root > .MuiGrid-root > #Route-Cucumber-Puppeteer > .MuiButton-label')
-
-//   await page.waitForSelector('div > div > .makeStyles-deleteBtn-2398 > .MuiFab-label > .MuiSvgIcon-root')
-//   await page.click('div > div > .makeStyles-deleteBtn-2398 > .MuiFab-label > .MuiSvgIcon-root')
-
-//   await page.waitForSelector('.MuiDialog-container > .MuiPaper-root > .MuiDialogActions-root > .MuiButtonBase-root:nth-child(2) > .MuiButton-label')
-//   await page.click('.MuiDialog-container > .MuiPaper-root > .MuiDialogActions-root > .MuiButtonBase-root:nth-child(2) > .MuiButton-label')
-
-//   await browser.close()
-// })()
