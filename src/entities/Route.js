@@ -32,6 +32,18 @@ class Route {
 
         this.totalDistance = this.calculateDistance();
         this.author = author;
+
+        this.url = null
+    }
+
+    getUrl() {
+        return this.url;
+    }
+
+    setUrl(url) {
+        if(url !== null) {
+            this.url = url;
+        }
     }
 
     setID(id) {

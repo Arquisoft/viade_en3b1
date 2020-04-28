@@ -1,6 +1,7 @@
 const { defineFeature, loadFeature } = require('jest-cucumber');
-const feature2 = loadFeature('./e2e/features/routes/viewRoutes.feature');
 const feature = loadFeature('./e2e/features/routes/addRoute.feature');
+const feature2 = loadFeature('./e2e/features/routes/viewRoutes.feature');
+const feature3 = loadFeature('./e2e/features/routes/deleteRoute.feature');
 const puppeteer = require('puppeteer');
 
 let webId = "https://viadeen3b1pod.solid.community/profile/card#me";
@@ -85,7 +86,7 @@ defineFeature(feature, (test) => {
         });
 
         when('The user fills the Create New route stepper form', async () => {
-            
+
             await delay(2000);
             await page.waitForSelector('.MuiGrid-root #name');
             await page.click('.MuiGrid-root #name');
@@ -167,3 +168,85 @@ defineFeature(feature2, (test2) => {
         });
     });
 });
+
+defineFeature(feature3, (test3) => {
+    test3("The user wants to delete one of his routes", ({ given, when, then }) => {
+
+        given('The user is logged in and in the route details view of a route', async () => {
+            // logged in thanks to beforeAll
+
+            // console.log('############### ROUTE DETAILS ###############');
+        });
+
+        when('The user aggrees to delete a route', async () => {
+
+            await delay(5000);
+
+            await page.waitForSelector('.MuiGrid-root:nth-child(1) > .MuiPaper-root > .MuiCardContent-root > .MuiGrid-root > .MuiGrid-root > #Route-Cucumber-Puppeteer > .MuiButton-label')
+            await page.click('.MuiGrid-root:nth-child(1) > .MuiPaper-root > .MuiCardContent-root > .MuiGrid-root > .MuiGrid-root > #Route-Cucumber-Puppeteer > .MuiButton-label')
+
+            await delay(5000);
+
+            await page.waitForSelector('button[title="Delete route"]');
+            await page.click('button[title="Delete route"]');
+
+            await delay(5000);
+
+            await page.waitForSelector('.MuiDialog-container > .MuiPaper-root > .MuiDialogActions-root > .MuiButtonBase-root:nth-child(2) > .MuiButton-label')
+            await page.click('.MuiDialog-container > .MuiPaper-root > .MuiDialogActions-root > .MuiButtonBase-root:nth-child(2) > .MuiButton-label')
+
+            // console.log('############### CLICK DETAILS ###############');
+        });
+
+        then('The user is redirected to the dashboard page', async () => {
+            await delay(10000);
+
+            await page.waitForFunction('document.querySelector("body").innerText.includes("have any routes yet.")');
+
+            // console.log('############### DASHBOARD ###############');
+        });
+    });
+});
+
+
+
+
+
+// const puppeteer = require('puppeteer');
+// (async () => {
+//   const browser = await puppeteer.launch()
+//   const page = await browser.newPage()
+
+//   await page.goto('http://localhost:3001/viade_en3b1#/RouteDetails/4c7878f6-abd6-442f-a565-c675a0e14f37')
+
+//   await page.setViewport({ width: 1404, height: 1057 })
+
+//   await page.waitForSelector('div > .makeStyles-deleteBtn-1017 > .MuiFab-label > .MuiSvgIcon-root > path')
+//   await page.click('div > .makeStyles-deleteBtn-1017 > .MuiFab-label > .MuiSvgIcon-root > path')
+
+//   await page.waitForSelector('.MuiDialog-container > .MuiPaper-root > .MuiDialogActions-root > .MuiButtonBase-root:nth-child(2) > .MuiButton-label')
+//   await page.click('.MuiDialog-container > .MuiPaper-root > .MuiDialogActions-root > .MuiButtonBase-root:nth-child(2) > .MuiButton-label')
+
+//   await browser.close()
+// })()
+
+// const puppeteer = require('puppeteer');
+// (async () => {
+//   const browser = await puppeteer.launch()
+//   const page = await browser.newPage()
+
+//   await page.goto('http://localhost:3001/viade_en3b1#/dashboard')
+
+//   await page.setViewport({ width: 1404, height: 1057 })
+
+//   await page.waitForSelector('.MuiGrid-root:nth-child(1) > .MuiPaper-root > .MuiCardContent-root > .MuiGrid-root > .MuiGrid-root > #Route-Cucumber-Puppeteer > .MuiButton-label')
+//   await page.click('.MuiGrid-root:nth-child(1) > .MuiPaper-root > .MuiCardContent-root > .MuiGrid-root > .MuiGrid-root > #Route-Cucumber-Puppeteer > .MuiButton-label')
+
+//   await page.waitForSelector('div > div > .makeStyles-deleteBtn-2398 > .MuiFab-label > .MuiSvgIcon-root')
+//   await page.click('div > div > .makeStyles-deleteBtn-2398 > .MuiFab-label > .MuiSvgIcon-root')
+
+//   await page.waitForSelector('.MuiDialog-container > .MuiPaper-root > .MuiDialogActions-root > .MuiButtonBase-root:nth-child(2) > .MuiButton-label')
+//   await page.click('.MuiDialog-container > .MuiPaper-root > .MuiDialogActions-root > .MuiButtonBase-root:nth-child(2) > .MuiButton-label')
+
+//   await browser.close()
+// })()

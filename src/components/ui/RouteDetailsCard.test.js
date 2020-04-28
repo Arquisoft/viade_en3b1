@@ -9,11 +9,11 @@ test('Define RouteDetailsCard', () => {
 });
 
 test('Renders correctly', () => {
-    const wrapper = render(<RouteDetailsCard route={route1} />);
+    const wrapper = render(<RouteDetailsCard.WrappedComponent route={route1} />);
     expect(wrapper).toMatchSnapshot();
 });
 
 test('Renders null', () => {
-    const wrapper = render(<RouteDetailsCard route={null} />);
+    const wrapper = render(<RouteDetailsCard.WrappedComponent route={null} />);
     expect(wrapper).toMatchSnapshot();
 });

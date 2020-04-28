@@ -68,6 +68,7 @@ Object {
               <a
                 aria-disabled="false"
                 class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-menuButton-8 MuiButton-colorInherit"
+                data-testid="btn-login-navbar"
                 href="#/login"
                 tabindex="0"
               >
@@ -230,6 +231,7 @@ Object {
             <a
               aria-disabled="false"
               class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-menuButton-8 MuiButton-colorInherit"
+              data-testid="btn-login-navbar"
               href="#/login"
               tabindex="0"
             >
@@ -449,6 +451,7 @@ Object {
               <a
                 aria-disabled="false"
                 class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-menuButton-268 MuiButton-colorInherit"
+                data-testid="btn-login-navbar"
                 href="#/login"
                 tabindex="0"
               >
@@ -611,6 +614,7 @@ Object {
             <a
               aria-disabled="false"
               class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-menuButton-268 MuiButton-colorInherit"
+              data-testid="btn-login-navbar"
               href="#/login"
               tabindex="0"
             >

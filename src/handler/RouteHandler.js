@@ -25,3 +25,11 @@ export async function loadAllRoutes() {
     
     return loadedRoutes;
 }
+
+export async function deleteRoute(route) {
+    let session = await auth.currentSession();
+    let storageHandler = new PodHandler(session);
+    let url = route.getUrl();
+    
+    await storageHandler.deleteRoute(url);
+}

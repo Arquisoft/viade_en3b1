@@ -30,6 +30,7 @@ Array [
       </button>
       <button
         class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+        id="btn-next"
         style="margin-top:12px;margin-left:auto"
         tabindex="0"
         type="submit"
