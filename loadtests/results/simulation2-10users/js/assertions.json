@@ -1,0 +1,10 @@
+{
+  "simulation": "viade.RecordedSimulation2",
+  "simulationId": "recordedsimulation2",
+  "start": 1588157213901,
+  "description": "10 users",
+  "scenarios": ["RecordedSimulation2"],
+  "assertions": [
+
+  ]
+}
