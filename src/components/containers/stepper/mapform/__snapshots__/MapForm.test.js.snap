@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+Array [
+  <h6
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
+  >
+    Click on the map to add trackpoints to your route
+  </h6>,
+  <form>
+    <div
+      id="test-map-leaflet"
+      style="width:34.5rem;height:20rem"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+      style="margin-top:12px"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+        style="margin-top:12px;margin-left:1vh"
+        tabindex="0"
+        type="submit"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Back
+        </span>
+      </button>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+        id="btn-next"
+        style="margin-top:12px;margin-left:auto"
+        tabindex="0"
+        type="submit"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Next
+        </span>
+      </button>
+    </div>
+  </form>,
+]
+`;

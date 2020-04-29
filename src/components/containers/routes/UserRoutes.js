@@ -1,18 +1,60 @@
-import React from "react";
-import NavBar from '../../graphic interface/NavBar.js';
-import ListUserRoutes from '../../graphic interface/ListUserRoutes.js';
+import React, { Component } from 'react';
+import NavBar from '../../ui/main/NavBar.js';
+import ListUserRoutes from '../../ui/ListUserRoutes';
+import { Grid } from "@material-ui/core";
+import MyRouteBanner from "../../ui/banner/MyRouteBanner.js";
+import Footer from "../../ui/main/Footer.js";
 
-const UserRoutes = () => {
-  return (
-    <div>
+export class UserRoutes extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      hidden: true,
+    };
+  }
+
+  toggleBackground = () => {
+    this.setState({hidden: false});
+  }
+
+  render() {
+
+    const { hidden } = this.state;
+
+    return (
       <div>
-        <NavBar />
+        <div>
+          <NavBar />
+        </div>
+
+        <Grid
+          container
+          alignItems="center"
+          justify="center"
+        >
+          <Grid item hidden={hidden}>
+            <MyRouteBanner />
+          </Grid>
+
+          <Grid item style={{ maxWidth: '75rem' }}>
+            <ListUserRoutes toggleBackground={this.toggleBackground} />
+          </Grid>
+
+          <Grid
+            item
+            // xs={12}
+            sm={12}
+            md={12}
+            style={{ marginTop: '10rem' }}
+            hidden={hidden}
+          >
+            <Footer />
+          </Grid>
+        </Grid>
       </div>
-      <div>
-        <ListUserRoutes />
-      </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default UserRoutes;

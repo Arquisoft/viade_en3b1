@@ -1,0 +1,436 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correct 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="leaflet-container leaflet-grab leaflet-touch-drag"
+        id="test-map-leaflet"
+        style="width: 34.5rem; height: 20rem; position: relative;"
+        tabindex="0"
+      >
+        <div
+          class="leaflet-pane leaflet-map-pane"
+          style="left: 0px; top: 0px;"
+        >
+          <div
+            class="leaflet-pane leaflet-tile-pane"
+          >
+            <div
+              class="leaflet-layer "
+              style="z-index: 1;"
+            >
+              <div
+                class="leaflet-tile-container leaflet-zoom-animated"
+                style="z-index: 18; left: 0px; top: 0px;"
+              >
+                <img
+                  alt=""
+                  class="leaflet-tile"
+                  role="presentation"
+                  src="https://a.tile.openstreetmap.org/12/1981/1499.png"
+                  style="width: 256px; height: 256px; left: -114px; top: -109px;"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="leaflet-pane leaflet-shadow-pane"
+          />
+          <div
+            class="leaflet-pane leaflet-overlay-pane"
+          >
+            <svg
+              height="0"
+              pointer-events="none"
+              style="left: 0px; top: 0px;"
+              viewBox="0 0 0 0"
+              width="0"
+            >
+              <g>
+                <path
+                  class="leaflet-interactive"
+                  d="M0 0"
+                  fill="none"
+                  stroke="#09012f"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-opacity="1"
+                  stroke-width="3"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="leaflet-pane leaflet-marker-pane"
+          />
+          <div
+            class="leaflet-pane leaflet-tooltip-pane"
+          />
+          <div
+            class="leaflet-pane leaflet-popup-pane"
+          />
+        </div>
+        <div
+          class="leaflet-control-container"
+        >
+          <div
+            class="leaflet-top leaflet-left"
+          >
+            <div
+              class="leaflet-control-zoom leaflet-bar leaflet-control"
+            >
+              <a
+                aria-label="Zoom in"
+                class="leaflet-control-zoom-in"
+                href="#"
+                role="button"
+                title="Zoom in"
+              >
+                +
+              </a>
+              <a
+                aria-label="Zoom out"
+                class="leaflet-control-zoom-out"
+                href="#"
+                role="button"
+                title="Zoom out"
+              >
+                −
+              </a>
+            </div>
+            <div
+              class="leaflet-search-wrap leaflet-control"
+            >
+              <article
+                class="search-control-wrap"
+              >
+                <section
+                  class="search-control"
+                >
+                  <button
+                    class="search-control-icon-button"
+                  >
+                    <svg
+                      viewBox="0 0 50 50"
+                    >
+                      <line
+                        x1="35"
+                        x2="46"
+                        y1="35"
+                        y2="46"
+                      />
+                      <circle
+                        cx="23"
+                        cy="23"
+                        fill="none"
+                        r="16"
+                      />
+                      Sorry, your browser does not support inline SVG.
+                    </svg>
+                  </button>
+                  <input
+                    class="search-input search-control-input"
+                    name="SearchInput"
+                    placeholder="Search Lat,Lng"
+                    tabindex="1"
+                    type="text"
+                    value=""
+                  />
+                  <button
+                    class="search-control-close-button"
+                  >
+                    <svg
+                      viewBox="0 0 50 50"
+                    >
+                      <path
+                        d="M5 5 L45 45 M45 5 L5 45"
+                      />
+                      Sorry, your browser does not support inline SVG.
+                    </svg>
+                  </button>
+                </section>
+                <section
+                  class="search-control-info-wrapper search-control-info-wrapper-close"
+                >
+                  <section
+                    class="search-control-info"
+                  />
+                </section>
+              </article>
+            </div>
+          </div>
+          <div
+            class="leaflet-top leaflet-right"
+          />
+          <div
+            class="leaflet-bottom leaflet-left"
+          />
+          <div
+            class="leaflet-bottom leaflet-right"
+          >
+            <div
+              class="leaflet-control-attribution leaflet-control"
+            >
+              <a
+                href="https://leafletjs.com"
+                title="A JS library for interactive maps"
+              >
+                Leaflet
+              </a>
+               | © 
+              <a
+                href="http://osm.org/copyright"
+              >
+                OpenStreetMap
+              </a>
+               contributors
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="leaflet-container leaflet-grab leaflet-touch-drag"
+      id="test-map-leaflet"
+      style="width: 34.5rem; height: 20rem; position: relative;"
+      tabindex="0"
+    >
+      <div
+        class="leaflet-pane leaflet-map-pane"
+        style="left: 0px; top: 0px;"
+      >
+        <div
+          class="leaflet-pane leaflet-tile-pane"
+        >
+          <div
+            class="leaflet-layer "
+            style="z-index: 1;"
+          >
+            <div
+              class="leaflet-tile-container leaflet-zoom-animated"
+              style="z-index: 18; left: 0px; top: 0px;"
+            >
+              <img
+                alt=""
+                class="leaflet-tile"
+                role="presentation"
+                src="https://a.tile.openstreetmap.org/12/1981/1499.png"
+                style="width: 256px; height: 256px; left: -114px; top: -109px;"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="leaflet-pane leaflet-shadow-pane"
+        />
+        <div
+          class="leaflet-pane leaflet-overlay-pane"
+        >
+          <svg
+            height="0"
+            pointer-events="none"
+            style="left: 0px; top: 0px;"
+            viewBox="0 0 0 0"
+            width="0"
+          >
+            <g>
+              <path
+                class="leaflet-interactive"
+                d="M0 0"
+                fill="none"
+                stroke="#09012f"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-opacity="1"
+                stroke-width="3"
+              />
+            </g>
+          </svg>
+        </div>
+        <div
+          class="leaflet-pane leaflet-marker-pane"
+        />
+        <div
+          class="leaflet-pane leaflet-tooltip-pane"
+        />
+        <div
+          class="leaflet-pane leaflet-popup-pane"
+        />
+      </div>
+      <div
+        class="leaflet-control-container"
+      >
+        <div
+          class="leaflet-top leaflet-left"
+        >
+          <div
+            class="leaflet-control-zoom leaflet-bar leaflet-control"
+          >
+            <a
+              aria-label="Zoom in"
+              class="leaflet-control-zoom-in"
+              href="#"
+              role="button"
+              title="Zoom in"
+            >
+              +
+            </a>
+            <a
+              aria-label="Zoom out"
+              class="leaflet-control-zoom-out"
+              href="#"
+              role="button"
+              title="Zoom out"
+            >
+              −
+            </a>
+          </div>
+          <div
+            class="leaflet-search-wrap leaflet-control"
+          >
+            <article
+              class="search-control-wrap"
+            >
+              <section
+                class="search-control"
+              >
+                <button
+                  class="search-control-icon-button"
+                >
+                  <svg
+                    viewBox="0 0 50 50"
+                  >
+                    <line
+                      x1="35"
+                      x2="46"
+                      y1="35"
+                      y2="46"
+                    />
+                    <circle
+                      cx="23"
+                      cy="23"
+                      fill="none"
+                      r="16"
+                    />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                </button>
+                <input
+                  class="search-input search-control-input"
+                  name="SearchInput"
+                  placeholder="Search Lat,Lng"
+                  tabindex="1"
+                  type="text"
+                  value=""
+                />
+                <button
+                  class="search-control-close-button"
+                >
+                  <svg
+                    viewBox="0 0 50 50"
+                  >
+                    <path
+                      d="M5 5 L45 45 M45 5 L5 45"
+                    />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                </button>
+              </section>
+              <section
+                class="search-control-info-wrapper search-control-info-wrapper-close"
+              >
+                <section
+                  class="search-control-info"
+                />
+              </section>
+            </article>
+          </div>
+        </div>
+        <div
+          class="leaflet-top leaflet-right"
+        />
+        <div
+          class="leaflet-bottom leaflet-left"
+        />
+        <div
+          class="leaflet-bottom leaflet-right"
+        >
+          <div
+            class="leaflet-control-attribution leaflet-control"
+          >
+            <a
+              href="https://leafletjs.com"
+              title="A JS library for interactive maps"
+            >
+              Leaflet
+            </a>
+             | © 
+            <a
+              href="http://osm.org/copyright"
+            >
+              OpenStreetMap
+            </a>
+             contributors
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

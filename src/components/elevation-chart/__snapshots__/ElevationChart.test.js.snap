@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<Line
+  data={
+    Object {
+      "datasets": Array [
+        Object {
+          "backgroundColor": "rgba(75,192,192,0.4)",
+          "borderCapStyle": "butt",
+          "borderColor": "#44dba1",
+          "borderDash": Array [],
+          "borderDashOffset": 0,
+          "borderJoinStyle": "miter",
+          "data": Array [
+            3,
+            4,
+          ],
+          "fill": false,
+          "label": "Elevation",
+          "lineTension": 0.1,
+          "pointBackgroundColor": "#302c58",
+          "pointBorderColor": "#302c58",
+          "pointBorderWidth": 1,
+          "pointHitRadius": 15,
+          "pointHoverBackgroundColor": "rgba(75,192,192,1)",
+          "pointHoverBorderColor": "#302c58",
+          "pointHoverBorderWidth": 2,
+          "pointHoverRadius": 5,
+          "pointRadius": 1,
+        },
+      ],
+      "labels": Array [
+        "Point 1",
+        "Point 2",
+      ],
+    }
+  }
+  height={100}
+  options={
+    Object {
+      "legend": Object {
+        "display": false,
+      },
+      "tooltips": Object {
+        "enabled": true,
+      },
+    }
+  }
+/>
+`;

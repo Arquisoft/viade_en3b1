@@ -1,9 +1,18 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import App from "./App";
+import Router from "./components/containers/Router";
 
-test('renders routes component', () => {
-  // const { getByText } = render(<App />);
-  // const linkElement = getByText(/Sign in/i);
-  // expect(linkElement).toBeInTheDocument();
+test('Define App', () => {
+  expect(App).toBeDefined();
+});
+
+test('Renders correctly', () => {
+  const wrapper = render(<App />);
+  expect(wrapper).toMatchSnapshot();
+});
+
+test("Router", () => {
+  const wrapper = mount(<App />);
+  const router = wrapper.find(Router);
+  expect(router).toBeDefined();
+  expect(router.exists()).toBeTruthy();
 });

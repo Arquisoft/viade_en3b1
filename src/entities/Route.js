@@ -1,41 +1,102 @@
 import { v4 as uuid } from "uuid";
-import RouteElement from "./RouteElement";
+import Media from "./Media";
+import TrackPoint from "./TrackPoint";
 
 class Route {
 
     /**
      * Constructor for a new Route. 
      * An id will be automatically generated (uuid v4).
-     * TotalDistance will also be automatically generated.
-     * 
-     * RouteElements have name, latitude, longitude and elevation.
      * 
      * @param {String} name Name of the route.
-     * @param {Date} date Date of the route.
      * @param {String} description Description of the route.
-     * @param {Array} routeElements List of RouteElement objects, which are the trackpoints.
+     * @param {Array} trackPoints List of trackpoints.
      * @param {Array} comments List of comments
-     * @param {Array<String>} media List of urls of media (on the POD)
+     * @param {Array<Object>} media List of objects of media
+     * @param {Date} date Date of the route.
      */
-    constructor(name, description, routeElements, comments, media, date) {
-        this.id = uuid().toString();
+    constructor(name, description, trackPoints, comments, media, date, id, author = null) {
         this.name = name;
         this.date = date;
         this.description = description;
 
-        this.media = media;
-        this.totalDistance = null;
+        this.id = null;
+        this.media = null;
+        this.trackPoints = null;
+        this.comments = null;
 
+        this.setID(id);
+        this.setMedia(media);
+        this.setTrackPoints(trackPoints);
+        this.setComments(comments);
+
+        this.totalDistance = this.calculateDistance();
+        this.author = author;
+
+        this.url = null
+    }
+
+    getUrl() {
+        return this.url;
+    }
+
+    setUrl(url) {
+        if(url !== null) {
+            this.url = url;
+        }
+    }
+
+    setID(id) {
+        if (id === null || id === undefined) {
+            this.id = uuid().toString();
+        } else {
+            this.id = id;
+        }
+    }
+
+    setMedia(media) {
+        if (media === null) {
+            this.media = [];
+            return;
+        }
+        if (media[0] instanceof Media) {
+            this.media = media;
+            return;
+        }
+        if (media instanceof Media) {
+            this.media = [];
+            this.media.push(media);
+            return;
+        }
+        let finalMedia = [];
+        media.forEach((m) => {
+            finalMedia.push(new Media(m, m.name, null));
+        });
+        this.media = finalMedia;
+    }
+
+    setTrackPoints(points) {
+        if (points === null) {
+            this.trackPoints = [];
+            return;
+        }
+        if (points[0] instanceof TrackPoint) {
+            this.trackPoints = points;
+            return;
+        }
+        let finalPoints = [];
+        points.forEach((p) => {
+            finalPoints.push(new TrackPoint(p.lat, p.lng));
+        });
+        this.trackPoints = finalPoints;
+    }
+
+    setComments(comments) {
+        // CHANGE WHEN COMMENTS FEATURE
         if (comments === null) {
             this.comments = [];
         } else {
             this.comments = comments;
-        }
-
-        if (routeElements[0] instanceof RouteElement) {
-            this.routeElements = routeElements;
-        } else {
-            this.routeElements = generateRouteElements(routeElements);
         }
     }
 
@@ -51,40 +112,12 @@ class Route {
         return this.date;
     }
 
-    getTime() {
-        return this.time;
-    }
-
     getDescription() {
         return this.description;
     }
 
-    getRouteElements() {
-        return this.routeElements;
-    }
-
-    getTotalDistance() {
-        var total = 0;
-        var aux = 0;
-
-        for (let i = 1; i < this.routeElements.length; i++) {
-            aux = this.routeElements[i].getLatitude() - this.routeElements[i - 1].getLatitude();
-            total += this.addDistance(aux);
-            aux = this.routeElements[i].getLongitude() - this.routeElements[i - 1].getLongitude();
-            total += this.addDistance(aux);
-            aux = this.routeElements[i].getElevation() - this.routeElements[i - 1].getElevation();
-            total += this.addDistance(aux);
-        }
-
-        return total;
-    }
-
-    addDistance(aux) {
-        if (aux < 0) {
-            return -aux;
-        } else {
-            return aux;
-        }
+    getTrackPoints() {
+        return this.trackPoints;
     }
 
     getComments() {
@@ -95,17 +128,124 @@ class Route {
         return this.media;
     }
 
+    getDistance() {
+        return this.totalDistance;
+    }
+
+    getAuthor() {
+        return this.author;
+    }
+
     addMedia(media) {
         this.media.push(media);
     }
 
-    addRouteElement(routeElement) {
-        this.routeElements.push(routeElement);
+    deleteMedia(media) {
+        this.media.splice(this.media.indexOf(media), 1);
     }
 
-    getJsonLD() {
+    async calculateElevation() {
+        if (this.trackPoints === null) { // no trackpoints list
+            return;
+        }
+        if (this.trackPoints[0].getElevation().length !== 0) { // route already has elevation
+            return;
+        }
+
+        var baseUrl = "https://api.jawg.io/elevations?locations=";
+
+        for (let i = 0; i < this.trackPoints.length; i++) {
+            let lastPoint = this.trackPoints.length - 1;
+            let p = this.trackPoints[i];
+
+            if (i === lastPoint) {
+                baseUrl += p.getLatitude() + "," + p.getLongitude();
+            } else {
+                baseUrl += p.getLatitude() + "," + p.getLongitude() + "%7C";
+            }
+        }
+
+        baseUrl += "&access-token=" + process.env.REACT_APP_JAWG_KEY;
+
+        fetch(baseUrl)
+            .then((response) => {
+                if (response.status === 200) {
+                    response.json()
+                        .then((data) => {
+                            for (let i = 0; i < data.length; i++) {
+                                let elevation = parseInt(data[i].elevation, 10);
+                                
+                                if(isNaN(elevation)) {
+                                    alert("Error while parsing elevation data");
+                                    return;
+                                }
+                                this.trackPoints[i].setElevation(elevation);
+                            }
+                        });
+                }
+            })
+            .catch((err) => {
+                alert("Error while trying to fetch trackpoints elevation.");
+            });
+    }
+
+    calculateDistance() {
+        if (this.trackPoints === null || !this.trackPoints || this.trackPoints.length === 0) { // no trackpoints list
+            return;
+        }
+
+        let distance = 0;
+        for(let i = 0; i < this.trackPoints.length; i++) {
+            if(i < this.trackPoints.length - 1) {
+                let origin = [this.trackPoints[i].getLatitude(), this.trackPoints[i].getLongitude()];
+                let destination = [this.trackPoints[i + 1].getLatitude(), this.trackPoints[i + 1].getLongitude()];
+                distance += parseInt(this.calculateDistanceTwoPoints(origin, destination), 10);
+            }
+        }
+
+        if(isNaN(distance)) {
+            return -1;
+        }
+
+        return distance;
+    }
+
+    /**
+     * Calculates the distance between two given points.
+     * Those points must be passed as pairs of latitude and longitude.
+     * 
+     * Example: var distance = getDistance([lat1, lng1], [lat2, lng2])
+     * 
+     * @param {Array} origin Pair of lat and lng of origin trackpoint 
+     * @param {Array} destination Pair of lat and lng of destination trackpoint
+     */
+    calculateDistanceTwoPoints(origin, destination) {
+        // return distance in meters
+        var lon1 = this.toRadian(origin[1]),
+            lat1 = this.toRadian(origin[0]),
+            lon2 = this.toRadian(destination[1]),
+            lat2 = this.toRadian(destination[0]);
+    
+        var deltaLat = lat2 - lat1;
+        var deltaLon = lon2 - lon1;
+    
+        var a = Math.pow(Math.sin(deltaLat/2), 2) + Math.cos(lat1) * Math.cos(lat2) * Math.pow(Math.sin(deltaLon/2), 2);
+        var c = 2 * Math.asin(Math.sqrt(a));
+        var EARTH_RADIUS = 6371;
+        return c * EARTH_RADIUS * 1000;
+    }
+    
+    toRadian(degree) {
+        return degree*Math.PI/180;
+    }
+
+    toJsonLD() {
         let routePointsJson = [];
-        this.routeElements.forEach((p) => routePointsJson.push(p.toJsonLatLng()));
+        let routeMediaJson = [];
+
+        this.trackPoints.forEach((p) => routePointsJson.push(p.toJson()));
+        this.media.forEach((m) => routeMediaJson.push(m.toJson()));
+
         return JSON.stringify(
             {
                 "@context": {
@@ -146,33 +286,28 @@ class Route {
                         "@id": "schema:author",
                         "@type": "@id"
                     },
+                    "date": {
+                        "@id": "schema:DateTime",
+                        "@type": "xsd:dateTime"
+                    },
                     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
                     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
                     "schema": "http://schema.org/",
                     "viade": "http://arquisoft.github.io/viadeSpec/",
                     "xsd": "http://www.w3.org/2001/XMLSchema#"
                 },
+                "id": this.id,
+                "date": this.date,
                 "name": this.name,
-                "author": this.author,
+                "author": this.author || "",
                 "description": this.description,
                 "comments": this.comments,
-                "media": this.media,
+                "media": routeMediaJson,
                 "points": routePointsJson
             }
         );
     }
 
-}
-
-/**
- * Method that receives a list of points and returns
- * a list of RouteElements
- * @param {Array} points List of points containing name, latitude, longitude, elevation. 
- */
-function generateRouteElements(points) {
-    let routeElements = [];
-    points.forEach((p) => routeElements.push(new RouteElement(p.lat, p.lng)));
-    return routeElements;
 }
 
 export default Route;

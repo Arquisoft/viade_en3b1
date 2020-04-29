@@ -1,24 +1,56 @@
-import React from "react";
-import NavBar from '../../graphic interface/NavBar.js';
-import { useParams } from "react-router-dom";
-import RouteDetailsCard from "../../graphic interface/RouteDetailsCard.js";
-import cache from '../../../cache/RoutesChache';
+import React, { Component } from 'react';
+import NavBar from '../../ui/main/NavBar.js';
+import RouteDetailsCard from "../../ui/RouteDetailsCard.js";
+import cache from '../../../cache/RoutesCache';
+import { LinearProgress, Typography } from '@material-ui/core';
 
-const RouteDetails = () => {
-  let { id } = useParams();
+export class RouteDetails extends Component {
 
-  let myroute=cache.getRoutesFromCache().filter((r) => (r.getId() === id));
+  constructor(props) {
+    super(props);
+    this.state = {
+      myroute: null,
+      id: this.props.match.params.id,
+      loading: true,
+    };
+  }
 
-  return (
-    <div>
+  componentDidMount() {
+    cache.getRouteById(this.state.id).then((r) => {
+      if (r === -1) {
+        this.props.history.push("/404");
+        return;
+      }
+      this.setState({
+        myroute: r,
+        loading: false,
+      });
+    });
+  }
+
+  render() {
+    const { myroute } = this.state;
+
+    if (this.state.loading) {
+      return (
+        <div style={{ textAlign: "center" }}>
+          <LinearProgress />
+          <Typography variant="h5">Loading your route...</Typography>
+        </div>
+      );
+    }
+
+    return (
       <div>
-        <NavBar />
+        <div>
+          <NavBar />
+        </div>
+        <div>
+          <RouteDetailsCard route={myroute} ></RouteDetailsCard>
+        </div>
       </div>
-      <div>
-        { <RouteDetailsCard route={myroute[0]} ></RouteDetailsCard> }
-      </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default RouteDetails;

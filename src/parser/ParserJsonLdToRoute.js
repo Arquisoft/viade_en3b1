@@ -1,30 +1,51 @@
 import Route from '../entities/Route.js';
-import RouteElement from '../entities/RouteElement.js';
+import TrackPoint from '../entities/TrackPoint.js';
+import { loadMedia } from '../handler/MediaHandler.js';
 
 class ParserJsonLdToRoute {
-    
-    parse(file){    
-        var route = JSON.parse( file );
 
-        var name = route.name;
-        var description = route.description;
-        // var date = route.date;
-        var points = route.points;
-        var comments = [];
-        var media = [];
-        
-        let routeElements = this.parsePoints(points);
+    async parse(file) {
+        try {
+            var route = JSON.parse(file);
 
-        
-        return new Route(name, description, routeElements, comments, media);
+            var name = route.name;
+            var id = route.id;
+            // var date = route.date;
+            var description = route.description;
+
+            var points = route.points;
+            var comments = [];
+            var mediaData = route.media;
+
+            let trackPoints = this.parsePoints(points);
+            let media = await this.parseMedia(mediaData);
+
+            let finalroute = new Route(name, description, trackPoints, comments, null, null, id);
+
+            finalroute.setMedia(media);
+            // DATE null now.
+            return finalroute;
+            
+        } catch (e) {
+            alert(e);
+        }
+    }
+
+    async parseMedia(media) {
+        let mediaList = [];
+        for (let i = 0; i < media.length; i++) {
+            let m = await loadMedia( media[i] );
+            mediaList.push(m);
+        }
+        return mediaList;
     }
 
     parsePoints(points) {
-        let routeElements = [];
-        for(var i = 0; i < points.length; i++ ){
-            routeElements.push(new RouteElement(points[i].latitude, points[i].longitude));
+        let trackPoints = [];
+        for (let i = 0; i < points.length; i++) {
+            trackPoints.push(new TrackPoint(points[i].latitude, points[i].longitude, points[i].elevation));
         }
-        return routeElements;
+        return trackPoints;
     }
 }
 

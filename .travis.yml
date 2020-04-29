@@ -1,6 +1,7 @@
 language: node_js
 node_js:
   - 12.14.0
+services: xvfb
 cache:
   directories:
   - node_modules
@@ -11,7 +12,7 @@ before_install:
 script:
   - npm install -g codecov
   - npm test && codecov
-  - CI=false npm run build
+  - npm run build
   - npm run docs
 deploy:
   provider: pages

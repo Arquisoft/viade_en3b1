@@ -17,7 +17,7 @@ export class SuccessForm extends Component {
                 <Grid container>
                     <Grid item xs={12} sm={2}>
                         <DirectionsWalkIcon fontSize="large" style={{
-                            fill: "orange", width: 65,
+                            fill: "#94E8B4", width: 65, // 93E1D8
                             height: 65
                         }} />
                     </Grid>
@@ -29,7 +29,7 @@ export class SuccessForm extends Component {
                         </Grid>
                         <Grid item xs={12}>
                             <Typography variant="subtitle1">
-                                Your new track was succesfully created and saved
+                                Don't worry, we are saving your brand new track
                         </Typography>
                         </Grid>
                     </Grid>
@@ -43,7 +43,7 @@ export class SuccessForm extends Component {
                             }}
                             onClick={this.download}
                         >
-                            <GetAppIcon fontSize="large" style={{ fill: "orange" }} />
+                            <GetAppIcon fontSize="large" style={{ fill: "#5c5585" }} />
                         </IconButton>
                     </Tooltip>
                 </Grid>

@@ -1,0 +1,255 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div>
+  <div
+    style="align-items:left"
+  >
+    <a
+      aria-disabled="false"
+      aria-label="back"
+      class="MuiButtonBase-root MuiFab-root makeStyles-backBtn-15 MuiFab-sizeSmall"
+      href="#/dashboard"
+      tabindex="0"
+      title="Back"
+    >
+      <span
+        class="MuiFab-label"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+          />
+        </svg>
+      </span>
+    </a>
+  </div>
+  <div
+    style="align-items:right"
+  >
+    <button
+      aria-label="back"
+      class="MuiButtonBase-root MuiFab-root makeStyles-deleteBtn-16 MuiFab-sizeSmall"
+      tabindex="0"
+      title="Delete route"
+      type="button"
+    >
+      <span
+        class="MuiFab-label"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+  <div
+    class="MuiGrid-root makeStyles-root-1 MuiGrid-container MuiGrid-spacing-xs-3"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-6"
+    >
+      <div
+        class="MuiGrid-root makeStyles-title-8 MuiGrid-item"
+      >
+        <div
+          class="MuiBox-root MuiBox-root-171"
+        >
+          Route1
+        </div>
+        <h6
+          class="MuiTypography-root MuiTypography-h6 MuiTypography-colorTextSecondary"
+        >
+          by you
+        </h6>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          class="MuiGrid-root makeStyles-mapTitle-3 MuiGrid-container MuiGrid-item"
+        >
+          <img
+            alt="Map logo"
+            class="makeStyles-maplogo-2"
+            src="map.svg"
+          />
+          <div
+            class="MuiBox-root MuiBox-root-202"
+          >
+            Map
+          </div>
+        </div>
+        <div
+          class="MuiPaper-root MuiCard-root makeStyles-map-4 MuiPaper-outlined MuiPaper-rounded"
+        >
+          <div
+            id="mapdetails"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          class="MuiGrid-root makeStyles-elevationTitle-7 MuiGrid-container MuiGrid-item"
+        >
+          <img
+            alt="Elevation logo"
+            class="makeStyles-elevationlogo-6"
+            src="mountain.svg"
+          />
+          <div
+            class="MuiBox-root MuiBox-root-232"
+          >
+            Elevation
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root makeStyles-chart-5 MuiGrid-item"
+        >
+          <canvas
+            height="100"
+            width="300"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-4"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          class="MuiGrid-root makeStyles-carouselTitle-10 MuiGrid-container MuiGrid-item"
+        >
+          <img
+            alt="Camera logo"
+            class="makeStyles-cameralogo-9"
+            src="camera.svg"
+          />
+          <div
+            class="MuiBox-root MuiBox-root-233"
+          >
+            Gallery
+          </div>
+        </div>
+        <div
+          class="MuiPaper-root MuiCard-root makeStyles-carousel-11 MuiPaper-elevation0 MuiPaper-rounded"
+        >
+          <div
+            class="makeStyles-defaultGallery-18"
+            style="text-align:center"
+          >
+            <img
+              alt="Camera retro logo"
+              class="makeStyles-cameraRetrologo-17"
+              src="camera-retro.svg"
+            />
+            <h6
+              class="MuiTypography-root MuiTypography-h6"
+            >
+              You don't have any photos or videos
+            </h6>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          class="MuiGrid-root makeStyles-dataTitle-14 MuiGrid-container MuiGrid-item"
+        >
+          <img
+            alt="Map logo"
+            class="makeStyles-datalogo-13"
+            src="arrows.svg"
+          />
+          <div
+            class="MuiBox-root MuiBox-root-234"
+          >
+            Info
+          </div>
+        </div>
+        <div
+          class="MuiPaper-root MuiCard-root makeStyles-data-12 MuiPaper-outlined MuiPaper-rounded"
+        >
+          <div
+            class="MuiCardContent-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-item"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item"
+                >
+                  <div
+                    class="MuiBox-root MuiBox-root-236"
+                  >
+                    Date
+                  </div>
+                  <div
+                    class="MuiBox-root MuiBox-root-237"
+                  >
+                    --
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item"
+                >
+                  <div
+                    class="MuiBox-root MuiBox-root-238"
+                  >
+                    Distance
+                  </div>
+                  <div
+                    class="MuiBox-root MuiBox-root-239"
+                  >
+                    111194
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item"
+                >
+                  <div
+                    class="MuiBox-root MuiBox-root-240"
+                  >
+                    Description
+                  </div>
+                  <div
+                    class="MuiBox-root MuiBox-root-241"
+                  >
+                    Description 1
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renders null 1`] = `null`;

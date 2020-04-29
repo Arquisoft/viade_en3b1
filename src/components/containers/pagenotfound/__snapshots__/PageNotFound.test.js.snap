@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Correct 1`] = `
+<div
+  style="margin-left:5vh;margin-top:5vh"
+>
+  <h4
+    class="MuiTypography-root opps-warning-text MuiTypography-h4"
+  >
+    Sorry, this is not the webpage you are looking for
+  </h4>
+  <p>
+    Go back to 
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+      href="#/"
+    >
+      Home
+    </a>
+  </p>
+</div>
+`;

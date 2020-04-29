@@ -1,21 +1,17 @@
 import React from 'react';
-import Routes from './components/containers/Routes.js';
+import Router from './components/containers/Router.js';
 import "./App.css";
 import { Helmet } from 'react-helmet';
-import cache from './cache/RoutesChache';
-
-async function getRoutes(){
-  return await cache.getRoutesFromPod();
-}
+import UserCache from './cache/UserCache.js';
 
 function App() {
-  getRoutes();
+  UserCache.loadFriends();
   return (
     <div>
       <Helmet>
-        <title>{'Viade'}</title>
+        <title>{'ViaDe'}</title>
       </Helmet>
-      <Routes />
+      <Router />
     </div>
   );
 }
