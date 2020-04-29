@@ -112,16 +112,19 @@ function RouteDetailsCard(props) {
 
     var name = route.getName();
     var author = route.getAuthor() || "you";
-    var date = route.getDate().toLocaleDateString() || "--";
+    var date = route.getDate() || "--";
     var description = route.getDescription() || "--";
     var distance = route.getDistance() || "--";
+
+    if(date !== "--") {
+        date = date.toLocaleDateString();
+    }
 
     if(distance !== "--") {
         if(distance > 1000) {
             var km = distance / 1000;
             distance = km.toFixed(1) + " km";
         } else {
-            var m = distance;
             distance = distance.toFixed(0) + " m";
         }
     }

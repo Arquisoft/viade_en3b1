@@ -1,6 +1,8 @@
 import Media from "../entities/Media";
 import ParserJsonLdToRoute from "../parser/ParserJsonLdToRoute";
 import ParserJsonLdToGroup from "../parser/ParserJsonLdToGroup";
+import { Breadcrumbs } from "@material-ui/core";
+import React from 'react';
 
 const auth = require('solid-auth-client');
 const FC = require('solid-file-client');
@@ -82,7 +84,10 @@ class PodHandler {
                 }
 
             } catch (error) {
-                alert(error);
+                // alert(error);
+                return (
+                    <Breadcrumbs>CUIDAO CON LA RUTA</Breadcrumbs>
+                );
             }
         } else {
             // There is no routes directory
@@ -97,7 +102,16 @@ class PodHandler {
         let url = urlJson["@id"]; 
         let media;
 
-        if(await fc.itemExists(url)) {
+        let fileExists = await fc.itemExists(url).catch((err) => {
+            // do nothing
+            return null;
+        });
+
+        if(fileExists === null) {
+            return null;
+        }
+
+        if(fileExists) {
             try {
                 let file = await fc.readFile(url);
                 media = new Media(file, urlJson["name"]);

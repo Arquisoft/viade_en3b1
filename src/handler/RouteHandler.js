@@ -6,7 +6,7 @@ export async function uploadRoute(route, callback) {
     let session = await auth.currentSession();
     let storageHandler = new PodHandler(session);
     let fileName = route.getName() + "@" + route.getId() + ".jsonld"; // change for final version
-
+    
     if(route.getMedia().length !== 0) {
         await uploadMedia(route.getMedia());
     }
