@@ -1,28 +1,37 @@
 [[section-architecture-constraints]]
 == Architecture Constraints
 
+=== Technical constraints
 [%header, cols=2]
 |===
-|Issue
+|Constraint
 |Explanation
 
-|Lack of time
-|The amount of work required for this course project (7.5 hours per week) may prove problematic.
-Even though the project is planned around the amount of time we have, it could end up as too large if we consider coordinating between ourselves consumes extra time.
+|JavaScript
+|The programming language used to support the entire development of the application. It will serve as the backend of the system.
 
-|Licenses
-|We have limited resources, and some of the licenses that could be interesting to try are not included in the ones provided by our studen accounts.
-Still, the software itself is free, so this could be considered a minor inconvenience.
+|React
+|A JavaScript library maintained by Facebook that allows to create easy-to-use interfaces. It is used by a lot of companies thanks to its open source and maintainable nature.
 
-|Study materials
-|There are a lot of technologies on this course that are new to us, and require us to find courses and books to study them.
-There are some materials about them for free, but of course the best books and courses are locked behind a paywall.
+|Solid
+|It is an open source project, created by Tim Berners-Lee, that aims to achieve a complete, decentralized web allows users to decide where to store their own data.
 
-|Coordination issues
-|The problems that may come from working with other people, distributing the tasks and making code understandable by others somehow also limits the development of the project.
+|Git
+|Version control software.
 
-|Use of React Framework
-|As we have no previous knowledge of React, its compulsory use limits using the web deveolpment techniques we are used to
+|JSON-LD
+|It is a Linked Data format based on the JSON format and very easy to read for humans.
 |===
 
+=== Conventions
+[%header, cols=2]
+|===
+|Constraint
+|Explanation
 
+|W3C Standards
+|The application should comply with W3C Standards, in order to increase interoperability. 
+
+|Linked Data
+|Following Solid specification, the architecture must use linked data principles.
+|===

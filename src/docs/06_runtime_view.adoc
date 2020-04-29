@@ -5,33 +5,25 @@ In this section, some use case scenarios will be described to indicate concrete 
 
 This segment will be in continuous development.
 
-=== Sharing a new route
+=== Creating a new route
 
-Sharing a route with another user (friend) will be one of the most done operations in the application. To do that, the user that wants to store his route will send the coordinates and map data to the system, which will store it in the user's POD. 
+Users will be able to create a new route. To do it, an entire is designed to guide users in order to complete all the form in the correct way. Several data is indicated in this wizard, like the name, description, date, points on the map and photos or videos of the route.
 
-At the same time, to see the route of another user, the application will provide the necessary information for the user to visualize it graphically.
-
-image:6_RuntimeView_sharing.svg["Sharing routes"]
+image:06_createRoute.png["Creating routes"]
 
 
-=== Sharing contents of an existing route
+=== Importing a route
 
-This is also one of the most frequent scenarios, in which a user will share some contents of the route it has done. 
+In addition to the creation of routes, users can also import any route they want. To do that, another wizard, smaller than the previous one, guides the user during all the steps. 
 
-These contents can be photos, videos or comments of the route. The application will act as a middle intermediate to store the given content as a new element of the selected route. As the diagram below shows, the photo (also video or comment) will be stored in the user's POD, and the system will give feedback to the user about the state of the operation.
-
-image:6_RuntimeView_sharingContents.svg["Sharing contents of routes"]
+Compatible types of files to import a new route are GPX, JSON and JSON-LD.
 
 
-=== Adding a Friend
-
-In Viade, the community is formed by Friends, and they can be added by simply passing the user's ID to the application. Then, if the requested user accepts the invitation, the system will make the proper changes.
-
-image:6_RuntimeView_friends.svg["Adding e new friend"]
+image:06_importRoute.png["Importing routes"]
 
 
-=== Notifications
+=== Listing routes
 
-Some of the operations of the application will require feedback for the user to know if the action was succesful or, on the contrary, if it has been rejected in any way. For that, we will integrate a notification system that will be the module in charge of giving that mentioned feedback to the user.
+In Viade, the most important functionality is the visualization of routes stored in the POD of the user. This task, that seems very simple, is composed by several classes that act as handlers, parsers, and definitions of a route. Here, the JawgMaps API takes place, in order to ensure that all routes downloaded from the POD have correct elevation calculated.
 
-image:6_RuntimeView_notificationSystem.svg["Sharing contents of routes"]
+image:06_listRoute.png["Importing routes"]

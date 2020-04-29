@@ -4,12 +4,24 @@
 == Deployment View
 Viade is a descentralized system where the information from the users is independent from the application.
 
-.Groups
-A group is composed by two or more users. When a user sends information to the group the other members are able to visualize it.
+=== Test Environment
 
-image:07_deployment.PNG["Group interaction"]
+|===
+| *Test Framework* | *Explanation*
 
-=== Infrastructure Level 1
+| Jest-Enzyme
+| Main test libraries to ensure all the React components are rendered correctly.
 
-.To Do
-...
+| Travis
+| Continuous integration tool whenever a new feature is added. Travis takes care of running the tests as well as running code coverage analysis.
+
+| Code Coverage
+| This tool checks the coverage of the app's code.
+
+| Codacy
+| Codacy checks for code quality.
+
+| Cucumber-Puppeteer
+| Tool to perform end-to-end tests in the system.
+
+|===
