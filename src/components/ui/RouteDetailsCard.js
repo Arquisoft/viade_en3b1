@@ -115,6 +115,17 @@ function RouteDetailsCard(props) {
     var date = route.getDate() || "--";
     var description = route.getDescription() || "--";
     var distance = route.getDistance() || "--";
+
+    if(distance !== "--") {
+        if(distance > 1000) {
+            var km = distance / 1000;
+            distance = km.toFixed(1) + " km";
+        } else {
+            var m = distance;
+            distance = distance.toFixed(0) + " m";
+        }
+    }
+
     var media = route.getMedia();
 
     const handleClickOpen = () => {
