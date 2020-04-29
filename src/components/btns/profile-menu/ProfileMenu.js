@@ -88,7 +88,7 @@ const ProfileMenu = () => {
                     </StyledMenuItem>
                 </Link>
 
-                <Link underline='none' href={'#/help'}>
+                <Link underline='none' target="_blank" href={'https://github.com/Arquisoft/viade_en3b1/issues/new'}>
                     <StyledMenuItem divider>
                         <ListItemIcon>
                             <ContactSupportIcon />

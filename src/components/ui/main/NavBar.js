@@ -39,7 +39,7 @@ const NavBar = () => {
 
           <LoggedIn><ImportRoute /></LoggedIn>
 
-          <LoggedIn><Button className={classes.menuButton} href={"#/social-feed"} color="primary" variant='contained'>Social Feed</Button></LoggedIn>
+          {/* <LoggedIn><Button className={classes.menuButton} href={"#/social-feed"} color="primary" variant='contained'>Social Feed</Button></LoggedIn> */}
           <LoggedIn><MisRutas /></LoggedIn>
 
           <LoggedOut><Button className={classes.menuButton} href={"#/register"} color="primary" variant='contained'>Sign Up</Button></LoggedOut>
@@ -56,6 +56,7 @@ const NavBar = () => {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    // width: '100%'
   },
   toolbar: {
     minHeight: '3vh',
