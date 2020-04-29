@@ -54,6 +54,7 @@ exports[`Renders correctly 1`] = `
   >
     <div
       class="MuiPaper-root MuiCard-root makeStyles-root-1 MuiPaper-elevation4 MuiPaper-rounded"
+      style="min-height:15rem"
     >
       <div
         class="MuiCardContent-root"

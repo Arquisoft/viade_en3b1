@@ -2,6 +2,7 @@ import React from 'react';
 import {  Container, Card, CssBaseline, makeStyles, CardContent } from '@material-ui/core';
 import { ProviderLogin } from "@inrupt/solid-react-components";
 import NavBar from '../../ui/main/NavBar';
+import Provider from '../../auth/Provider';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -17,7 +18,7 @@ export default function Login() {
         <div>
         <NavBar />
             <Container component="main" maxWidth="sm">
-                <Card className={classes.root} elevation={4}>
+                <Card className={classes.root} elevation={4} style={{minHeight: '15rem'}}>
                     <CssBaseline />
                     <CardContent>
                         <ProviderLogin
@@ -34,6 +35,7 @@ export default function Login() {
                                 emptyProvider: 'Solid Provider is required',
                                 emptyWebId: 'Valid WebID is required'
                             }}
+                            providers={Provider.getIdentityProviders()}
                         />
                         </CardContent>
                 </Card>
