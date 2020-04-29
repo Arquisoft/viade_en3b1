@@ -14,6 +14,7 @@ exports[`Renders Correct 1`] = `
     <a
       class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
       href="#/"
+      style="color:#94E8B4"
     >
       Home
     </a>
