@@ -10,22 +10,29 @@ This project is an assignment for the [Software Architecture course](https://arq
 The app is [**deployed here**](https://arquisoft.github.io/viade_en3b1/) and also contains a [technical documentation](https://arquisoft.github.io/viade_en3b1/docs).
 
 
-
-## Index
 - [VIADE EN3B1](#viade-en3b1)
-  - [Index](#index)
   - [Developers](#developers)
-  - [Building and running the web app locally](#building-and-running-the-web-app-locally)
+  - [Installing and launching the app locally](#installing-and-launching-the-app-locally)
   - [Building the docs locally](#building-the-docs-locally)
+  - [Running tests locally](#running-tests-locally)
+    - [React tests by Jest and Enzyme](#react-tests-by-jest-and-enzyme)
+    - [Cucumber-Puppeteer tests](#cucumber-puppeteer-tests)
+  - [Relevant packages](#relevant-packages)
 
 ## Developers
 *  [Pablo Cañal Suárez](https://github.com/PabloCanalSuarez)
 
-## Building and running the web app locally
+
+## Installing and launching the app locally 
 
 You’ll need to have [Node](https://nodejs.org/) 8.16.0 or Node 10.16.0 or later version on your local development machine.
 
-Run:
+First, to install the dependencies:
+
+```
+npm install
+```
+And then, run:
 
 ```
 npm start
@@ -40,3 +47,33 @@ Once they have been installed, the docs can be generated with:
 ```
 npm run docs
 ```
+
+## Running tests locally
+
+### React tests by Jest and Enzyme
+
+To run these tests you can simply do:
+```
+npm test
+```
+
+### Cucumber-Puppeteer tests
+
+This set of tests is run by executing:
+```
+npm run test:e2e
+```
+
+In case of error related to Chromium, please do:
+```
+npm install puppeteer
+```
+In order to install Chromium browser.
+
+## Relevant packages
+- [React JS](https://github.com/facebook/react) for development.
+- [Solid](https://github.com/solid) for decentralized.
+- [Material-UI](https://github.com/mui-org/material-ui) and [Material-UI Dropzone](https://github.com/Yuvaleros/material-ui-dropzone) for UI design.
+- [Leaflet](https://github.com/Leaflet/Leaflet) for maps.
+- [React Jest](https://github.com/facebook/jest) and [Enzyme](https://github.com/enzymejs/enzyme) for general testing.
+- [Cucumber](https://github.com/cucumber/cucumber) and [Puppeteer](https://github.com/puppeteer/puppeteer) for end-to-end testing.
