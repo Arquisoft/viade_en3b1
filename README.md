@@ -7,9 +7,16 @@
 
 This project is an assignment for the [Software Architecture course](https://arquisoft.github.io/) following [these requirements](https://labra.solid.community/public/SoftwareArchitecture/AssignmentDescription/).
 
-The app is deployed [here](https://arquisoft.github.io/viade_en3b1/) which also contains a [technical documentation](https://arquisoft.github.io/viade_en3b1/docs).
+The app is [**deployed here**](https://arquisoft.github.io/viade_en3b1/) and also contains a [technical documentation](https://arquisoft.github.io/viade_en3b1/docs).
 
-More information about how this project has been setup is available [in the wiki](https://github.com/Arquisoft/viade_en3b/wiki).
+
+
+## Index
+- [VIADE EN3B1](#viade-en3b1)
+  - [Index](#index)
+  - [Developers](#developers)
+  - [Building and running the web app locally](#building-and-running-the-web-app-locally)
+  - [Building the docs locally](#building-the-docs-locally)
 
 ## Developers
 *  [Pablo Cañal Suárez](https://github.com/PabloCanalSuarez)

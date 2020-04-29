@@ -76,11 +76,11 @@ defineFeature(feature, (test) => {
 
         given('The user is logged in and in the create new route form', async () => {
 
-            await page.waitForSelector('.MuiPaper-root > .MuiToolbar-root > div:nth-child(4) > .MuiButtonBase-root > .MuiButton-label');
-            await page.click('.MuiPaper-root > .MuiToolbar-root > div:nth-child(4) > .MuiButtonBase-root > .MuiButton-label');
+            await page.waitForSelector('.MuiPaper-root > .MuiToolbar-root > div:nth-child(3) > .MuiButtonBase-root > .MuiButton-label')
+            await page.click('.MuiPaper-root > .MuiToolbar-root > div:nth-child(3) > .MuiButtonBase-root > .MuiButton-label')
 
-            await page.waitForSelector('.MuiPaper-root:nth-child(3) > .MuiList-root > .MuiTypography-root:nth-child(2) > .MuiButtonBase-root > .MuiListItemText-root > .MuiTypography-root');
-            await page.click('.MuiPaper-root:nth-child(3) > .MuiList-root > .MuiTypography-root:nth-child(2) > .MuiButtonBase-root > .MuiListItemText-root > .MuiTypography-root');
+            await page.waitForSelector('.MuiPaper-root:nth-child(3) > .MuiList-root > .MuiTypography-root:nth-child(2) > .MuiButtonBase-root > .MuiListItemText-root > .MuiTypography-root')
+            await page.click('.MuiPaper-root:nth-child(3) > .MuiList-root > .MuiTypography-root:nth-child(2) > .MuiButtonBase-root > .MuiListItemText-root > .MuiTypography-root')
 
             // console.log('############### IN CREATE-ROUTE ###############');
         });
@@ -122,11 +122,11 @@ defineFeature(feature, (test) => {
         });
 
         then('The user can create and upload the new route', async () => {
-            await page.waitForSelector('.MuiPaper-root > .MuiToolbar-root > div:nth-child(4) > .MuiButtonBase-root > .MuiButton-label');
-            await page.click('.MuiPaper-root > .MuiToolbar-root > div:nth-child(4) > .MuiButtonBase-root > .MuiButton-label');
+            await page.waitForSelector('.MuiPaper-root > .MuiToolbar-root > div:nth-child(3) > .MuiButtonBase-root > .MuiButton-label');
+            await page.click('.MuiPaper-root > .MuiToolbar-root > div:nth-child(3) > .MuiButtonBase-root > .MuiButton-label');
 
-            await page.waitForSelector('.MuiList-root > .MuiTypography-root:nth-child(1) > .MuiButtonBase-root > .MuiListItemText-root > .MuiTypography-root');
-            await page.click('.MuiList-root > .MuiTypography-root:nth-child(1) > .MuiButtonBase-root > .MuiListItemText-root > .MuiTypography-root');
+            await page.waitForSelector('#customized-menu > .MuiPaper-root > .MuiList-root > .MuiTypography-root:nth-child(1) > .MuiButtonBase-root');
+            await page.click('#customized-menu > .MuiPaper-root > .MuiList-root > .MuiTypography-root:nth-child(1) > .MuiButtonBase-root');
 
             // console.log('############### IN DASHBOARD ###############');
 
@@ -155,8 +155,8 @@ defineFeature(feature2, (test2) => {
         when('The user clicks on My Routes button', async () => {
             await delay(10000);
 
-            await page.waitForSelector('.MuiGrid-root:nth-child(1) > .MuiPaper-root > .MuiCardContent-root > .MuiGrid-root > .MuiGrid-root > #Route-Cucumber-Puppeteer > .MuiButton-label');
-            await page.click('.MuiGrid-root:nth-child(1) > .MuiPaper-root > .MuiCardContent-root > .MuiGrid-root > .MuiGrid-root > #Route-Cucumber-Puppeteer > .MuiButton-label');
+                await page.waitForSelector('.MuiGrid-root:nth-child(1) > .MuiPaper-root > .MuiCardContent-root > .MuiGrid-root > .MuiGrid-root > #Route-Cucumber-Puppeteer > .MuiButton-label');
+                await page.click('.MuiGrid-root:nth-child(1) > .MuiPaper-root > .MuiCardContent-root > .MuiGrid-root > .MuiGrid-root > #Route-Cucumber-Puppeteer > .MuiButton-label');
 
             // console.log('############### CLICK DETAILS ###############');
         });
@@ -182,11 +182,6 @@ defineFeature(feature3, (test3) => {
 
             await delay(5000);
 
-            await page.waitForSelector('.MuiGrid-root:nth-child(1) > .MuiPaper-root > .MuiCardContent-root > .MuiGrid-root > .MuiGrid-root > #Route-Cucumber-Puppeteer > .MuiButton-label');
-            await page.click('.MuiGrid-root:nth-child(1) > .MuiPaper-root > .MuiCardContent-root > .MuiGrid-root > .MuiGrid-root > #Route-Cucumber-Puppeteer > .MuiButton-label');
-
-            await delay(5000);
-
             await page.waitForSelector('button[title="Delete route"]');
             await page.click('button[title="Delete route"]');
 
@@ -195,7 +190,6 @@ defineFeature(feature3, (test3) => {
             await page.waitForSelector('.MuiDialog-container > .MuiPaper-root > .MuiDialogActions-root > .MuiButtonBase-root:nth-child(2) > .MuiButton-label');
             await page.click('.MuiDialog-container > .MuiPaper-root > .MuiDialogActions-root > .MuiButtonBase-root:nth-child(2) > .MuiButton-label');
 
-            // console.log('############### CLICK DETAILS ###############');
         });
 
         then('The user is redirected to the dashboard page', async () => {

@@ -12,7 +12,7 @@ before_install:
 script:
   - npm install -g codecov
   - npm test && codecov
-  - CI=false npm run build
+  - npm run build
   - npm run docs
 deploy:
   provider: pages
