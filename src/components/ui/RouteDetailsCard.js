@@ -112,7 +112,7 @@ function RouteDetailsCard(props) {
 
     var name = route.getName();
     var author = route.getAuthor() || "you";
-    var date = route.getDate() || "--";
+    var date = route.getDate().toLocaleDateString() || "--";
     var description = route.getDescription() || "--";
     var distance = route.getDistance() || "--";
 

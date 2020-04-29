@@ -10,7 +10,7 @@ class ParserJsonLdToRoute {
 
             var name = route.name;
             var id = route.id;
-            // var date = route.date;
+            var date = new Date(route.date);
             var description = route.description;
 
             var points = route.points;
@@ -20,7 +20,7 @@ class ParserJsonLdToRoute {
             let trackPoints = this.parsePoints(points);
             let media = await this.parseMedia(mediaData);
 
-            let finalroute = new Route(name, description, trackPoints, comments, null, null, id);
+            let finalroute = new Route(name, description, trackPoints, comments, null, date, id);
 
             finalroute.setMedia(media);
             // DATE null now.
