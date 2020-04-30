@@ -3,7 +3,7 @@
 
 The Covid Shield is a revolutionary idea that appeared when trying to think about a new feature that could help the world as it is in this complicated situation right now. By simply merging the power of the decentralized systems of Solid, with the Linked Data and ViaDe's web application, this system can turn into live.
 
-image:13_covidShield_1.png["Covid Shield logo 1"]
+image:13_covidshield_1.png["Covid Shield logo 1"]
 
 === How it works
 
@@ -19,7 +19,7 @@ In case any user decides to participate in Covid Shield, they will have to go th
 
 When these steps are completed, the user is considered as part of the Covid Shield.
 
-image:13_covidShield_2.png["Covid Shield logo 2"]
+image:13_covidshield_2.png["Covid Shield logo 2"]
 
 === What is happening underground
 
