@@ -1,0 +1,33 @@
+[[section-covid-shield]]
+== Covid Shield
+
+The Covid Shield is a revolutionary idea that appeared when trying to think about a new feature that could help the world as it is in this complicated situation right now. By simply merging the power of the decentralized systems of Solid, with the Linked Data and ViaDe's web application, this system can turn into live.
+
+image:13_covidShield_1.png["Covid Shield logo 1"]
+
+=== How it works
+
+ViaDe's Covid Shield is a quite simple, but also complex, tool. It allows users to be awared of which of the busiest routes today are potentially dangerous to their health because other users have tested positive for Covid-19.
+
+In case any user decides to participate in Covid Shield, they will have to go through a set of steps:
+
+1. Reading and accepting a set of Privacy Terms that indicate which information of the user's profile will be used in the system. In this case, only the routes the user indicates will be the ones that will be used publicly by the application, as the rest of the data will be only stored in the user's POD.
+
+2. Selecting which routes are to be included in the program. Through a simple and guided wizard, users will select which routes of the most recently ones they want to include as the most "dangerous ones".
+
+3. Creating new, basic routes to indicate the busiest regions today. In this section, users will be able to indicate their paths to the pharmacy, grocery stores or routes they walk with their dogs.
+
+When these steps are completed, the user is considered as part of the Covid Shield.
+
+image:13_covidShield_2.png["Covid Shield logo 2"]
+
+=== What is happening underground
+
+Basically, when a user decides to participate, and completes all the required steps, the selected routes are shared privately with a Solid Group, and the user begins to be part of it. 
+
+.Notification system
+Once a user notifies to the application because he/she has been tested positive for Covid-19, the selected routes turn to be public for the rest of the users that are included in the Covid Shield group. These routes will be shared with the rest of them in an anonymous way, so no data like the name, email, profile photo, or date of birth will be shared. Only the affected routes.
+
+=== Is it mandatory?
+
+No, ViaDe's Covid Shield is just for the user that **explicitly accept** to participate in this program. Moreover, no user data is required beyond the routes that are **selected to be included** in the system.
