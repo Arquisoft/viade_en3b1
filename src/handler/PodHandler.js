@@ -1,8 +1,6 @@
 import Media from "../entities/Media";
 import ParserJsonLdToRoute from "../parser/ParserJsonLdToRoute";
 import ParserJsonLdToGroup from "../parser/ParserJsonLdToGroup";
-import { Breadcrumbs } from "@material-ui/core";
-import React from 'react';
 
 const auth = require('solid-auth-client');
 const FC = require('solid-file-client');
@@ -84,10 +82,7 @@ class PodHandler {
                 }
 
             } catch (error) {
-                // alert(error);
-                return (
-                    <Breadcrumbs>CUIDAO CON LA RUTA</Breadcrumbs>
-                );
+                // alert("EN POD HANDLER");
             }
         } else {
             // There is no routes directory
