@@ -4,28 +4,32 @@ import { loadMedia } from '../handler/MediaHandler.js';
 
 class ParserJsonLdToRoute {
 
-    async parse(file) {
+    async parse(file, fileUrl) {
 
-            var route = JSON.parse(file);
+        var route = JSON.parse(file);
 
-            var name = route.name;
-            var id = route.id;
-            var date = new Date(route.date);
-            var description = route.description;
+        var name = route.name;
+        var id = route.id;
+        var date = new Date(route.date);
+        var description = route.description;
 
-            var points = route.points;
-            var comments = [];
-            var mediaData = route.media;
+        var points = route.points;
+        var comments = [];
+        var mediaData = route.media;
 
-            let trackPoints = this.parsePoints(points);
-            let media = await this.parseMedia(mediaData);
+        let trackPoints = this.parsePoints(points);
+        let media = await this.parseMedia(mediaData);
 
+        if(trackPoints.length === 0) {
+            return;
+        }
 
-            let finalroute = new Route(name, description, trackPoints, comments, null, date, id);
+        let finalroute = new Route(name, description, trackPoints, comments, null, date, id);
 
-            finalroute.setMedia(media);
+        finalroute.setMedia(media);
+        finalroute.setUrl(fileUrl);
 
-            return finalroute;
+        return finalroute;
     }
 
     async parseImport(file) {
@@ -44,7 +48,7 @@ class ParserJsonLdToRoute {
             let finalroute = new Route(name, description, trackPoints, comments, null, date, null);
 
             return finalroute;
-            
+
         } catch (e) {
             alert(e);
         }
@@ -53,12 +57,20 @@ class ParserJsonLdToRoute {
     async parseMedia(media) {
         let mediaList = [];
         for (let i = 0; i < media.length; i++) {
-            let m = await loadMedia( media[i] );
-            if(m !== null) {
-                mediaList.push(m);   
+            let m = await loadMedia(media[i]);
+            if (m !== null) {
+                mediaList.push(m);
             }
         }
+
+        mediaList = this.filterMedia(mediaList);
+
         return mediaList;
+    }
+
+    filterMedia(list) {
+        let result = list.filter((item) => item !== undefined);
+        return result;
     }
 
     parsePoints(points) {

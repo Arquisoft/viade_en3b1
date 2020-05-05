@@ -3,21 +3,17 @@ import Group from '../entities/Group.js';
 class ParserJsonLdToGroup {
 
     parse(file) {
-        try {
-            var group = JSON.parse(file);
+        var group = JSON.parse(file);
 
-            var name = group.name;
-            var id = group.id;
+        var name = group.name;
+        var id = group.id;
 
-            var users = group.users;
-            var members = this.parseMembers(users);
+        var users = group.users;
+        var members = this.parseMembers(users);
 
-            var finalGroup = new Group(name, members, id);
+        var finalGroup = new Group(name, members, id);
 
-            return finalGroup;
-        } catch (e) {
-            alert(e);
-        }
+        return finalGroup;
     }
 
     parseMembers(users) {

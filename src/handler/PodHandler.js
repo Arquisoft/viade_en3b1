@@ -47,7 +47,7 @@ class PodHandler {
     }
 
     async deleteRoute(routeUrl) {
-        if(routeUrl !== null) {
+        if (routeUrl !== null) {
             this.deleteFile(routeUrl);
         } else {
             alert('Route url cannot be null');
@@ -58,7 +58,7 @@ class PodHandler {
         if (await fc.itemExists(url)) {
             try {
                 fc.delete(url);
-            } catch(error) {
+            } catch (error) {
                 alert(error);
             }
         }
@@ -68,7 +68,7 @@ class PodHandler {
         let url = this.defaultFolder + this.routesFolder;
 
         var routes = [];
-        
+
         if (await fc.itemExists(url)) {
             try {
                 let contents = await fc.readFolder(url);
@@ -76,8 +76,7 @@ class PodHandler {
 
                 for (let i = 0; i < files.length; i++) {
                     let fileContent = await fc.readFile(files[i].url);
-                    let route = await new ParserJsonLdToRoute().parse(fileContent);
-                    route.setUrl(files[i].url);
+                    let route = await new ParserJsonLdToRoute().parse(fileContent, files[i].url);
                     routes.push(route);
                 }
 
@@ -89,33 +88,30 @@ class PodHandler {
             await fc.createFolder(url);
         }
 
-        return routes;
+        return routes.filter((r) => r !== undefined);
     }
 
     async findMedia(urlJson) {
-        
-        let url = urlJson["@id"]; 
+
+        let url = urlJson["@id"];
         let media;
 
         let fileExists = await fc.itemExists(url).catch((err) => {
-            // do nothing
             return null;
         });
 
-        if(fileExists === null) {
-            return null;
-        }
 
-        if(fileExists) {
+        if (fileExists) {
             try {
                 let file = await fc.readFile(url);
                 media = new Media(file, urlJson["name"]);
                 media.setUrl(url);
-            } catch(error) {
-                alert(error);
+            } catch (error) {
+                // alert(error);
+                return null;
             }
         } else {
-            alert(`Media doesn't exist: ${url}`);
+            // Media doesn't exist
         }
 
         return media;
@@ -125,7 +121,7 @@ class PodHandler {
         let url = this.defaultFolder + this.groupsFolder;
 
         var groups = [];
-        
+
         if (await fc.itemExists(url)) {
             try {
                 let contents = await fc.readFolder(url);
@@ -137,7 +133,7 @@ class PodHandler {
                 }
 
             } catch (error) {
-                alert(error);
+                // alert(error);
             }
         } else {
             // There is no groups directory

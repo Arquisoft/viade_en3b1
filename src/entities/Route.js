@@ -16,6 +16,9 @@ class Route {
      * @param {Date} date Date of the route.
      */
     constructor(name, description, trackPoints, comments, media, date, id, author = null) {
+
+        // this.checkInput(name, trackPoints);
+
         this.name = name;
         this.date = date;
         this.description = description;
@@ -34,6 +37,15 @@ class Route {
         this.author = author;
 
         this.url = null
+    }
+
+    checkInput(name, trackPoints) {
+        if(!name || name.length === 0){
+            throw Error("Name can't be null nor empty");
+        }
+        if(trackPoints.length === 0){
+            throw Error("Trackpoints list can't be empty");
+        }
     }
 
     getUrl() {
