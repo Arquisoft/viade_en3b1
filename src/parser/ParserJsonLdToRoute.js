@@ -20,11 +20,12 @@ class ParserJsonLdToRoute {
         let trackPoints = this.parsePoints(points);
         let media = await this.parseMedia(mediaData);
 
-        if(trackPoints.length === 0) {
+        let finalroute;
+        try {
+            finalroute = new Route(name, description, trackPoints, comments, null, date, id);
+        } catch (err) {
             return;
         }
-
-        let finalroute = new Route(name, description, trackPoints, comments, null, date, id);
 
         finalroute.setMedia(media);
         finalroute.setUrl(fileUrl);
@@ -33,25 +34,26 @@ class ParserJsonLdToRoute {
     }
 
     async parseImport(file) {
+
+        var route = JSON.parse(file);
+
+        var name = route.name;
+        var date = new Date(route.date);
+        var description = route.description;
+
+        var points = route.points;
+        var comments = [];
+
+        let trackPoints = this.parsePoints(points);
+
+        let finalroute;
         try {
-            var route = JSON.parse(file);
-
-            var name = route.name;
-            var date = new Date(route.date);
-            var description = route.description;
-
-            var points = route.points;
-            var comments = [];
-
-            let trackPoints = this.parsePoints(points);
-
-            let finalroute = new Route(name, description, trackPoints, comments, null, date, null);
-
-            return finalroute;
-
-        } catch (e) {
-            alert(e);
+            finalroute = new Route(name, description, trackPoints, comments, null, date, null);
+        } catch (err) {
+            return;
         }
+
+        return finalroute;
     }
 
     async parseMedia(media) {

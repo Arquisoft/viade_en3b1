@@ -79,9 +79,14 @@ export class ImportRouteForm extends Component {
     async handleJSON(file) {
         let parser = new ParserJsonLdToRoute();
         let route = await parser.parseImport(file);
-        this.state.routes.push(route);
-        const { routes } = this.state;
-        this.setState({ routes: routes.slice() });
+
+        if (!route) {
+            this.props.history.push('/404');
+        } else {
+            this.state.routes.push(route);
+            const { routes } = this.state;
+            this.setState({ routes: routes.slice() });
+        }
     }
 
     async upload() {
@@ -89,10 +94,10 @@ export class ImportRouteForm extends Component {
         let success = [];
         routes.forEach((r) => {
             this.uploadRoute(r).then((code) => {
-                success.push(code); 
+                success.push(code);
             });
         });
-        if(success.includes(-1)) {
+        if (success.includes(-1)) {
             this.openNotif("There was an error uploading your routes", 'error');
         } else {
             this.openNotif("Your route was successfully saved", 'success');

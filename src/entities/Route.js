@@ -17,7 +17,7 @@ class Route {
      */
     constructor(name, description, trackPoints, comments, media, date, id, author = null) {
 
-        // this.checkInput(name, trackPoints);
+        this.checkInput(name, trackPoints);
 
         this.name = name;
         this.date = date;
@@ -36,7 +36,7 @@ class Route {
         this.totalDistance = this.calculateDistance();
         this.author = author;
 
-        this.url = null
+        this.url = null;
     }
 
     checkInput(name, trackPoints) {
