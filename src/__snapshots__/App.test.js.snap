@@ -1,3 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders correctly 1`] = `<div />`;
+exports[`Renders correctly 1`] = `
+<div>
+  <div
+    class="Toastify"
+  />
+</div>
+`;

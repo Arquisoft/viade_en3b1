@@ -16,6 +16,9 @@ class Route {
      * @param {Date} date Date of the route.
      */
     constructor(name, description, trackPoints, comments, media, date, id, author = null) {
+
+        this.checkInput(name, trackPoints);
+
         this.name = name;
         this.date = date;
         this.description = description;
@@ -33,7 +36,16 @@ class Route {
         this.totalDistance = this.calculateDistance();
         this.author = author;
 
-        this.url = null
+        this.url = null;
+    }
+
+    checkInput(name, trackPoints) {
+        if(!name || name.length === 0){
+            throw Error("Name can't be null nor empty");
+        }
+        if(trackPoints.length === 0){
+            throw Error("Trackpoints list can't be empty");
+        }
     }
 
     getUrl() {
@@ -97,6 +109,14 @@ class Route {
             this.comments = [];
         } else {
             this.comments = comments;
+        }
+    }
+
+    addTrackPoints(points) {
+        if(points.length > 0) {
+            points.forEach((p) => {
+                this.trackPoints.push(p);
+            });
         }
     }
 

@@ -128,7 +128,7 @@ Object {
           >
             <div>
               <footer
-                class="makeStyles-footer-233"
+                class="makeStyles-footer-226"
               >
                 <div
                   class="MuiContainer-root MuiContainer-maxWidthSm"
@@ -291,7 +291,7 @@ Object {
         >
           <div>
             <footer
-              class="makeStyles-footer-233"
+              class="makeStyles-footer-226"
             >
               <div
                 class="MuiContainer-root MuiContainer-maxWidthSm"
@@ -390,16 +390,16 @@ Object {
     <div>
       <div>
         <div
-          class="makeStyles-root-266"
+          class="makeStyles-root-259"
         >
           <header
             class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
           >
             <div
-              class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-267 MuiToolbar-gutters"
+              class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-260 MuiToolbar-gutters"
             >
               <div
-                class="MuiGrid-root makeStyles-link-269"
+                class="MuiGrid-root makeStyles-link-262"
               >
                 <div
                   class="MuiGrid-root MuiGrid-container"
@@ -435,7 +435,7 @@ Object {
               </div>
               <a
                 aria-disabled="false"
-                class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-menuButton-268 MuiButton-containedPrimary"
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-menuButton-261 MuiButton-containedPrimary"
                 href="#/register"
                 tabindex="0"
               >
@@ -450,7 +450,7 @@ Object {
               </a>
               <a
                 aria-disabled="false"
-                class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-menuButton-268 MuiButton-colorInherit"
+                class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-menuButton-261 MuiButton-colorInherit"
                 data-testid="btn-login-navbar"
                 href="#/login"
                 tabindex="0"
@@ -471,13 +471,13 @@ Object {
           class="MuiGrid-root MuiGrid-container"
         >
           <div
-            class="MuiGrid-root ImportRouteForm-image-265 MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
+            class="MuiGrid-root ImportRouteForm-image-258 MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
           >
             <main
-              class="ImportRouteForm-layout-261"
+              class="ImportRouteForm-layout-254"
             >
               <div
-                class="MuiPaper-root ImportRouteForm-paper-262 MuiPaper-elevation1 MuiPaper-rounded"
+                class="MuiPaper-root ImportRouteForm-paper-255 MuiPaper-elevation1 MuiPaper-rounded"
               >
                 <h1
                   class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter"
@@ -485,10 +485,10 @@ Object {
                   Please, review your routes
                 </h1>
                 <div
-                  class="ImportRouteForm-btnArea-264"
+                  class="ImportRouteForm-btnArea-257"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained ImportRouteForm-btn-263 MuiButton-containedPrimary"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained ImportRouteForm-btn-256 MuiButton-containedPrimary"
                     data-testid="btn-test-accept"
                     tabindex="0"
                     type="button"
@@ -511,7 +511,7 @@ Object {
           >
             <div>
               <footer
-                class="makeStyles-footer-493"
+                class="makeStyles-footer-479"
               >
                 <div
                   class="MuiContainer-root MuiContainer-maxWidthSm"
@@ -553,16 +553,16 @@ Object {
   "container": <div>
     <div>
       <div
-        class="makeStyles-root-266"
+        class="makeStyles-root-259"
       >
         <header
           class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
         >
           <div
-            class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-267 MuiToolbar-gutters"
+            class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-260 MuiToolbar-gutters"
           >
             <div
-              class="MuiGrid-root makeStyles-link-269"
+              class="MuiGrid-root makeStyles-link-262"
             >
               <div
                 class="MuiGrid-root MuiGrid-container"
@@ -598,7 +598,7 @@ Object {
             </div>
             <a
               aria-disabled="false"
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-menuButton-268 MuiButton-containedPrimary"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-menuButton-261 MuiButton-containedPrimary"
               href="#/register"
               tabindex="0"
             >
@@ -613,7 +613,7 @@ Object {
             </a>
             <a
               aria-disabled="false"
-              class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-menuButton-268 MuiButton-colorInherit"
+              class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-menuButton-261 MuiButton-colorInherit"
               data-testid="btn-login-navbar"
               href="#/login"
               tabindex="0"
@@ -634,13 +634,13 @@ Object {
         class="MuiGrid-root MuiGrid-container"
       >
         <div
-          class="MuiGrid-root ImportRouteForm-image-265 MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
+          class="MuiGrid-root ImportRouteForm-image-258 MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
         >
           <main
-            class="ImportRouteForm-layout-261"
+            class="ImportRouteForm-layout-254"
           >
             <div
-              class="MuiPaper-root ImportRouteForm-paper-262 MuiPaper-elevation1 MuiPaper-rounded"
+              class="MuiPaper-root ImportRouteForm-paper-255 MuiPaper-elevation1 MuiPaper-rounded"
             >
               <h1
                 class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter"
@@ -648,10 +648,10 @@ Object {
                 Please, review your routes
               </h1>
               <div
-                class="ImportRouteForm-btnArea-264"
+                class="ImportRouteForm-btnArea-257"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained ImportRouteForm-btn-263 MuiButton-containedPrimary"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained ImportRouteForm-btn-256 MuiButton-containedPrimary"
                   data-testid="btn-test-accept"
                   tabindex="0"
                   type="button"
@@ -674,7 +674,7 @@ Object {
         >
           <div>
             <footer
-              class="makeStyles-footer-493"
+              class="makeStyles-footer-479"
             >
               <div
                 class="MuiContainer-root MuiContainer-maxWidthSm"

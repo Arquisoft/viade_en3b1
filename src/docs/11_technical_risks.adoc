@@ -7,6 +7,4 @@
 | Poor performance of the application.|The application may receive a lot of requests at the same time. It is necessary to apply techniques that increase effectively the performance of the application.
 
 | Bad usage of the proposed technologies.|The usage of solid or react is completely new for the development team. Taking a look and practcing with these technologies can decrease the risk of making mistakes while using them.
-
-| Communication problems between the members of the development team.|An efficient way of ensuring that the team works as expected is to distribute the tasks equitatively, expose any problem that a member may have and collaborate to solve all doubts that appear in the development process.
 |===
