@@ -76,7 +76,7 @@ Array [
               name="date"
               required=""
               type="text"
-              value="04/30/2020"
+              value="05/06/2020"
             />
             <div
               class="MuiInputAdornment-root MuiInputAdornment-positionEnd"

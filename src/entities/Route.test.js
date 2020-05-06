@@ -3,13 +3,14 @@ import Media from "./Media";
 import TrackPoint from "./TrackPoint";
 import { v4 as uuid } from "uuid";
 
-var route1 = new Route("Route1", "Description 1", [new TrackPoint(1,1), new TrackPoint(2,1)], null, null, null, "ID1");
+var route1 = new Route("Route1", "Description 1", [new TrackPoint(1, 1), new TrackPoint(2, 1)], null, null, null, "ID1");
 
-var route2 = new Route("Route2", "Description 2", [(1,1),(2,1)], null, [new Media("photo", "My Photo", null)], null);
+var route2 = new Route("Route2", "Description 2", [(1, 1), (2, 1)], null, [new Media("photo", "My Photo", null)], null);
 
-var route3 = new Route("Route3", "Description 3", [new TrackPoint(1,1), new TrackPoint(4,1)], null, [new Media("photo", "My Photo", null)], new Date());
+var route3 = new Route("Route3", "Description 3", [new TrackPoint(1, 1), new TrackPoint(4, 1)], null, [new Media("photo", "My Photo", null)], new Date());
 
-var route4 = new Route("Empty Route", "R4", null, null, null, null, "ID1");
+var route4 = new Route("Empty Route", "R4", [new TrackPoint(1, 1), new TrackPoint(4, 1)], null, null, null, "ID1");
+
 
 test("Simple route", () => {
     expect(route1.getName()).toEqual("Route1");
@@ -61,7 +62,7 @@ test("Set trackpoints", () => {
     expect(route4.getTrackPoints()[0].getLongitude()).toEqual(1);
     expect(route4.getTrackPoints().length).toEqual(1);
 
-    let tr2 = new TrackPoint(1,2);
+    let tr2 = new TrackPoint(1, 2);
     route4.setTrackPoints([tr2]);
     expect(route4.getTrackPoints()[0].getLatitude()).toEqual(1);
     expect(route4.getTrackPoints()[0].getLongitude()).toEqual(2);
@@ -106,9 +107,9 @@ test("Calculate distance", () => {
 test("Calculate elevation", () => {
     route1.calculateElevation();
     let points = route1.getTrackPoints();
-    
+
     let elevation = 0;
-    for(let i = 0; i < points.length; i++) {
+    for (let i = 0; i < points.length; i++) {
         elevation += points[i].getElevation();
     }
     expect(elevation).toBeTruthy();
