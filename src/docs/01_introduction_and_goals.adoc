@@ -22,10 +22,6 @@ The objective of Viade is to give users a platform where they can share their ta
 ==== Developers: 
 
 * link:https://github.com/PabloCanalSuarez[Pablo Cañal Suárez.] 
-* link:https://github.com/CarmenVigo[Carmen Vigo Rodríguez.]
-* link:https://github.com/MiguelCuestaM[Miguel Cuesta Martínez.]
-* link:https://github.com/UO264850[Lucía Megido García.]
-* link:https://github.com/ElenaRodriguezRio[Elena Rodríguez Río.]
 
 === Quality Goals
 
@@ -35,7 +31,8 @@ The objective of Viade is to give users a platform where they can share their ta
 | Usability | All users must be able to use the application with no difficulties. Therefore, the app will be intuitive and will have a user-friendly interface.
 | Interoperability | All the system should allow the users to interact with other applications that use the same standard.
 | Performance | The service should run fluidly, with no problems or restrictions that affect to its performance efficiency. 
-| Availability | The app should always work whevener the user has Internet connection and the server is available.
+| Scalability | The service must be scalable and modular, in order to facilitate a better adaptation for new geographic formats and functionalities.
+| Maintainability | Following the previous point, the application should be highly maintainable, which means it could expand in the future in a quite simple way.
 |===
 
 

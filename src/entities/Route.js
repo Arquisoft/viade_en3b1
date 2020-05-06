@@ -165,7 +165,7 @@ class Route {
             }
         }
 
-        baseUrl += "&access-token=" + process.env.REACT_APP_JAWG_KEY;
+        baseUrl += "&access-token=TW7jT2vvzu9Oxs3Yr5RmuVkdwYZW6cKCfYdDoj55KBp9YmpuBqBrFcQtbNOI0QVi";
 
         fetch(baseUrl)
             .then((response) => {

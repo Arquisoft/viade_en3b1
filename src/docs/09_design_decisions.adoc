@@ -9,21 +9,18 @@ We talked about the decisions we have made at section four (Solution Strategy), 
 |=======
 |Decisions |Advantages |Disadvantages
 |JavaScript
- |Provides more resources in Solid.
- |Not a programming language we are used to.
+ |Provides more resources for Solid.
+ |Although it's used worldwide, it has several disadvantages, like the lack of a debugging facility, single inheritance and the client-side security.
 |Solid
  |Protects user's privacy. Develop without harvesting massive amounts of data.
- |The scarce sources of documentation.
-|React
- |Efficient update and render of the UI.
- |Library of a language we are not used to (JavaScript).
- |NodeJS
- |Fast, efficient and nonblocking. 
- |Uses only JavaScript.
- |MVC
- |Separation of concepts and code reusability.
- |React does not follow this pattern.
+ |The lack of documentation for some things.
+|JawgMaps
+ | Allows to get the elevation of up to 500 points in a single request. 
+ | The free version of the API doesn't support high traffic loads.
+|Leaflet Maps
+ | Open-source library to get maps implementation.
+ | Needs other modules and libraries to get additional (and somehow obvious) features.
 |Github
  |The version-controll system we are used to. Issue tracker, wiki, etc.
- |As we are working on a public repository, other teams might copy our work.
+ | None.
 |=======

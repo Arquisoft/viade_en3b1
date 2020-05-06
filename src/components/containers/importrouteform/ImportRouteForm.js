@@ -78,7 +78,7 @@ export class ImportRouteForm extends Component {
 
     async handleJSON(file) {
         let parser = new ParserJsonLdToRoute();
-        let route = await parser.parse(file);
+        let route = await parser.parseImport(file);
         this.state.routes.push(route);
         const { routes } = this.state;
         this.setState({ routes: routes.slice() });
@@ -102,6 +102,7 @@ export class ImportRouteForm extends Component {
     }
 
     uploadRoute(route) {
+        RoutesCache.clear();
         RoutesCache.addRouteToCache(route);
         return new Promise((resolve) => {
             uploadRoute(route, (response) => resolve(response));

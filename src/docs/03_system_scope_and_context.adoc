@@ -1,16 +1,17 @@
 [[section-system-scope-and-context]]
 == System Scope and Context
+Tha main goal of ViaDe is to give the ability to create, store and visualize routes without without being forced to store all the related data in a concrete, third-party server. Therefore, the data will be stored in the user's POD, which will convert ViaDe in the middle-man between Solid and the user.
 
 === Business Context
-Viade´s main goal is to give the ability to store, visualize and be shared to the routes withou storing the actual data, which is kept by the users.
 
 The public target for the applications is all types of users, but especially non-technical users.
-The application will allow the user to store and visualize their routes in a map.
+The application will allow the user to store any route they create or import in their own POD, and visualize them in a proper, intuitive way.
 
-The users will be able to communicate among them by sharing routes, pictures or videos. The interaction can be between two individuals or multiple, by creating groups of friends. Whenever a user shares content with another one, the target receives a notification. 
+As application is decentralized, the application and the data storage are separated, being this last one owned by the user (POD).
 
-The application is decentralize, the application and the data storage are separated, being this last one owned and stored by the user.
-As the application will support interoperability, our users will be able to use the routes and other data in different applications with a similar functionality.
+Interoperability is one of the main goals of the system, so users will be able to use the routes and other data in different applications with a similar functionality.
+
+image:03_businessContext_1.svg["Viade Interoperable"]
 
 === Technical Context
 
@@ -18,6 +19,27 @@ The main idea is to separate the data storage from the rest of the app, so each 
 
 To achieve this, we follow the SOLID specifications as it ensures that our application is decentralized. Each user will be able to store its data in their own POD and grant the applications access to just certain type of data. With SOLID users can use the data of the routes in other applications that also use that kind of data.
 
-Javascript is going to be used as the programming language, since we are going to make use of the framework React, which makes it easier to develop interactive and attractive graphic interfaces, which is key to obtain a usable interface.
+- Technical interfaces:
 
-image:03_businessContext.png["Class diagram"]
+[%header, cols=2]
+|===
+|Technical interface
+|Explanation
+
+|React
+|Used to create the general interface design of the application, integrating it with the JavaScript backend.
+
+|JavaScript
+|Language in which all the backend of the application is developed.
+
+|Solid
+|It's the base of the project. Each Solid POD serves as the personal storage for each user of the application.
+
+|APIs
+|Several APIs are used in order to achieve the correct functionalities: the main ones are Leaflet and JawgMaps.
+
+|GitHub Pages
+|GitHub's servers will allow us to host the application.
+|===
+
+image:03_technicalContext_1.svg["Viade Communication"]
