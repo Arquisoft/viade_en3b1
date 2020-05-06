@@ -14,6 +14,7 @@ import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { LogOut } from '../../../handler/SessionHandler';
 import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
+import InfoIcon from '@material-ui/icons/Info';
 
 const ProfileMenu = () => {
 
@@ -89,11 +90,20 @@ const ProfileMenu = () => {
                 </Link>
 
                 <Link underline='none' href={'#/help'}>
-                    <StyledMenuItem divider>
+                    <StyledMenuItem>
                         <ListItemIcon>
                             <ContactSupportIcon />
                         </ListItemIcon>
                         <ListItemText primary="Need help?" />
+                    </StyledMenuItem>
+                </Link>
+
+                <Link underline='none' href={'#/about'}>
+                    <StyledMenuItem divider>
+                        <ListItemIcon>
+                            <InfoIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="About us" />
                     </StyledMenuItem>
                 </Link>
 

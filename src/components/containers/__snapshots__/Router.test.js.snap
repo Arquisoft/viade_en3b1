@@ -13,6 +13,11 @@ exports[`Renders correctly 1`] = `
       exact={true}
       path="/help"
     />
+    <PublicLayout
+      component={[Function]}
+      exact={true}
+      path="/about"
+    />
     <Redirect
       exact={true}
       from="/"

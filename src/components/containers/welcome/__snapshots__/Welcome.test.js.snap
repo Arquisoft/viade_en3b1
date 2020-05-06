@@ -58,7 +58,7 @@ exports[`Renders correctly 1`] = `
     >
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"
-        style="margin-bottom:2vh"
+        style="margin-bottom:1rem"
       >
         <img
           alt="Viade Logo"
@@ -71,7 +71,7 @@ exports[`Renders correctly 1`] = `
       >
         <h4
           class="MuiTypography-root MuiTypography-h4 MuiTypography-colorInherit MuiTypography-alignCenter"
-          style="margin-bottom:10px"
+          style="margin-bottom:0.5rem"
         >
           Welcome to ViaDe.
         </h4>
@@ -80,18 +80,31 @@ exports[`Renders correctly 1`] = `
         />
         <p
           class="MuiTypography-root MuiTypography-body1 MuiTypography-colorInherit MuiTypography-alignCenter"
-          style="margin-top:10px"
+          style="margin-top:0.5rem"
         >
           The first routes management system based on SOLID technology.
         </p>
       </div>
+      <a
+        aria-disabled="false"
+        class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary"
+        href="#/about"
+        style="margin-top:2rem"
+        tabindex="0"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Learn More
+        </span>
+      </a>
     </div>
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
     >
       <div>
         <footer
-          class="makeStyles-footer-196"
+          class="makeStyles-footer-228"
         >
           <div
             class="MuiContainer-root MuiContainer-maxWidthXs"

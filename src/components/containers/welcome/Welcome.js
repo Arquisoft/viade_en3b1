@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from '../../ui/main/NavBar.js';
-import { Typography, Grid, Divider, CssBaseline } from '@material-ui/core';
+import { Typography, Grid, Divider, CssBaseline, Button } from '@material-ui/core';
 import logo1 from '../../../assets/img/logo/logo_1.svg';
 import Footer from '../../ui/main/Footer';
 
@@ -24,15 +24,17 @@ const Welcome = () => {
                         // height: '80rem'
                      }}
                     >
-                    <Grid item xs={3} style={{ marginBottom: '2vh' }}>
+                    <Grid item xs={3} style={{ marginBottom: '1rem' }}>
                         <img src={logo1} alt="Viade Logo" style={{ height: '6.5rem', width: '6.5rem' }} />
                     </Grid>
 
                     <Grid item xs={3}>
-                        <Typography style={{ marginBottom: '10px' }} variant="h4" color="inherit" align="center">Welcome to ViaDe.</Typography>
+                        <Typography style={{ marginBottom: '0.5rem' }} variant="h4" color="inherit" align="center">Welcome to ViaDe.</Typography>
                         <Divider />
-                        <Typography style={{ marginTop: '10px' }} variant="body1" color="inherit" align="center">The first routes management system based on SOLID technology.</Typography>
+                        <Typography style={{ marginTop: '0.5rem' }} variant="body1" color="inherit" align="center">The first routes management system based on SOLID technology.</Typography>
                     </Grid>
+
+                    <Button style={{ marginTop: '2rem' }} href={"#/about"} variant="outlined" color="primary">Learn More</Button>
                 </Grid>
 
 

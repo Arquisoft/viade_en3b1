@@ -1,5 +1,5 @@
-import React from 'react'
-import FaqQuestions from './FaqQuestions'
+import React from 'react';
+import FaqQuestions from './FaqQuestions';
 import NavBar from '../../ui/main/NavBar';
 import Footer from '../../ui/main/Footer';
 import { Container, makeStyles } from '@material-ui/core';
