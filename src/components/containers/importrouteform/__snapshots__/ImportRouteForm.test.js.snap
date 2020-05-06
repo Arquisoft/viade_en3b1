@@ -131,34 +131,58 @@ Object {
                 class="makeStyles-footer-226"
               >
                 <div
-                  class="MuiContainer-root MuiContainer-maxWidthSm"
+                  class="MuiContainer-root MuiContainer-maxWidthXs"
                 >
-                  <h6
-                    class="MuiTypography-root MuiTypography-h6"
+                  <div
+                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5"
                   >
-                    ViaDe En3B1
-                  </h6>
-                  <h6
-                    class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-colorTextSecondary"
-                  >
-                    Made by Pablo Cañal
-                  </h6>
-                  <a
-                    class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-                    href="https://github.com/Arquisoft/viade_en3b1/"
-                    target="_blank"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root"
-                      focusable="false"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="MuiGrid-root MuiGrid-item"
                     >
-                      <path
-                        d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"
-                      />
-                    </svg>
-                  </a>
+                      <h6
+                        class="MuiTypography-root MuiTypography-h6"
+                      >
+                        ViaDe En3B1
+                      </h6>
+                      <h6
+                        class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-colorTextSecondary"
+                      >
+                        Made by 
+                        <a
+                          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                          href="https://github.com/PabloCanalSuarez"
+                          style="color: rgb(48, 44, 88);"
+                          target="_blank"
+                        >
+                          Pablo Cañal
+                        </a>
+                      </h6>
+                    </div>
+                    <hr
+                      class="MuiDivider-root MuiDivider-flexItem MuiDivider-vertical"
+                    />
+                    <div
+                      class="MuiGrid-root MuiGrid-item"
+                      style="margin-top: 0.5rem;"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                        href="https://github.com/Arquisoft/viade_en3b1/"
+                        target="_blank"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </footer>
             </div>
@@ -294,34 +318,58 @@ Object {
               class="makeStyles-footer-226"
             >
               <div
-                class="MuiContainer-root MuiContainer-maxWidthSm"
+                class="MuiContainer-root MuiContainer-maxWidthXs"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6"
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5"
                 >
-                  ViaDe En3B1
-                </h6>
-                <h6
-                  class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-colorTextSecondary"
-                >
-                  Made by Pablo Cañal
-                </h6>
-                <a
-                  class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-                  href="https://github.com/Arquisoft/viade_en3b1/"
-                  target="_blank"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root"
-                    focusable="false"
-                    viewBox="0 0 24 24"
+                  <div
+                    class="MuiGrid-root MuiGrid-item"
                   >
-                    <path
-                      d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"
-                    />
-                  </svg>
-                </a>
+                    <h6
+                      class="MuiTypography-root MuiTypography-h6"
+                    >
+                      ViaDe En3B1
+                    </h6>
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-colorTextSecondary"
+                    >
+                      Made by 
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                        href="https://github.com/PabloCanalSuarez"
+                        style="color: rgb(48, 44, 88);"
+                        target="_blank"
+                      >
+                        Pablo Cañal
+                      </a>
+                    </h6>
+                  </div>
+                  <hr
+                    class="MuiDivider-root MuiDivider-flexItem MuiDivider-vertical"
+                  />
+                  <div
+                    class="MuiGrid-root MuiGrid-item"
+                    style="margin-top: 0.5rem;"
+                  >
+                    <a
+                      class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                      href="https://github.com/Arquisoft/viade_en3b1/"
+                      target="_blank"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </footer>
           </div>
@@ -390,16 +438,16 @@ Object {
     <div>
       <div>
         <div
-          class="makeStyles-root-259"
+          class="makeStyles-root-266"
         >
           <header
             class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
           >
             <div
-              class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-260 MuiToolbar-gutters"
+              class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-267 MuiToolbar-gutters"
             >
               <div
-                class="MuiGrid-root makeStyles-link-262"
+                class="MuiGrid-root makeStyles-link-269"
               >
                 <div
                   class="MuiGrid-root MuiGrid-container"
@@ -435,7 +483,7 @@ Object {
               </div>
               <a
                 aria-disabled="false"
-                class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-menuButton-261 MuiButton-containedPrimary"
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-menuButton-268 MuiButton-containedPrimary"
                 href="#/register"
                 tabindex="0"
               >
@@ -450,7 +498,7 @@ Object {
               </a>
               <a
                 aria-disabled="false"
-                class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-menuButton-261 MuiButton-colorInherit"
+                class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-menuButton-268 MuiButton-colorInherit"
                 data-testid="btn-login-navbar"
                 href="#/login"
                 tabindex="0"
@@ -471,13 +519,13 @@ Object {
           class="MuiGrid-root MuiGrid-container"
         >
           <div
-            class="MuiGrid-root ImportRouteForm-image-258 MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
+            class="MuiGrid-root ImportRouteForm-image-265 MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
           >
             <main
-              class="ImportRouteForm-layout-254"
+              class="ImportRouteForm-layout-261"
             >
               <div
-                class="MuiPaper-root ImportRouteForm-paper-255 MuiPaper-elevation1 MuiPaper-rounded"
+                class="MuiPaper-root ImportRouteForm-paper-262 MuiPaper-elevation1 MuiPaper-rounded"
               >
                 <h1
                   class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter"
@@ -485,10 +533,10 @@ Object {
                   Please, review your routes
                 </h1>
                 <div
-                  class="ImportRouteForm-btnArea-257"
+                  class="ImportRouteForm-btnArea-264"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained ImportRouteForm-btn-256 MuiButton-containedPrimary"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained ImportRouteForm-btn-263 MuiButton-containedPrimary"
                     data-testid="btn-test-accept"
                     tabindex="0"
                     type="button"
@@ -511,37 +559,61 @@ Object {
           >
             <div>
               <footer
-                class="makeStyles-footer-479"
+                class="makeStyles-footer-486"
               >
                 <div
-                  class="MuiContainer-root MuiContainer-maxWidthSm"
+                  class="MuiContainer-root MuiContainer-maxWidthXs"
                 >
-                  <h6
-                    class="MuiTypography-root MuiTypography-h6"
+                  <div
+                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5"
                   >
-                    ViaDe En3B1
-                  </h6>
-                  <h6
-                    class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-colorTextSecondary"
-                  >
-                    Made by Pablo Cañal
-                  </h6>
-                  <a
-                    class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-                    href="https://github.com/Arquisoft/viade_en3b1/"
-                    target="_blank"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root"
-                      focusable="false"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="MuiGrid-root MuiGrid-item"
                     >
-                      <path
-                        d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"
-                      />
-                    </svg>
-                  </a>
+                      <h6
+                        class="MuiTypography-root MuiTypography-h6"
+                      >
+                        ViaDe En3B1
+                      </h6>
+                      <h6
+                        class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-colorTextSecondary"
+                      >
+                        Made by 
+                        <a
+                          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                          href="https://github.com/PabloCanalSuarez"
+                          style="color: rgb(48, 44, 88);"
+                          target="_blank"
+                        >
+                          Pablo Cañal
+                        </a>
+                      </h6>
+                    </div>
+                    <hr
+                      class="MuiDivider-root MuiDivider-flexItem MuiDivider-vertical"
+                    />
+                    <div
+                      class="MuiGrid-root MuiGrid-item"
+                      style="margin-top: 0.5rem;"
+                    >
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                        href="https://github.com/Arquisoft/viade_en3b1/"
+                        target="_blank"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </footer>
             </div>
@@ -553,16 +625,16 @@ Object {
   "container": <div>
     <div>
       <div
-        class="makeStyles-root-259"
+        class="makeStyles-root-266"
       >
         <header
           class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
         >
           <div
-            class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-260 MuiToolbar-gutters"
+            class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-267 MuiToolbar-gutters"
           >
             <div
-              class="MuiGrid-root makeStyles-link-262"
+              class="MuiGrid-root makeStyles-link-269"
             >
               <div
                 class="MuiGrid-root MuiGrid-container"
@@ -598,7 +670,7 @@ Object {
             </div>
             <a
               aria-disabled="false"
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-menuButton-261 MuiButton-containedPrimary"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-menuButton-268 MuiButton-containedPrimary"
               href="#/register"
               tabindex="0"
             >
@@ -613,7 +685,7 @@ Object {
             </a>
             <a
               aria-disabled="false"
-              class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-menuButton-261 MuiButton-colorInherit"
+              class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-menuButton-268 MuiButton-colorInherit"
               data-testid="btn-login-navbar"
               href="#/login"
               tabindex="0"
@@ -634,13 +706,13 @@ Object {
         class="MuiGrid-root MuiGrid-container"
       >
         <div
-          class="MuiGrid-root ImportRouteForm-image-258 MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
+          class="MuiGrid-root ImportRouteForm-image-265 MuiGrid-item MuiGrid-grid-sm-12 MuiGrid-grid-md-12"
         >
           <main
-            class="ImportRouteForm-layout-254"
+            class="ImportRouteForm-layout-261"
           >
             <div
-              class="MuiPaper-root ImportRouteForm-paper-255 MuiPaper-elevation1 MuiPaper-rounded"
+              class="MuiPaper-root ImportRouteForm-paper-262 MuiPaper-elevation1 MuiPaper-rounded"
             >
               <h1
                 class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter"
@@ -648,10 +720,10 @@ Object {
                 Please, review your routes
               </h1>
               <div
-                class="ImportRouteForm-btnArea-257"
+                class="ImportRouteForm-btnArea-264"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained ImportRouteForm-btn-256 MuiButton-containedPrimary"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained ImportRouteForm-btn-263 MuiButton-containedPrimary"
                   data-testid="btn-test-accept"
                   tabindex="0"
                   type="button"
@@ -674,37 +746,61 @@ Object {
         >
           <div>
             <footer
-              class="makeStyles-footer-479"
+              class="makeStyles-footer-486"
             >
               <div
-                class="MuiContainer-root MuiContainer-maxWidthSm"
+                class="MuiContainer-root MuiContainer-maxWidthXs"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6"
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5"
                 >
-                  ViaDe En3B1
-                </h6>
-                <h6
-                  class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-colorTextSecondary"
-                >
-                  Made by Pablo Cañal
-                </h6>
-                <a
-                  class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-                  href="https://github.com/Arquisoft/viade_en3b1/"
-                  target="_blank"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root"
-                    focusable="false"
-                    viewBox="0 0 24 24"
+                  <div
+                    class="MuiGrid-root MuiGrid-item"
                   >
-                    <path
-                      d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"
-                    />
-                  </svg>
-                </a>
+                    <h6
+                      class="MuiTypography-root MuiTypography-h6"
+                    >
+                      ViaDe En3B1
+                    </h6>
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 MuiTypography-colorTextSecondary"
+                    >
+                      Made by 
+                      <a
+                        class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                        href="https://github.com/PabloCanalSuarez"
+                        style="color: rgb(48, 44, 88);"
+                        target="_blank"
+                      >
+                        Pablo Cañal
+                      </a>
+                    </h6>
+                  </div>
+                  <hr
+                    class="MuiDivider-root MuiDivider-flexItem MuiDivider-vertical"
+                  />
+                  <div
+                    class="MuiGrid-root MuiGrid-item"
+                    style="margin-top: 0.5rem;"
+                  >
+                    <a
+                      class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                      href="https://github.com/Arquisoft/viade_en3b1/"
+                      target="_blank"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </footer>
           </div>
