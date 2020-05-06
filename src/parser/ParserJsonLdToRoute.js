@@ -5,32 +5,40 @@ import { loadMedia } from '../handler/MediaHandler.js';
 class ParserJsonLdToRoute {
 
     async parse(file, fileUrl) {
-
-        var route = JSON.parse(file);
-
-        var name = route.name;
-        var id = route.id;
-        var date = new Date(route.date);
-        var description = route.description;
-
-        var points = route.points;
-        var comments = [];
-        var mediaData = route.media;
-
-        let trackPoints = this.parsePoints(points);
-        let media = await this.parseMedia(mediaData);
-
-        let finalroute;
         try {
-            finalroute = new Route(name, description, trackPoints, comments, null, date, id);
+            var route;
+            try {
+                route = JSON.parse(file);
+            } catch (err) {
+                return;
+            }
+
+            var name = route.name;
+            var id = route.id;
+            var date = new Date(route.date);
+            var description = route.description;
+
+            var points = route.points;
+            var comments = [];
+            var mediaData = route.media;
+
+            let trackPoints = this.parsePoints(points);
+            let media = await this.parseMedia(mediaData);
+
+            let finalroute;
+            try {
+                finalroute = new Route(name, description, trackPoints, comments, null, date, id);
+            } catch (err) {
+                return;
+            }
+
+            finalroute.setMedia(media);
+            finalroute.setUrl(fileUrl);
+
+            return finalroute;
         } catch (err) {
             return;
         }
-
-        finalroute.setMedia(media);
-        finalroute.setUrl(fileUrl);
-
-        return finalroute;
     }
 
     async parseImport(file) {

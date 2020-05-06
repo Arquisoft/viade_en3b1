@@ -1,6 +1,7 @@
 import Media from "../entities/Media";
 import ParserJsonLdToRoute from "../parser/ParserJsonLdToRoute";
 import ParserJsonLdToGroup from "../parser/ParserJsonLdToGroup";
+import { toast } from 'react-toastify';
 
 const auth = require('solid-auth-client');
 const FC = require('solid-file-client');
@@ -86,6 +87,10 @@ class PodHandler {
         } else {
             // There is no routes directory
             await fc.createFolder(url);
+        }       
+
+        if(routes.includes(undefined)) {
+            toast.warn("Some of your routes couldn't be listed.", {toastId:'1', autoClose:10000 })
         }
 
         return routes.filter((r) => r !== undefined);

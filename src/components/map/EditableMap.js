@@ -24,7 +24,7 @@ export class EditableMap extends Component {
         // this.state.points = points;
 
         if (this.firstPoint === true) {
-            this.props.openNotif("You can move a point by dragging it and delete it just clicking on it.", 'info');
+            this.props.openNotif("You can move a point by dragging it and delete it just clicking on it.");
             this.firstPoint = false;
         }
     }
