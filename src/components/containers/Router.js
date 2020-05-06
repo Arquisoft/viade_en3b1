@@ -15,12 +15,14 @@ import PublicLayout from "../layouts/PublicLayout.js";
 import NotLoggedInLayout from "../layouts/NotLoggedInLayout.js";
 import ProfileGroups from "./profile/ProfileGroups.js";
 import CreateGroup from "./creategroup/CreateGroup.js";
+import Help from "./help/Help.js";
 
 const Router = () => (
   <HashRouter>
     <Fragment>
       <Switch>
         <PublicLayout exact path="/404" component={PageNotFound} />
+        <PublicLayout exact path="/help" component={Help} />
         <Redirect exact from="/" to="/home" />
         <PublicLayout exact path="/home" component={Welcome} />
         <PrivateLayout exact path="/dashboard" component={UserRoutes} />

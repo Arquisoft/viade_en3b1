@@ -1,20 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders correctly 1`] = `
-<div
-  class="makeStyles-root-1"
->
+exports[`Renders Correct 1`] = `
+<div>
   <div
-    class="makeStyles-root-8"
+    class="makeStyles-root-2"
   >
     <header
       class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
     >
       <div
-        class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-9 MuiToolbar-gutters"
+        class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-3 MuiToolbar-gutters"
       >
         <div
-          class="MuiGrid-root makeStyles-link-11"
+          class="MuiGrid-root makeStyles-link-5"
         >
           <div
             class="MuiGrid-root MuiGrid-container"
@@ -52,178 +50,137 @@ exports[`Renders correctly 1`] = `
     </header>
   </div>
   <main
-    class="MuiContainer-root makeStyles-main-2 MuiContainer-maxWidthMd"
+    class="MuiContainer-root makeStyles-main-1 MuiContainer-maxWidthMd"
   >
-    <h3
-      class="MuiTypography-root MuiTypography-h3"
-    >
-      Your Profile
-    </h3>
-    <div
-      class="MuiPaper-root makeStyles-paper-3 MuiPaper-elevation0 MuiPaper-rounded"
-    >
+    <img
+      alt="Help Support"
+      src="HelpSupport.svg"
+    />
+    <div>
       <div
-        class="MuiTabs-root"
+        class="MuiBox-root MuiBox-root-197"
       >
+        Frequently asked questions (FAQ)
+      </div>
+      <div>
         <div
-          class="MuiTabs-scroller MuiTabs-fixed"
-          style="overflow:hidden"
+          style="margin-top:2rem"
         >
           <div
-            class="MuiTabs-flexContainer"
-            role="tablist"
+            class="MuiBox-root MuiBox-root-198"
           >
-            <button
-              aria-selected="true"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected"
-              role="tab"
-              tabindex="0"
-              type="button"
-            >
-              <span
-                class="MuiTab-wrapper"
-              >
-                General
-              </span>
-              <span
-                class="PrivateTabIndicator-root-226 PrivateTabIndicator-colorPrimary-227 MuiTabs-indicator"
-              />
-            </button>
-            <a
-              aria-disabled="false"
-              aria-selected="false"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary"
-              href="#/profile/friends"
-              role="tab"
-              tabindex="0"
-            >
-              <span
-                class="MuiTab-wrapper"
-              >
-                Friends
-              </span>
-            </a>
-            <a
-              aria-disabled="false"
-              aria-selected="false"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary"
-              href="#/profile/groups"
-              role="tab"
-              tabindex="0"
-            >
-              <span
-                class="MuiTab-wrapper"
-              >
-                Groups
-              </span>
-            </a>
+            What is Solid?
+          </div>
+          <div
+            class="MuiBox-root MuiBox-root-199"
+          >
+            It is an open source project, created by Tim Berners-Lee, that aims to achieve a complete, 
+            decentralized web allows users to decide where to store their own data.
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      class="MuiPaper-root MuiCard-root makeStyles-card-4 MuiPaper-outlined MuiPaper-rounded"
-    >
-      <div
-        class="MuiCardContent-root"
-      >
         <div
-          class="MuiGrid-root MuiGrid-container"
+          style="margin-top:2rem"
         >
           <div
-            class="MuiGrid-root MuiGrid-item"
+            class="MuiBox-root MuiBox-root-200"
           >
-            <div
-              class="MuiAvatar-root MuiAvatar-circle makeStyles-photo-5 MuiAvatar-colorDefault"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiAvatar-fallback"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-                />
-              </svg>
-            </div>
+            What is a Pod?
           </div>
-          <hr
-            class="MuiDivider-root MuiDivider-flexItem MuiDivider-vertical"
-          />
           <div
-            class="MuiGrid-root MuiGrid-item"
+            class="MuiBox-root MuiBox-root-201"
           >
-            <h3
-              class="MuiTypography-root makeStyles-name-6 MuiTypography-h3"
-            >
-              <span
-                class="solid value pending"
-              />
-            </h3>
+            A Pod is where data is stored on the Web with Solid. (see quote). A user may store their data in one Pod or several Pods, 
+            and applications read and write data into the Pod depending on the authorisations granted by the user or users associated to that Pod.
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      class="MuiPaper-root MuiCard-root makeStyles-card-4 MuiPaper-outlined MuiPaper-rounded"
-    >
-      <div
-        class="MuiCardContent-root"
-      >
         <div
-          class="MuiGrid-root MuiGrid-container"
+          style="margin-top:2rem"
         >
           <div
-            class="MuiGrid-root MuiGrid-item"
+            class="MuiBox-root MuiBox-root-202"
           >
-            <h6
-              class="MuiTypography-root MuiTypography-subtitle1"
-            >
-              Need to change anything?
-            </h6>
+            Where are my routes saved?
           </div>
-          <h6
-            class="MuiTypography-root makeStyles-link1-7 MuiTypography-subtitle1"
+          <div
+            class="MuiBox-root MuiBox-root-203"
           >
-            Go to your 
-            <a
-              class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-              href="0"
-              style="color:#7c4dff"
-              target="_blank"
-            >
-              Solid account
-            </a>
-          </h6>
+            All your routes, as well as the media files associated with them are stored in your own Pod. When you disconnect from our app,
+            no data is stored on our servers.
+          </div>
         </div>
-      </div>
-    </div>
-    <div
-      class="MuiPaper-root MuiCard-root makeStyles-card-4 MuiPaper-outlined MuiPaper-rounded"
-    >
-      <div
-        class="MuiCardContent-root"
-      >
         <div
-          class="MuiGrid-root MuiGrid-container"
+          style="margin-top:2rem"
         >
           <div
-            class="MuiGrid-root MuiGrid-item"
+            class="MuiBox-root MuiBox-root-204"
           >
-            <h6
-              class="MuiTypography-root MuiTypography-subtitle1"
-            >
-              Or you can also 
-              <a
-                class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-                href=""
-                style="color:#8693E3"
-              >
-                sign out
-              </a>
-              .
-            </h6>
+            Can I store any number of routes in my Pod?
+          </div>
+          <div
+            class="MuiBox-root MuiBox-root-205"
+          >
+            Yes, you can store any number of routes that you want in your Pod. To store a route, you can do it manually in
+            your Pod, or you can use our app to create or even import some.
+          </div>
+        </div>
+        <div
+          style="margin-top:2rem"
+        >
+          <div
+            class="MuiBox-root MuiBox-root-206"
+          >
+            My routes doesn't seem to load. Why is that?
+          </div>
+          <div
+            class="MuiBox-root MuiBox-root-207"
+          >
+            If you have a big number of routes associated to your account, you may experience load times bigger than usual. 
+            Don't worry about that, if you wait enough, you will be able to see all your routes.
+          </div>
+        </div>
+        <div
+          style="margin-top:2rem"
+        >
+          <div
+            class="MuiBox-root MuiBox-root-208"
+          >
+            I can't see all my routes listed. What is the reason?
+          </div>
+          <div
+            class="MuiBox-root MuiBox-root-209"
+          >
+            ViaDeEn3B1's app only works with routes that comply with ViadeSpec's standard. This means that the application can only list 
+            JSON-LD routes that are correctly built.
+          </div>
+        </div>
+        <div
+          style="margin-top:2rem"
+        >
+          <div
+            class="MuiBox-root MuiBox-root-210"
+          >
+            When I try to import a route, I get an error. Why is that?
+          </div>
+          <div
+            class="MuiBox-root MuiBox-root-211"
+          >
+            You can only import GPX, JSON and JSON-LD routes. Those files may contain some errors, so they get rejected and ignored
+            when trying to import them.
+          </div>
+        </div>
+        <div
+          style="margin-top:2rem"
+        >
+          <div
+            class="MuiBox-root MuiBox-root-212"
+          >
+            I can't import my GPX route. Why?
+          </div>
+          <div
+            class="MuiBox-root MuiBox-root-213"
+          >
+            Our GPX-import system is optimized specially for achieving interoperability with Strava's routes. This doesn't mean that
+            you can only import files that come from Strava, but you may encounter some problems if your GPX file has an strange internal structure.
           </div>
         </div>
       </div>
@@ -231,7 +188,7 @@ exports[`Renders correctly 1`] = `
   </main>
   <div>
     <footer
-      class="makeStyles-footer-257"
+      class="makeStyles-footer-216"
     >
       <div
         class="MuiContainer-root MuiContainer-maxWidthXs"
