@@ -42,26 +42,35 @@ class ParserJsonLdToRoute {
     }
 
     async parseImport(file) {
-
-        var route = JSON.parse(file);
-
-        var name = route.name;
-        var date = new Date(route.date);
-        var description = route.description;
-
-        var points = route.points;
-        var comments = [];
-
-        let trackPoints = this.parsePoints(points);
-
-        let finalroute;
         try {
-            finalroute = new Route(name, description, trackPoints, comments, null, date, null);
+
+            var route;
+            try {
+                route = JSON.parse(file);
+            } catch (err) {
+                return;
+            }
+
+            var name = route.name;
+            var date = new Date(route.date);
+            var description = route.description;
+
+            var points = route.points;
+            var comments = [];
+
+            let trackPoints = this.parsePoints(points);
+
+            let finalroute;
+            try {
+                finalroute = new Route(name, description, trackPoints, comments, null, date, null);
+            } catch (err) {
+                return;
+            }
+
+            return finalroute;
         } catch (err) {
             return;
         }
-
-        return finalroute;
     }
 
     async parseMedia(media) {
