@@ -63,12 +63,19 @@ export class ImportRouteForm extends Component {
             });
         });
 
-        routesList.forEach((r) => {
-            this.state.routes.push(r);
-        });
-
-        const { routes } = this.state;
-        this.setState({ routes: routes.slice() });
+        if(routesList.length > 0){
+            routesList.forEach((r) => {
+                this.state.routes.push(r);
+            });
+    
+            const { routes } = this.state;
+            this.setState({ routes: routes.slice() });
+        } else {
+            if(this.state.files.length === 1) {
+                this.props.history.push('/404');
+            }
+            toast.error(<ErrorToast text={"Some of your routes couldn't be imported."} />, {toastId:'2'});
+        }
     }
 
     async handleJSON(file) {
@@ -99,7 +106,6 @@ export class ImportRouteForm extends Component {
             toast.error(<ErrorToast text={"There was an error uploading your routes."} />);
         } else {
             toast.success(<SuccessToast text={"Your routes were successfully saved."} />);
-
         }
         await new Promise((r) => setTimeout(r, 1000));
         this.props.history.push('/dashboard');

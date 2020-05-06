@@ -112,6 +112,14 @@ class Route {
         }
     }
 
+    addTrackPoints(points) {
+        if(points.length > 0) {
+            points.forEach((p) => {
+                this.trackPoints.push(p);
+            });
+        }
+    }
+
     getId() {
         return this.id;
     }

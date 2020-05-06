@@ -49,7 +49,7 @@ export class ImportRoute extends Component {
                     acceptedFiles={['.gpx', '.json', '.jsonld']}
                     showPreviews={true}
                     showPreviewsInDropzone={false}
-                    maxFileSize={5000000}
+                    maxFileSize={30000000}
                     filesLimit={10}
                     clearOnUnmount={true}
                     onSave={(files) => this.handleSave(files)}
