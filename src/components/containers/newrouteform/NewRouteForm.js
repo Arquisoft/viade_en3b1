@@ -12,12 +12,12 @@ import SuccessForm from '../stepper/success/SuccessForm';
 import { withStyles } from '@material-ui/styles';
 import Route from '../../../entities/Route';
 import { uploadRoute } from '../../../handler/RouteHandler';
-import MuiAlert from '@material-ui/lab/Alert';
-import CloseIcon from '@material-ui/icons/Close';
-import { Snackbar, IconButton, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import cache from '../../../cache/RoutesCache';
 import imageSignal from '../../../assets/img/logo/signal.svg';
 import Footer from '../../ui/main/Footer';
+import { toast } from 'react-toastify';
+import { ErrorToast, SuccessToast } from '../../ui/utils/ToastContent';
 
 export class NewRouteForm extends Component {
 
@@ -27,11 +27,6 @@ export class NewRouteForm extends Component {
         this.route = null;
 
         this.state = {
-            open: false,
-            message: '',
-            vertical: 'top',
-            horizontal: 'center',
-            severity: '', // success, error, warning, info
             // ----  route ----
             activeStep: 0,
             name: '',
@@ -79,24 +74,6 @@ export class NewRouteForm extends Component {
         this.setState({ points: newPoints });
     }
 
-
-    // ###########################
-    //        Notification
-    // ###########################
-
-    openNotif = (text, newSeverity) => {
-        this.setState({
-            open: true,
-            message: text,
-            severity: newSeverity
-        });
-    };
-
-    closeNotif = () => {
-        this.setState({ open: false });
-    };
-
-
     // ###########################
     // Download and Upload methods
     // ###########################
@@ -139,10 +116,10 @@ export class NewRouteForm extends Component {
     checkSuccessCode(code) {
         switch (code) {
             case -1: // error
-                this.openNotif("There was an error during this operation", 'error');
+                toast.error(<ErrorToast text={"There was an error during this operation."} />);
                 break;
             case 0: // success
-                this.openNotif("Your route was successfully saved", 'success');
+                toast.success(<SuccessToast text={"Your route was successfully saved."} />);
                 break;
             default:
                 throw new Error('Unknown Success Code ' + code);
@@ -157,31 +134,9 @@ export class NewRouteForm extends Component {
 
         const { classes } = this.props;
 
-        const { open, message, severity } = this.state;
-        const { vertical, horizontal } = this.state;
-
         return (
             <React.Fragment>
                 <NavBar />
-                <Snackbar
-                    anchorOrigin={{ vertical, horizontal }}
-                    open={open}
-                    action={
-                        <React.Fragment>
-                            <IconButton
-                                aria-label="close"
-                                color="inherit"
-                                onClick={this.closeNotif}
-                            >
-                                <CloseIcon />
-                            </IconButton>
-                        </React.Fragment>
-                    }
-                >
-                    <Alert onClose={this.closeNotif} severity={severity}>
-                        {message}
-                    </Alert>
-                </Snackbar>
 
                 {/* Route Banner & Form */}
 
@@ -350,9 +305,5 @@ const useStyles = (theme) => ({
         minHeight: '90vh',
     },
 });
-
-function Alert(props) {
-    return <MuiAlert elevation={6} variant="filled" {...props} />;
-}
 
 export default withStyles(useStyles)(NewRouteForm);

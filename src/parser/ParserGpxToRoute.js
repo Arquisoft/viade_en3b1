@@ -7,21 +7,17 @@ export function parseGpxToRoutes(gpxString, callback) {
     try {
         parseGpx(gpxString, ((error, gpxData) => {
             var routes = [];
-            // var routeWaypoints = [];
-    
-            // var waypoints = gpxData.waypoints;
             var tracks = gpxData.tracks;
     
-            tracks.forEach(track => {
+            tracks.forEach((track) => {
                 let route = parseRouteTrack(track);
                 routes.push(route);
-    
             });
     
             return callback(routes);
         }));
     } catch(TypeError) {
-        alert(TypeError);
+        return [];
     }
     
 }

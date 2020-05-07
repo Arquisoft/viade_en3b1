@@ -65,7 +65,7 @@ exports[`Renders correctly 1`] = `
             id="date"
             name="date"
             type="text"
-            value="4/30/2020"
+            value="5/7/2020"
           />
         </div>
       </div>

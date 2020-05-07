@@ -14,6 +14,7 @@ import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { LogOut } from '../../../handler/SessionHandler';
 import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
+import InfoIcon from '@material-ui/icons/Info';
 
 const ProfileMenu = () => {
 
@@ -88,12 +89,21 @@ const ProfileMenu = () => {
                     </StyledMenuItem>
                 </Link>
 
-                <Link underline='none' target="_blank" href={'https://github.com/Arquisoft/viade_en3b1/issues/new'}>
-                    <StyledMenuItem divider>
+                <Link underline='none' href={'#/help'}>
+                    <StyledMenuItem>
                         <ListItemIcon>
                             <ContactSupportIcon />
                         </ListItemIcon>
                         <ListItemText primary="Need help?" />
+                    </StyledMenuItem>
+                </Link>
+
+                <Link underline='none' href={'#/about'}>
+                    <StyledMenuItem divider>
+                        <ListItemIcon>
+                            <InfoIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="About us" />
                     </StyledMenuItem>
                 </Link>
 

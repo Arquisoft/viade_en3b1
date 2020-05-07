@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
 import NavBar from '../../ui/main/NavBar';
 import Footer from '../../ui/main/Footer';
-import { withStyles, Typography, Paper, Grid, Button, Snackbar, IconButton } from '@material-ui/core';
+import { withStyles, Typography, Paper, Grid, Button } from '@material-ui/core';
 import ImportRouteCard from '../../ui/ImportRouteCard';
 import { parseGpxToRoutes } from '../../../parser/ParserGpxToRoute';
 import ParserJsonLdToRoute from '../../../parser/ParserJsonLdToRoute';
 import RoutesCache from '../../../cache/RoutesCache';
 import { uploadRoute } from '../../../handler/RouteHandler';
-import CloseIcon from '@material-ui/icons/Close';
-import MuiAlert from '@material-ui/lab/Alert';
+import { toast } from 'react-toastify';
+import { ErrorToast, SuccessToast } from '../../ui/utils/ToastContent';
 
 export class ImportRouteForm extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            open: false,
-            message: '',
-            vertical: 'top',
-            horizontal: 'center',
-            severity: '', // success, error, warning, info
             // --- files ---
             files: this.props.location.routes,
             routes: []
@@ -68,20 +63,35 @@ export class ImportRouteForm extends Component {
             });
         });
 
-        routesList.forEach((r) => {
-            this.state.routes.push(r);
-        });
-
-        const { routes } = this.state;
-        this.setState({ routes: routes.slice() });
+        if(routesList.length > 0){
+            routesList.forEach((r) => {
+                this.state.routes.push(r);
+            });
+    
+            const { routes } = this.state;
+            this.setState({ routes: routes.slice() });
+        } else {
+            if(this.state.files.length === 1) {
+                this.props.history.push('/404');
+            }
+            toast.error(<ErrorToast text={"Some of your routes couldn't be imported."} />, {toastId:'2'});
+        }
     }
 
     async handleJSON(file) {
         let parser = new ParserJsonLdToRoute();
         let route = await parser.parseImport(file);
-        this.state.routes.push(route);
-        const { routes } = this.state;
-        this.setState({ routes: routes.slice() });
+
+        if (!route) {
+            if(this.state.files.length === 1) {
+                this.props.history.push('/404');
+            }
+            toast.error(<ErrorToast text={"Some of your routes couldn't be imported."} />);
+        } else {
+            this.state.routes.push(route);
+            const { routes } = this.state;
+            this.setState({ routes: routes.slice() });
+        }
     }
 
     async upload() {
@@ -89,13 +99,13 @@ export class ImportRouteForm extends Component {
         let success = [];
         routes.forEach((r) => {
             this.uploadRoute(r).then((code) => {
-                success.push(code); 
+                success.push(code);
             });
         });
-        if(success.includes(-1)) {
-            this.openNotif("There was an error uploading your routes", 'error');
+        if (success.includes(-1)) {
+            toast.error(<ErrorToast text={"There was an error uploading your routes."} />);
         } else {
-            this.openNotif("Your route was successfully saved", 'success');
+            toast.success(<SuccessToast text={"Your routes were successfully saved."} />);
         }
         await new Promise((r) => setTimeout(r, 1000));
         this.props.history.push('/dashboard');
@@ -109,52 +119,13 @@ export class ImportRouteForm extends Component {
         });
     }
 
-    // ###########################
-    //        Notification
-    // ###########################
-
-    openNotif = (text, newSeverity) => {
-        this.setState({
-            open: true,
-            message: text,
-            severity: newSeverity
-        });
-    };
-
-    closeNotif = () => {
-        this.setState({ open: false });
-    };
-
     render() {
         const { classes } = this.props;
         const { routes } = this.state;
 
-        const { open, message, severity } = this.state;
-        const { vertical, horizontal } = this.state;
-
         return (
             <div>
                 <NavBar />
-
-                <Snackbar
-                    anchorOrigin={{ vertical, horizontal }}
-                    open={open}
-                    action={
-                        <React.Fragment>
-                            <IconButton
-                                aria-label="close"
-                                color="inherit"
-                                onClick={this.closeNotif}
-                            >
-                                <CloseIcon />
-                            </IconButton>
-                        </React.Fragment>
-                    }
-                >
-                    <Alert onClose={this.closeNotif} severity={severity}>
-                        {message}
-                    </Alert>
-                </Snackbar>
 
                 <Grid container className={classes.background}>
                     <Grid
@@ -239,9 +210,5 @@ const useStyles = (theme) => ({
         minHeight: '90vh',
     },
 });
-
-function Alert(props) {
-    return <MuiAlert elevation={6} variant="filled" {...props} />;
-}
 
 export default withStyles(useStyles)(ImportRouteForm);

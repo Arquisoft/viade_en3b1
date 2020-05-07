@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Correct 1`] = `
+<div>
+  <div
+    class="MuiBox-root MuiBox-root-2"
+  >
+    Frequently asked questions (FAQ)
+  </div>
+  <div>
+    <div
+      style="margin-top:2rem"
+    >
+      <div
+        class="MuiBox-root MuiBox-root-3"
+      >
+        What is Solid?
+      </div>
+      <div
+        class="MuiBox-root MuiBox-root-4"
+      >
+        It is an open source project, created by Tim Berners-Lee, that aims to achieve a complete, 
+            decentralized web allows users to decide where to store their own data.
+      </div>
+    </div>
+    <div
+      style="margin-top:2rem"
+    >
+      <div
+        class="MuiBox-root MuiBox-root-5"
+      >
+        What is a Pod?
+      </div>
+      <div
+        class="MuiBox-root MuiBox-root-6"
+      >
+        A Pod is where data is stored on the Web with Solid. (see quote). A user may store their data in one Pod or several Pods, 
+            and applications read and write data into the Pod depending on the authorisations granted by the user or users associated to that Pod.
+      </div>
+    </div>
+    <div
+      style="margin-top:2rem"
+    >
+      <div
+        class="MuiBox-root MuiBox-root-7"
+      >
+        Where are my routes saved?
+      </div>
+      <div
+        class="MuiBox-root MuiBox-root-8"
+      >
+        All your routes, as well as the media files associated with them are stored in your own Pod. When you disconnect from our app,
+            no data is stored on our servers.
+      </div>
+    </div>
+    <div
+      style="margin-top:2rem"
+    >
+      <div
+        class="MuiBox-root MuiBox-root-9"
+      >
+        Can I store any number of routes in my Pod?
+      </div>
+      <div
+        class="MuiBox-root MuiBox-root-10"
+      >
+        Yes, you can store any number of routes that you want in your Pod. To store a route, you can do it manually in
+            your Pod, or you can use our app to create or even import some.
+      </div>
+    </div>
+    <div
+      style="margin-top:2rem"
+    >
+      <div
+        class="MuiBox-root MuiBox-root-11"
+      >
+        My routes doesn't seem to load. Why is that?
+      </div>
+      <div
+        class="MuiBox-root MuiBox-root-12"
+      >
+        If you have a big number of routes associated to your account, you may experience load times bigger than usual. 
+            Don't worry about that, if you wait enough, you will be able to see all your routes.
+      </div>
+    </div>
+    <div
+      style="margin-top:2rem"
+    >
+      <div
+        class="MuiBox-root MuiBox-root-13"
+      >
+        I can't see all my routes listed. What is the reason?
+      </div>
+      <div
+        class="MuiBox-root MuiBox-root-14"
+      >
+        ViaDeEn3B1's app only works with routes that comply with ViadeSpec's standard. This means that the application can only list 
+            JSON-LD routes that are correctly built.
+      </div>
+    </div>
+    <div
+      style="margin-top:2rem"
+    >
+      <div
+        class="MuiBox-root MuiBox-root-15"
+      >
+        When I try to import a route, I get an error. Why is that?
+      </div>
+      <div
+        class="MuiBox-root MuiBox-root-16"
+      >
+        You can only import GPX, JSON and JSON-LD routes. Those files may contain some errors, so they get rejected and ignored
+            when trying to import them.
+      </div>
+    </div>
+    <div
+      style="margin-top:2rem"
+    >
+      <div
+        class="MuiBox-root MuiBox-root-17"
+      >
+        I can't import my GPX route. Why?
+      </div>
+      <div
+        class="MuiBox-root MuiBox-root-18"
+      >
+        Our GPX-import system is optimized specially for achieving interoperability with Strava's routes. This doesn't mean that
+            you can only import files that come from Strava, but you may encounter some problems if your GPX file has an strange internal structure.
+      </div>
+    </div>
+  </div>
+</div>
+`;

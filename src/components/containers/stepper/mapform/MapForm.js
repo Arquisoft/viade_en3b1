@@ -1,27 +1,20 @@
 import React, { Component } from 'react';
 import EditableMap from '../../../map/EditableMap';
-import { Button, Typography, Grid, Snackbar, IconButton } from '@material-ui/core';
-import CloseIcon from '@material-ui/icons/Close';
-import MuiAlert from '@material-ui/lab/Alert';
+import { Button, Typography, Grid } from '@material-ui/core';
+import { toast } from 'react-toastify';
+import { WarnToast, InfoToast } from '../../../ui/utils/ToastContent';
 
 export class MapForm extends Component {
 
     constructor() {
         super();
         this.points = React.createRef();
-        this.state = {
-            open: false,
-            message: "",
-            severity: '',
-            vertical: 'top',
-            horizontal: 'center',
-        };
     }
 
     next = (e) => {
         e.preventDefault();
         if (this.points.current.getTrackPoints() === 'undefined' || this.points.current.getTrackPoints().length === 0) {
-            this.openNotif("You must select at least one track point to continue.", 'warning');
+            toast.warn(<WarnToast text={"Please, select at least one track point to continue."} />);
             return;
         }
         this.props.handleMapPoints(this.points.current.getTrackPoints());
@@ -33,12 +26,8 @@ export class MapForm extends Component {
         this.props.handleBack();
     }
 
-    openNotif = (text, newSeverity) => {
-        this.setState({
-            open: true,
-            message: text,
-            severity: newSeverity
-        });
+    openNotif = (text) => {
+        toast.info(<InfoToast text={text} />);
     };
 
     closeNotif = () => {
@@ -46,30 +35,9 @@ export class MapForm extends Component {
     };
 
     render() {
-        const { open, message, severity } = this.state;
-        const { vertical, horizontal } = this.state;
 
         return (
             <React.Fragment>
-                <Snackbar
-                    anchorOrigin={{ vertical, horizontal }}
-                    open={open}
-                    action={
-                        <React.Fragment>
-                            <IconButton
-                                aria-label="close"
-                                color="inherit"
-                                onClick={this.closeNotif}
-                            >
-                                <CloseIcon />
-                            </IconButton>
-                        </React.Fragment>
-                    }
-                >
-                    <Alert onClose={this.closeNotif} severity={severity}>
-                        {message}
-                    </Alert>
-                </Snackbar>
 
                 <Typography variant="h6" gutterBottom>
                     Click on the map to add trackpoints to your route
@@ -111,9 +79,4 @@ export class MapForm extends Component {
     }
 }
 
-function Alert(props) {
-    return <MuiAlert elevation={6} variant="filled" {...props} />;
-}
-
 export default MapForm;
-

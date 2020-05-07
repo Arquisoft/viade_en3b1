@@ -2,22 +2,23 @@
 
 exports[`Renders Correct 1`] = `
 <div
-  style="margin-left:5vh;margin-top:5vh"
+  style="margin-left:5vh;margin-top:5vh;text-align:center"
 >
-  <h4
-    class="MuiTypography-root opps-warning-text MuiTypography-h4"
+  <img
+    alt="404 logo"
+    src="404.svg"
+  />
+  <div
+    class="MuiBox-root MuiBox-root-2"
   >
-    Sorry, this is not the webpage you are looking for
-  </h4>
-  <p>
     Go back to 
     <a
       class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
       href="#/"
-      style="color:#94E8B4"
+      style="color:#27DEBF"
     >
       Home
     </a>
-  </p>
+  </div>
 </div>
 `;
